@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1296</x>
+      <y>657</y>
+      <w>189</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+User Verwalten
+--
+
+-
++UserAnlegen()
++UserLoeschen(): void
++UserAendern()
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>792</x>
+      <y>657</y>
+      <w>135</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>Umfrage
+-
+-Name :string
+-AnzahlStimmen :int
+-Ersteller :string
+-UmfragenTyp: 
+-</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>954</x>
+      <y>657</y>
+      <w>261</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>User
+--
+-benutzertyp :enum
+-name: string
+-passwort: string
+--
++Umfragenloeschen(): void
++Abstimmen(): boolean, void, string
++UmfrageErstellen(): long, char, float
++Anmelden(Passwort: string): string,boolean
++Umfragenloeschen(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1206</x>
+      <y>702</y>
+      <w>108</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;include&gt;&gt;</panel_attributes>
+    <additional_attributes>100.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>954</x>
+      <y>198</y>
+      <w>333</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>ViewHartSeite
+-
+-dataGridKleineUmfagenListe: DataGrid
+-buttonAbmelden: Button
+
+-benutzer: User
+-
++buttonAbmelden_Click(object sender, EventArgs e):void
++dataGridSelectionChanged()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>243</x>
+      <y>198</y>
+      <w>297</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>ViewAnmeldeScreen
+-
+-textBoxUsername: TextBox
+-textBoxPasswort: TextBox
+
+-buttonAnmelden: Button
+-buttonGastLogin: Button
+-
++buttonAnmelden_Click(object sender, EventArgs e):void
++buttonGastLogin_Click(object sender, EventArgs e):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>567</x>
+      <y>198</y>
+      <w>171</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>ViewUmfrageErstellen
+-
+-labelNameUmfrage: Label
+-labelBeschreibungUmfrage: Label
+-labelUmfrageTyp: Label
+
+-textBoxNameUmfrage: TextBox
+-textBoxBeschreibungUmfrage: TextBox
+
+-radioButtonJaNeinUmfrage: RadioButton
+-radioButtonCustomUmfrage: RadioButton
+
+-buttonUmfrageSpeichern: Button
+-buttonAbbrechen(?)
+-
++buttonUmfrageSpeichern_Click(object sender, EventArgs e)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1305</x>
+      <y>198</y>
+      <w>216</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>ViewUmfrageVollUebersicht
+-
+-labelUmfragenName: Label
+-labeUmfragenAuthor: Label
+-labelUmfragenBeschreibung: Label
+-labelErgebnisse: Label
+-labelAnzahlStimmenJa: Label
+-labelAnzahlStimmenNein: Label
+
+-buttonAbstimmen: Button
+-
++buttonAstimmen_Click(object sender, EventArgs e):void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>756</x>
+      <y>198</y>
+      <w>171</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>ViewUmfrageArchiv
+-
+-dataGridUmfragenListeArchiv: DataGrid
+-textBoxUmfrageSuchen: TextBox
+
+-buttonUmfrageSuchen: Button
+-
++buttonUmfrageSuchen_Click(object sender,EventArgs e)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>198</y>
+      <w>216</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>ViewUserVerwalten
+-
+-textBoxUsername: TextBox
+-textBoxPasswort: TextBox
+-comboBoxUserRolle: ComboBox
+-buttonAenderungSpeichern: Button
+-
++buttonAenderungSpeichern_Click(object sender, EventArgs e):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>243</x>
+      <y>351</y>
+      <w>297</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>ModelAnmeldeScreen
+-
+-conn:MySQLConnection
+-
++anmelden(username:string, passwort:string)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>567</x>
+      <y>36</y>
+      <w>360</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>_#Program_
+-
+-viewStartSeite: ViewHartSeite
+viewAnmeldeScreen: ViewAnmeldeScreen
+-modelStartSeite: ModelHartSeite
+-modelAnmeldeScreen: ModelAnmeldeScreen
+-controllerStartSeite: ControllerHartSeite
+-controllerAnmeldeScreen: ControllerAnmeldeScreen
+-
+_+Main()_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>351</y>
+      <w>216</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>ModelUserVerwalten
+-
+-conn:MySQLConnection
+-
++benutzerSpeichern(newUser:User)
++benutzerLoeschen(oldUser)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>567</x>
+      <y>351</y>
+      <w>171</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>ModelUmfrageErstellen
+-
+-conn:MySQLConnection
+-
++umfrageSpeichern(AllesRelevantesFürDatenbank): Umfrage</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>756</x>
+      <y>351</y>
+      <w>171</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>ModelUmfrageArchiv
+-
+-conn:MySQLConnection
+-
++suchen(umfrageName: string):Umfrage
++loeschen(umfrage)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>954</x>
+      <y>351</y>
+      <w>333</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>ModelHartSeite
+-
+-conn:MySQLConnection
+-
++suchen(umfragenName: string)
++abstimmen()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1305</x>
+      <y>351</y>
+      <w>216</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>ModelUmfrageVollUebersicht
+-
+-conn:MySQLConnection
+-
++abstimmen(antwort)
++ErgebnisseAnzeigen(wennAbgestimmt)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>477</y>
+      <w>216</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>ControllerUserVerwalten
+-
+-modelUserVerwalten: ModelUserVerwalten
+-viewUserVerwalten: ViewUserVerwalten
+-
++Meth Hoden wie Model
++benutzerSpeichern(newUser:User)
++benutzerLoeschen(oldUser)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>243</x>
+      <y>477</y>
+      <w>297</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>ControllerAnmeldeScreen
+-
+-modelAnmeldeScreen: ModelAnmeldeScreen
+-viewAnmeldeScreen: ViewAnmeldeScreen
+-
++Mett Hoden wie Model
++anmelden(username:string, passwort:string)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>567</x>
+      <y>477</y>
+      <w>171</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>ControllerUmfrageErstellen
+-
+-modelUmfrageErstellen: ModelUmfrageErstellen
+-viewUmfrageErstellen: ViewUmfrageErstellen
+-
++umfrageSpeichern(AllesRelevantesFürDatenbank): Umfrage
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>756</x>
+      <y>477</y>
+      <w>171</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>ControllerUmfrageArchiv
+-
+-modelUmfrageArchiv: ModelUmfrageArchiv
+-viewUmfrageArchiv: ViewUmfrageArchiv
+-
++suchen(umfrageName: string):Umfrage
++loeschen(umfrage)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>954</x>
+      <y>477</y>
+      <w>333</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>ControllerHartSeite
+-
+-modelStartSeite: ModelHartSeite
+-viewStartSeite: ViewHartSeite
+-
++suchen(umfragenName: string)
++abstimmen()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1305</x>
+      <y>477</y>
+      <w>216</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>ControllerUmfrageVollUebersicht
+-
+-modelUmfrageVollUebersicht: ModelUmfrageVollUebersicht
+-viewUmfrageVollUebersicht: ViewUmfrageVollUebersicht
+-
++abstimmen(antwort)
++ErgebnisseAnzeigen(wennAbgestimmt)</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
