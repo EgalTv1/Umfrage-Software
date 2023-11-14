@@ -36,7 +36,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(118, 54);
+            this.button1.Location = new System.Drawing.Point(203, 53);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(113, 20);
             this.button1.TabIndex = 0;
@@ -55,7 +55,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(12, 54);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(185, 20);
             this.textBox1.TabIndex = 2;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
