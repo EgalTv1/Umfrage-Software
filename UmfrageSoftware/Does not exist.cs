@@ -8,5 +8,6 @@ namespace UmfrageSoftware
 {
     internal class Does_not_exist
     {
+        //keine Ahnung
     }
 }
