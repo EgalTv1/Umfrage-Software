@@ -118,7 +118,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(144, 199);
+            this.button1.Location = new System.Drawing.Point(187, 180);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 9;
@@ -140,7 +140,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "UmfrageVollUebersicht";
-            this.Text = "Umfrage Uebersicht";
+            this.Text = "1";
             this.Load += new System.EventHandler(this.UmfrageVollUebersicht_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
