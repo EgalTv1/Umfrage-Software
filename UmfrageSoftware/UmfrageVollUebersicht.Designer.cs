@@ -89,9 +89,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(29, 40);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 13);
+            this.label6.Size = new System.Drawing.Size(87, 13);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Umfrage Name";
+            this.label6.Text = "Umfrage Name 3";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // radioButton1
