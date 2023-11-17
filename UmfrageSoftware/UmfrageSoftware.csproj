@@ -64,14 +64,6 @@
     <Compile Include="UmfrageArchiv.Designer.cs">
       <DependentUpon>UmfrageArchiv.cs</DependentUpon>
     </Compile>
-    <Compile Include="..\..\..\..\..\Downloads\StartSeite.cs">
-      <SubType>Form</SubType>
-      <Link>StartSeite.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\Downloads\StartSeite.Designer.cs">
-      <DependentUpon>StartSeite.cs</DependentUpon>
-      <Link>StartSeite.Designer.cs</Link>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Umfrage Erstellen.resx">
@@ -79,10 +71,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UmfrageArchiv.resx">
       <DependentUpon>UmfrageArchiv.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\..\..\..\..\Downloads\StartSeite.resx">
-      <DependentUpon>StartSeite.cs</DependentUpon>
-      <Link>StartSeite.resx</Link>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

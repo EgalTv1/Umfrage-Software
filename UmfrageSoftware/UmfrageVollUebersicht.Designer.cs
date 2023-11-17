@@ -89,9 +89,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(29, 40);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 13);
+            this.label6.Size = new System.Drawing.Size(87, 13);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Umfrage Name";
+            this.label6.Text = "Umfrage Name 3";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // radioButton1
@@ -118,7 +118,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(144, 199);
+            this.button1.Location = new System.Drawing.Point(187, 180);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 9;
@@ -140,7 +140,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "UmfrageVollUebersicht";
-            this.Text = "Umfrage Uebersicht";
+            this.Text = "1";
             this.Load += new System.EventHandler(this.UmfrageVollUebersicht_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
