@@ -16,6 +16,16 @@ namespace UmfrageSoftware
         {
             InitializeComponent();
         }
+
+        private void buttonAbbrechen_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
+
+        private void buttonSpeichern_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
     }
 }
