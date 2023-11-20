@@ -42,8 +42,8 @@ namespace UmfrageSoftware
         private void buttonViewUmfragenUebersicht_Click(object sender, EventArgs e)
         {
             panelViews.Controls.Clear();
-            //UserControlUmfragenUebersicht userControlUmfragenUebersicht = new UserControlUmfragenUebersicht();
-            //panelViews.Controls.Add(userControlUmfragenUebersicht);
+            UserControlUmfrageVollUebersicht userControlUmfragenUebersicht = new UserControlUmfrageVollUebersicht();
+            panelViews.Controls.Add(userControlUmfragenUebersicht);
         }
 
         private void buttonViewUmfrageErstellen_Click(object sender, EventArgs e)
@@ -63,8 +63,8 @@ namespace UmfrageSoftware
         private void buttonBenutzerVerwalten_Click(object sender, EventArgs e)
         {
             panelViews.Controls.Clear();
-            //UserControlBenutzerVerwalten userControlBenutzerVerwalten = new UserControlBenutzerVerwalten();
-            //panelViews.Controls.Add(userControlBenutzerVerwalten);
+            UserControlUserVerwalten userControlBenutzerVerwalten = new UserControlUserVerwalten();
+            panelViews.Controls.Add(userControlBenutzerVerwalten);
         }
 
         private void buttonAbmelden_Click(object sender, EventArgs e)

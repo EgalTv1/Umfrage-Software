@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,10 +20,9 @@ namespace UmfrageSoftware
         private string benutzername;
         private string passwort;
 
-        public string Benutzername { get => benutzername; }
-        public string Passwort { get => passwort; }
+        public string Benutzername { get => benutzername; set => benutzername = value; }
+        public string Passwort { get => passwort; set => passwort = value; }
         public Benutzertypen Benutzertyp { get; private set; } = Benutzertypen.Gast;
-
 
         public User()
         { }
