@@ -46,11 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="UmfrageVollUebersicht.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="UmfrageVollUebersicht.Designer.cs">
+      <DependentUpon>UmfrageVollUebersicht.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UmfrageArchiv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UmfrageArchiv.Designer.cs">
+      <DependentUpon>UmfrageArchiv.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewUserVerwalten.cs">
       <SubType>Form</SubType>
@@ -66,8 +72,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="UmfrageArchiv.resx">
+      <DependentUpon>UmfrageArchiv.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -78,11 +84,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ViewAnmeldeScreen.resx">
-      <DependentUpon>ViewAnmeldeScreen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ViewUserVerwalten.resx">
-      <DependentUpon>ViewUserVerwalten.cs</DependentUpon>
+    <EmbeddedResource Include="UmfrageVollUebersicht.resx">
+      <DependentUpon>UmfrageVollUebersicht.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
