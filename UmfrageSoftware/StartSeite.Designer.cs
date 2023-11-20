@@ -32,7 +32,7 @@
             this.buttonViewUmfrageErstellen = new System.Windows.Forms.Button();
             this.buttonBenutzerVerwalten = new System.Windows.Forms.Button();
             this.buttonViewUmfragenArchiv = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelViews = new System.Windows.Forms.Panel();
             this.buttonAbmelden = new System.Windows.Forms.Button();
             this.labelUserName = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -45,6 +45,7 @@
             this.buttonViewUmfragenUebersicht.TabIndex = 1;
             this.buttonViewUmfragenUebersicht.Text = "Umfragen Übersicht";
             this.buttonViewUmfragenUebersicht.UseVisualStyleBackColor = true;
+            this.buttonViewUmfragenUebersicht.Click += new System.EventHandler(this.buttonViewUmfragenUebersicht_Click);
             // 
             // buttonViewUmfrageErstellen
             // 
@@ -54,6 +55,7 @@
             this.buttonViewUmfrageErstellen.TabIndex = 2;
             this.buttonViewUmfrageErstellen.Text = "Umfrage Erstellen";
             this.buttonViewUmfrageErstellen.UseVisualStyleBackColor = true;
+            this.buttonViewUmfrageErstellen.Click += new System.EventHandler(this.buttonViewUmfrageErstellen_Click);
             // 
             // buttonBenutzerVerwalten
             // 
@@ -63,6 +65,7 @@
             this.buttonBenutzerVerwalten.TabIndex = 4;
             this.buttonBenutzerVerwalten.Text = "Benutzer Verwalten";
             this.buttonBenutzerVerwalten.UseVisualStyleBackColor = true;
+            this.buttonBenutzerVerwalten.Click += new System.EventHandler(this.buttonBenutzerVerwalten_Click);
             // 
             // buttonViewUmfragenArchiv
             // 
@@ -72,14 +75,14 @@
             this.buttonViewUmfragenArchiv.TabIndex = 3;
             this.buttonViewUmfragenArchiv.Text = "Umfrage Archiv";
             this.buttonViewUmfragenArchiv.UseVisualStyleBackColor = true;
+            this.buttonViewUmfragenArchiv.Click += new System.EventHandler(this.buttonViewUmfragenArchiv_Click);
             // 
-            // panel1
+            // panelViews
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Location = new System.Drawing.Point(153, 34);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1177, 611);
-            this.panel1.TabIndex = 6;
+            this.panelViews.Location = new System.Drawing.Point(153, 34);
+            this.panelViews.Name = "panelViews";
+            this.panelViews.Size = new System.Drawing.Size(1177, 611);
+            this.panelViews.TabIndex = 6;
             // 
             // buttonAbmelden
             // 
@@ -90,6 +93,7 @@
             this.buttonAbmelden.TabIndex = 7;
             this.buttonAbmelden.Text = "Abmelden";
             this.buttonAbmelden.UseVisualStyleBackColor = true;
+            this.buttonAbmelden.Click += new System.EventHandler(this.buttonAbmelden_Click);
             // 
             // labelUserName
             // 
@@ -109,14 +113,14 @@
             this.ClientSize = new System.Drawing.Size(1351, 657);
             this.Controls.Add(this.labelUserName);
             this.Controls.Add(this.buttonAbmelden);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelViews);
             this.Controls.Add(this.buttonBenutzerVerwalten);
             this.Controls.Add(this.buttonViewUmfragenArchiv);
             this.Controls.Add(this.buttonViewUmfrageErstellen);
             this.Controls.Add(this.buttonViewUmfragenUebersicht);
-            this.IsMdiContainer = true;
             this.Name = "StartSeite";
             this.Text = "StartSeite";
+            this.Load += new System.EventHandler(this.StartSeite_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,7 +132,7 @@
         private System.Windows.Forms.Button buttonViewUmfrageErstellen;
         private System.Windows.Forms.Button buttonBenutzerVerwalten;
         private System.Windows.Forms.Button buttonViewUmfragenArchiv;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelViews;
         private System.Windows.Forms.Button buttonAbmelden;
         private System.Windows.Forms.Label labelUserName;
     }
