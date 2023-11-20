@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    </Compile>
     <Compile Include="UmfrageVollUebersicht.cs">
       <SubType>Form</SubType>
     </Compile>
