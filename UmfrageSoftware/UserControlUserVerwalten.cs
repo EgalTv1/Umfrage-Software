@@ -28,8 +28,6 @@ namespace UmfrageSoftware
         {
             ModelUserVerwalten modelUserVerwalten = new ModelUserVerwalten();
             User userdaten = new User(textBoxUsername.Text, textBoxPasswort.Text, comboBoxUserrolle.Text);
-
-            
             modelUserVerwalten.speichern(userdaten);
         }
     }

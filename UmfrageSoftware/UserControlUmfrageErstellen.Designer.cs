@@ -138,7 +138,6 @@
             this.textBoxUmfrageBeschreibung.Location = new System.Drawing.Point(597, 29);
             this.textBoxUmfrageBeschreibung.Multiline = true;
             this.textBoxUmfrageBeschreibung.Name = "textBoxUmfrageBeschreibung";
-            this.textBoxUmfrageBeschreibung.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBoxUmfrageBeschreibung.Size = new System.Drawing.Size(115, 20);
             this.textBoxUmfrageBeschreibung.TabIndex = 10;
             // 

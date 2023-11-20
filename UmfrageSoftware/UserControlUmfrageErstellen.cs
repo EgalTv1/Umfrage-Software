@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,8 @@ namespace UmfrageSoftware
 {
     public partial class UserControlUmfrageErstellen : UserControl
     {
+        int maxAntwortZahl;
+
         public UserControlUmfrageErstellen()
         {
             InitializeComponent();
@@ -54,25 +57,7 @@ namespace UmfrageSoftware
             }
             comboBoxAnzahlAntworten.Visible = false;
 
-            labelCustomAntwort1.Visible = false;
-            labelCustomAntwort2.Visible = false;
-            labelCustomAntwort3.Visible = false;
-            labelCustomAntwort4.Visible = false;
-            labelCustomAntwort5.Visible = false;
-            labelCustomAntwort6.Visible = false;
-            labelCustomAntwort7.Visible = false;
-            labelCustomAntwort8.Visible = false;
-            labelCustomAntwort9.Visible = false;
-
-            textBoxCustomAntwort1.Visible = false;
-            textBoxCustomAntwort2.Visible = false;
-            textBoxCustomAntwort3.Visible = false;
-            textBoxCustomAntwort4.Visible = false;
-            textBoxCustomAntwort5.Visible = false;
-            textBoxCustomAntwort6.Visible = false;
-            textBoxCustomAntwort7.Visible = false;
-            textBoxCustomAntwort8.Visible = false;
-            textBoxCustomAntwort9.Visible = false;
+            MehrereAntwortenVerstecken();
         }
 
         private void radioButtonCustomAntworten_CheckedChanged(object sender, EventArgs e)
@@ -97,52 +82,22 @@ namespace UmfrageSoftware
             }
             comboBoxAnzahlAntworten.Visible = false;
 
-            labelCustomAntwort1.Visible = false;
-            labelCustomAntwort2.Visible = false;
-            labelCustomAntwort3.Visible = false;
-            labelCustomAntwort4.Visible = false;
-            labelCustomAntwort5.Visible = false;
-            labelCustomAntwort6.Visible = false;
-            labelCustomAntwort7.Visible = false;
-            labelCustomAntwort8.Visible = false;
-            labelCustomAntwort9.Visible = false;
-
-            textBoxCustomAntwort1.Visible = false;
-            textBoxCustomAntwort2.Visible = false;
-            textBoxCustomAntwort3.Visible = false;
-            textBoxCustomAntwort4.Visible = false;
-            textBoxCustomAntwort5.Visible = false;
-            textBoxCustomAntwort6.Visible = false;
-            textBoxCustomAntwort7.Visible = false;
-            textBoxCustomAntwort8.Visible = false;
-            textBoxCustomAntwort9.Visible = false;
+            MehrereAntwortenVerstecken();
         }
 
         private void comboBoxAnzahlAntworten_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //for (int i = 0; i < comboBoxAnzahlAntworten.SelectedIndex; i++)
+            //{
+
+            //}
+
+
             switch (comboBoxAnzahlAntworten.SelectedIndex)
             {
                 default: break;
                 case 0:
-                    labelCustomAntwort1.Visible = false;
-                    labelCustomAntwort2.Visible = false;
-                    labelCustomAntwort3.Visible = false;
-                    labelCustomAntwort4.Visible = false;
-                    labelCustomAntwort5.Visible = false;
-                    labelCustomAntwort6.Visible = false;
-                    labelCustomAntwort7.Visible = false;
-                    labelCustomAntwort8.Visible = false;
-                    labelCustomAntwort9.Visible = false;
-
-                    textBoxCustomAntwort1.Visible = false;
-                    textBoxCustomAntwort2.Visible = false;
-                    textBoxCustomAntwort3.Visible = false;
-                    textBoxCustomAntwort4.Visible = false;
-                    textBoxCustomAntwort5.Visible = false;
-                    textBoxCustomAntwort6.Visible = false;
-                    textBoxCustomAntwort7.Visible = false;
-                    textBoxCustomAntwort8.Visible = false;
-                    textBoxCustomAntwort9.Visible = false;
+                    MehrereAntwortenVerstecken();
                     break;
                     case 1:
                     labelCustomAntwort1.Visible = true;
@@ -333,7 +288,35 @@ namespace UmfrageSoftware
                     textBoxCustomAntwort8.Visible = true;
                     textBoxCustomAntwort9.Visible = true;
                     break;
-            }
+            }            
+        }
+        public void MehrereAntwortenVerstecken()
+        {
+            //Label testLabel = new Label();
+            //for (int i = 0; i < maxAntwortZahl; i++)
+            //{
+            //    //teile den Befehl in die hälften textbox, i, .Visible
+            //}
+
+            labelCustomAntwort1.Visible = false;
+            labelCustomAntwort2.Visible = false;
+            labelCustomAntwort3.Visible = false;
+            labelCustomAntwort4.Visible = false;
+            labelCustomAntwort5.Visible = false;
+            labelCustomAntwort6.Visible = false;
+            labelCustomAntwort7.Visible = false;
+            labelCustomAntwort8.Visible = false;
+            labelCustomAntwort9.Visible = false;
+
+            textBoxCustomAntwort1.Visible = false;
+            textBoxCustomAntwort2.Visible = false;
+            textBoxCustomAntwort3.Visible = false;
+            textBoxCustomAntwort4.Visible = false;
+            textBoxCustomAntwort5.Visible = false;
+            textBoxCustomAntwort6.Visible = false;
+            textBoxCustomAntwort7.Visible = false;
+            textBoxCustomAntwort8.Visible = false;
+            textBoxCustomAntwort9.Visible = false;
         }
     }
 }

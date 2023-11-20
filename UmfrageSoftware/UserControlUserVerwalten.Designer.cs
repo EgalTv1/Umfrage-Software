@@ -36,10 +36,13 @@
             this.labelPasswort = new System.Windows.Forms.Label();
             this.buttonAbbrechen = new System.Windows.Forms.Button();
             this.labelBenutzerRolle = new System.Windows.Forms.Label();
+            this.buttonUserSuchen = new System.Windows.Forms.Button();
+            this.buttonLoeschen = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // comboBoxUserrolle
             // 
+            this.comboBoxUserrolle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxUserrolle.FormattingEnabled = true;
             this.comboBoxUserrolle.Items.AddRange(new object[] {
             "Admin",
@@ -94,7 +97,7 @@
             // 
             // buttonAbbrechen
             // 
-            this.buttonAbbrechen.Location = new System.Drawing.Point(31, 123);
+            this.buttonAbbrechen.Location = new System.Drawing.Point(52, 152);
             this.buttonAbbrechen.Name = "buttonAbbrechen";
             this.buttonAbbrechen.Size = new System.Drawing.Size(75, 23);
             this.buttonAbbrechen.TabIndex = 9;
@@ -111,10 +114,30 @@
             this.labelBenutzerRolle.TabIndex = 10;
             this.labelBenutzerRolle.Text = "Benutzer Rolle:";
             // 
+            // buttonUserSuchen
+            // 
+            this.buttonUserSuchen.Location = new System.Drawing.Point(214, 123);
+            this.buttonUserSuchen.Name = "buttonUserSuchen";
+            this.buttonUserSuchen.Size = new System.Drawing.Size(75, 23);
+            this.buttonUserSuchen.TabIndex = 11;
+            this.buttonUserSuchen.Text = "Suchen";
+            this.buttonUserSuchen.UseVisualStyleBackColor = true;
+            // 
+            // buttonLoeschen
+            // 
+            this.buttonLoeschen.Location = new System.Drawing.Point(52, 123);
+            this.buttonLoeschen.Name = "buttonLoeschen";
+            this.buttonLoeschen.Size = new System.Drawing.Size(75, 23);
+            this.buttonLoeschen.TabIndex = 12;
+            this.buttonLoeschen.Text = "Löschen";
+            this.buttonLoeschen.UseVisualStyleBackColor = true;
+            // 
             // UserControlUserVerwalten
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.buttonLoeschen);
+            this.Controls.Add(this.buttonUserSuchen);
             this.Controls.Add(this.labelBenutzerRolle);
             this.Controls.Add(this.buttonAbbrechen);
             this.Controls.Add(this.labelPasswort);
@@ -140,5 +163,7 @@
         private System.Windows.Forms.Label labelPasswort;
         private System.Windows.Forms.Button buttonAbbrechen;
         private System.Windows.Forms.Label labelBenutzerRolle;
+        private System.Windows.Forms.Button buttonUserSuchen;
+        private System.Windows.Forms.Button buttonLoeschen;
     }
 }

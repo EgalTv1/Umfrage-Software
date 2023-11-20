@@ -46,6 +46,9 @@
             this.radioButtonCustomAntwort6 = new System.Windows.Forms.RadioButton();
             this.radioButtonCustomAntwort3 = new System.Windows.Forms.RadioButton();
             this.textBoxCustomTextAntwort = new System.Windows.Forms.TextBox();
+            this.textBoxUmfragenName = new System.Windows.Forms.TextBox();
+            this.textBoxUmfragenBeschreibung = new System.Windows.Forms.TextBox();
+            this.textBoxAutor = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // buttonAbstimmen
@@ -82,7 +85,7 @@
             // labelUmfragenName
             // 
             this.labelUmfragenName.AutoSize = true;
-            this.labelUmfragenName.Location = new System.Drawing.Point(14, 10);
+            this.labelUmfragenName.Location = new System.Drawing.Point(14, 6);
             this.labelUmfragenName.Name = "labelUmfragenName";
             this.labelUmfragenName.Size = new System.Drawing.Size(81, 13);
             this.labelUmfragenName.TabIndex = 15;
@@ -92,7 +95,7 @@
             // 
             this.labelUmfragenBeschreibung.AutoEllipsis = true;
             this.labelUmfragenBeschreibung.AutoSize = true;
-            this.labelUmfragenBeschreibung.Location = new System.Drawing.Point(14, 39);
+            this.labelUmfragenBeschreibung.Location = new System.Drawing.Point(14, 32);
             this.labelUmfragenBeschreibung.MaximumSize = new System.Drawing.Size(300, 0);
             this.labelUmfragenBeschreibung.Name = "labelUmfragenBeschreibung";
             this.labelUmfragenBeschreibung.Size = new System.Drawing.Size(115, 13);
@@ -120,7 +123,7 @@
             // labelAutor
             // 
             this.labelAutor.AutoSize = true;
-            this.labelAutor.Location = new System.Drawing.Point(14, 63);
+            this.labelAutor.Location = new System.Drawing.Point(14, 58);
             this.labelAutor.Name = "labelAutor";
             this.labelAutor.Size = new System.Drawing.Size(32, 13);
             this.labelAutor.TabIndex = 10;
@@ -243,10 +246,37 @@
             this.textBoxCustomTextAntwort.TabIndex = 28;
             this.textBoxCustomTextAntwort.Visible = false;
             // 
+            // textBoxUmfragenName
+            // 
+            this.textBoxUmfragenName.Location = new System.Drawing.Point(172, 3);
+            this.textBoxUmfragenName.Name = "textBoxUmfragenName";
+            this.textBoxUmfragenName.ReadOnly = true;
+            this.textBoxUmfragenName.Size = new System.Drawing.Size(165, 20);
+            this.textBoxUmfragenName.TabIndex = 29;
+            // 
+            // textBoxUmfragenBeschreibung
+            // 
+            this.textBoxUmfragenBeschreibung.Location = new System.Drawing.Point(172, 29);
+            this.textBoxUmfragenBeschreibung.Name = "textBoxUmfragenBeschreibung";
+            this.textBoxUmfragenBeschreibung.ReadOnly = true;
+            this.textBoxUmfragenBeschreibung.Size = new System.Drawing.Size(165, 20);
+            this.textBoxUmfragenBeschreibung.TabIndex = 30;
+            // 
+            // textBoxAutor
+            // 
+            this.textBoxAutor.Location = new System.Drawing.Point(172, 55);
+            this.textBoxAutor.Name = "textBoxAutor";
+            this.textBoxAutor.ReadOnly = true;
+            this.textBoxAutor.Size = new System.Drawing.Size(165, 20);
+            this.textBoxAutor.TabIndex = 31;
+            // 
             // UserControlUmfrageVollUebersicht
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.textBoxAutor);
+            this.Controls.Add(this.textBoxUmfragenBeschreibung);
+            this.Controls.Add(this.textBoxUmfragenName);
             this.Controls.Add(this.textBoxCustomTextAntwort);
             this.Controls.Add(this.radioButtonCustomAntwort9);
             this.Controls.Add(this.radioButtonCustomAntwort6);
@@ -267,6 +297,7 @@
             this.Controls.Add(this.labelAutor);
             this.Name = "UserControlUmfrageVollUebersicht";
             this.Size = new System.Drawing.Size(1177, 611);
+            this.Load += new System.EventHandler(this.UserControlUmfrageVollUebersicht_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -292,5 +323,8 @@
         private System.Windows.Forms.RadioButton radioButtonCustomAntwort6;
         private System.Windows.Forms.RadioButton radioButtonCustomAntwort3;
         private System.Windows.Forms.TextBox textBoxCustomTextAntwort;
+        private System.Windows.Forms.TextBox textBoxUmfragenName;
+        private System.Windows.Forms.TextBox textBoxUmfragenBeschreibung;
+        private System.Windows.Forms.TextBox textBoxAutor;
     }
 }

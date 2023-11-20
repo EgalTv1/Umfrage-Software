@@ -16,5 +16,10 @@ namespace UmfrageSoftware
         {
             InitializeComponent();
         }
+
+        private void UserControlUmfrageVollUebersicht_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

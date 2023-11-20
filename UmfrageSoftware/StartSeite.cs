@@ -29,20 +29,15 @@ namespace UmfrageSoftware
         private void StartSeite_Load(object sender, EventArgs e)
         {
             labelUserName.Text = Benutzer.Benutzername;
-            if (Benutzer.Benutzertyp == User.Benutzertypen.Benutzer)
-            {
-                buttonBenutzerVerwalten.Enabled = false;
-                buttonViewUmfrageErstellen.Enabled = true;
-            }
-            if (Benutzer.Benutzertyp == User.Benutzertypen.Admin)
-            {
-                buttonBenutzerVerwalten.Enabled = true;
-            }
-            else
+            if (Benutzer.Benutzertyp == User.Benutzertypen.Gast)
             {
                 //Gast du opfer
                 buttonViewUmfrageErstellen.Enabled = false;
-                buttonBenutzerVerwalten.Enabled = false;
+            }           
+
+            if (Benutzer.Benutzertyp == User.Benutzertypen.Admin)
+            {
+                buttonBenutzerVerwalten.Enabled = true;
             }
         }
 
