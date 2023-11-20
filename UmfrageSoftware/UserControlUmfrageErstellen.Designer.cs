@@ -1,6 +1,6 @@
 ﻿namespace UmfrageSoftware
 {
-    partial class UserControllUmfrageErstellen
+    partial class UserControlUmfrageErstellen
     {
         /// <summary> 
         /// Erforderliche Designervariable.

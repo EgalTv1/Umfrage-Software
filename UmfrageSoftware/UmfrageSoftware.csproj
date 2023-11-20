@@ -52,23 +52,11 @@
     <Compile Include="StartSeite.Designer.cs">
       <DependentUpon>StartSeite.cs</DependentUpon>
     </Compile>
-    <Compile Include="UmfrageVollUebersicht.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UmfrageVollUebersicht.Designer.cs">
-      <DependentUpon>UmfrageVollUebersicht.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UmfrageArchiv.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UmfrageArchiv.Designer.cs">
-      <DependentUpon>UmfrageArchiv.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControllUmfrageErstellen.cs">
+    <Compile Include="UserControlUmfrageErstellen.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControllUmfrageErstellen.Designer.cs">
-      <DependentUpon>UserControllUmfrageErstellen.cs</DependentUpon>
+    <Compile Include="UserControlUmfrageErstellen.Designer.cs">
+      <DependentUpon>UserControlUmfrageErstellen.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlUmfrageVollUebersicht.cs">
       <SubType>UserControl</SubType>
@@ -83,11 +71,11 @@
     <Compile Include="UserControlUmfrageArchiv.Designer.cs">
       <DependentUpon>UserControlUmfrageArchiv.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewUserVerwalten.cs">
-      <SubType>Form</SubType>
+    <Compile Include="UserControlUserVerwalten.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ViewUserVerwalten.Designer.cs">
-      <DependentUpon>ViewUserVerwalten.cs</DependentUpon>
+    <Compile Include="UserControlUserVerwalten.Designer.cs">
+      <DependentUpon>UserControlUserVerwalten.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewAnmeldeScreen.cs">
       <SubType>Form</SubType>
@@ -100,9 +88,6 @@
     <EmbeddedResource Include="StartSeite.resx">
       <DependentUpon>StartSeite.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UmfrageArchiv.resx">
-      <DependentUpon>UmfrageArchiv.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -112,8 +97,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UmfrageVollUebersicht.resx">
-      <DependentUpon>UmfrageVollUebersicht.cs</DependentUpon>
+    <EmbeddedResource Include="UserControlUmfrageArchiv.resx">
+      <DependentUpon>UserControlUmfrageArchiv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlUmfrageVollUebersicht.resx">
+      <DependentUpon>UserControlUmfrageVollUebersicht.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlUserVerwalten.resx">
+      <DependentUpon>UserControlUserVerwalten.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

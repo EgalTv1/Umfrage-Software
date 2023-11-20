@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace UmfrageSoftware
 {
-    public partial class UmfrageArchiv : Form
+    public partial class UserControlUserVerwalten : UserControl
     {
-        public UmfrageArchiv()
+        public UserControlUserVerwalten()
         {
             InitializeComponent();
-        }
-
-        private void UmfrageArchiv_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

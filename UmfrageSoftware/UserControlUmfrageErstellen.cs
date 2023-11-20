@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace UmfrageSoftware
 {
-    public partial class UmfrageVollUebersicht : Form
+    public partial class UserControlUmfrageErstellen : UserControl
     {
-        public UmfrageVollUebersicht()
+        public UserControlUmfrageErstellen()
         {
             InitializeComponent();
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void UmfrageVollUebersicht_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
