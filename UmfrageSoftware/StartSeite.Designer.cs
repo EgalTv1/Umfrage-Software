@@ -92,6 +92,7 @@
             this.buttonAbmelden.TabIndex = 7;
             this.buttonAbmelden.Text = "Abmelden";
             this.buttonAbmelden.UseVisualStyleBackColor = true;
+            this.buttonAbmelden.Click += new System.EventHandler(this.buttonAbmelden_Click);
             // 
             // labelUserName
             // 

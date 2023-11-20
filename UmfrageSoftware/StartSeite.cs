@@ -12,23 +12,31 @@ namespace UmfrageSoftware
 {
     public partial class StartSeite : Form
     {
+
+        //StartSeite soll einen User besitzen
+        //User static machen?
+        static User Benutzer;
+
         public StartSeite()
         {
             InitializeComponent();
         }
+        internal StartSeite(User benutzer)
+        {
+            InitializeComponent();
+            Benutzer = benutzer;
+        }
         private void StartSeite_Load(object sender, EventArgs e)
         {
-            User Benutzer = new User();
-
             labelUserName.Text = Benutzer.Benutzername;
-            //if (User.Benutzertyp != User.Benutzertyp.Admin)
-            //{
-            buttonBenutzerVerwalten.Enabled = false;
-            //}
-            //else 
-            //{
-            //    buttonBenutzerVerwalten.Enabled = true;
-            //}
+            if (Benutzer.Benutzertyp != User.Benutzertypen.Admin)
+            {
+                buttonBenutzerVerwalten.Enabled = false;
+            }
+            else
+            {
+                buttonBenutzerVerwalten.Enabled = true;
+            }
         }
 
         private void buttonViewUmfragenUebersicht_Click(object sender, EventArgs e)
@@ -57,6 +65,13 @@ namespace UmfrageSoftware
             panelViews.Controls.Clear();
             //UserControlBenutzerVerwalten userControlBenutzerVerwalten = new UserControlBenutzerVerwalten();
             //panelViews.Controls.Add(userControlBenutzerVerwalten);
+        }
+
+        private void buttonAbmelden_Click(object sender, EventArgs e)
+        {
+            ViewAnmeldeScreen viewAnmeldeScreen = new ViewAnmeldeScreen();
+            viewAnmeldeScreen.Show();
+            //thisView.close();
         }
     }
 }
