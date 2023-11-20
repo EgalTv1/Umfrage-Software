@@ -75,6 +75,7 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Location = new System.Drawing.Point(153, 34);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1177, 611);
@@ -82,6 +83,7 @@
             // 
             // buttonAbmelden
             // 
+            this.buttonAbmelden.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAbmelden.Location = new System.Drawing.Point(1255, 10);
             this.buttonAbmelden.Name = "buttonAbmelden";
             this.buttonAbmelden.Size = new System.Drawing.Size(75, 23);
@@ -91,6 +93,7 @@
             // 
             // labelUserName
             // 
+            this.labelUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelUserName.AutoSize = true;
             this.labelUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.labelUserName.Location = new System.Drawing.Point(1201, 13);
