@@ -62,8 +62,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ModelUserVerwalten.cs" />
-    <Compile Include="PasswortHasher.cs" />
     <Compile Include="StartSeite.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +101,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MessageBoxFormUmfrageErstellen.resx">
+      <DependentUpon>MessageBoxFormUmfrageErstellen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StartSeite.resx">
       <DependentUpon>StartSeite.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,7 +128,6 @@
     <EmbeddedResource Include="UserControlUserVerwalten.resx">
       <DependentUpon>UserControlUserVerwalten.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

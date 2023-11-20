@@ -32,6 +32,8 @@
             this.textBoxPasswort = new System.Windows.Forms.TextBox();
             this.buttonAnmelden = new System.Windows.Forms.Button();
             this.buttonGastLogin = new System.Windows.Forms.Button();
+            this.labelBenutzername = new System.Windows.Forms.Label();
+            this.labelPasswort = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBoxUsername
@@ -40,15 +42,13 @@
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(693, 20);
             this.textBoxUsername.TabIndex = 0;
-            this.textBoxUsername.Text = "Username";
             // 
             // textBoxPasswort
             // 
-            this.textBoxPasswort.Location = new System.Drawing.Point(46, 153);
+            this.textBoxPasswort.Location = new System.Drawing.Point(46, 164);
             this.textBoxPasswort.Name = "textBoxPasswort";
             this.textBoxPasswort.Size = new System.Drawing.Size(693, 20);
             this.textBoxPasswort.TabIndex = 1;
-            this.textBoxPasswort.Text = "Passwort";
             // 
             // buttonAnmelden
             // 
@@ -70,11 +70,31 @@
             this.buttonGastLogin.UseVisualStyleBackColor = true;
             this.buttonGastLogin.Click += new System.EventHandler(this.buttonGastLogin_Click);
             // 
+            // labelBenutzername
+            // 
+            this.labelBenutzername.AutoSize = true;
+            this.labelBenutzername.Location = new System.Drawing.Point(46, 102);
+            this.labelBenutzername.Name = "labelBenutzername";
+            this.labelBenutzername.Size = new System.Drawing.Size(75, 13);
+            this.labelBenutzername.TabIndex = 4;
+            this.labelBenutzername.Text = "Benutzername";
+            // 
+            // labelPasswort
+            // 
+            this.labelPasswort.AutoSize = true;
+            this.labelPasswort.Location = new System.Drawing.Point(46, 148);
+            this.labelPasswort.Name = "labelPasswort";
+            this.labelPasswort.Size = new System.Drawing.Size(50, 13);
+            this.labelPasswort.TabIndex = 5;
+            this.labelPasswort.Text = "Passwort";
+            // 
             // ViewAnmeldeScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelPasswort);
+            this.Controls.Add(this.labelBenutzername);
             this.Controls.Add(this.buttonGastLogin);
             this.Controls.Add(this.buttonAnmelden);
             this.Controls.Add(this.textBoxPasswort);
@@ -93,6 +113,8 @@
         private System.Windows.Forms.TextBox textBoxPasswort;
         private System.Windows.Forms.Button buttonAnmelden;
         private System.Windows.Forms.Button buttonGastLogin;
+        private System.Windows.Forms.Label labelBenutzername;
+        private System.Windows.Forms.Label labelPasswort;
     }
 }
 

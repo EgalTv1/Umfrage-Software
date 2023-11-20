@@ -56,6 +56,7 @@
             this.labelCustomAntwort4 = new System.Windows.Forms.Label();
             this.labelCustomAntwort5 = new System.Windows.Forms.Label();
             this.labelCustomAntwort1 = new System.Windows.Forms.Label();
+            this.comboBoxAnzahlAntworten = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // buttonSpeichern
@@ -243,6 +244,7 @@
             this.labelCustomAntwort9.Size = new System.Drawing.Size(93, 13);
             this.labelCustomAntwort9.TabIndex = 28;
             this.labelCustomAntwort9.Text = "Custom Antwort 9:";
+            this.labelCustomAntwort9.Visible = false;
             // 
             // labelCustomAntwort8
             // 
@@ -252,6 +254,7 @@
             this.labelCustomAntwort8.Size = new System.Drawing.Size(93, 13);
             this.labelCustomAntwort8.TabIndex = 29;
             this.labelCustomAntwort8.Text = "Custom Antwort 8:";
+            this.labelCustomAntwort8.Visible = false;
             // 
             // labelCustomAntwort6
             // 
@@ -261,6 +264,7 @@
             this.labelCustomAntwort6.Size = new System.Drawing.Size(93, 13);
             this.labelCustomAntwort6.TabIndex = 31;
             this.labelCustomAntwort6.Text = "Custom Antwort 6:";
+            this.labelCustomAntwort6.Visible = false;
             // 
             // labelCustomAntwort7
             // 
@@ -270,6 +274,7 @@
             this.labelCustomAntwort7.Size = new System.Drawing.Size(93, 13);
             this.labelCustomAntwort7.TabIndex = 30;
             this.labelCustomAntwort7.Text = "Custom Antwort 7:";
+            this.labelCustomAntwort7.Visible = false;
             // 
             // labelCustomAntwort2
             // 
@@ -279,6 +284,7 @@
             this.labelCustomAntwort2.Size = new System.Drawing.Size(93, 13);
             this.labelCustomAntwort2.TabIndex = 35;
             this.labelCustomAntwort2.Text = "Custom Antwort 2:";
+            this.labelCustomAntwort2.Visible = false;
             // 
             // labelCustomAntwort3
             // 
@@ -288,6 +294,7 @@
             this.labelCustomAntwort3.Size = new System.Drawing.Size(93, 13);
             this.labelCustomAntwort3.TabIndex = 34;
             this.labelCustomAntwort3.Text = "Custom Antwort 3:";
+            this.labelCustomAntwort3.Visible = false;
             // 
             // labelCustomAntwort4
             // 
@@ -297,6 +304,7 @@
             this.labelCustomAntwort4.Size = new System.Drawing.Size(93, 13);
             this.labelCustomAntwort4.TabIndex = 33;
             this.labelCustomAntwort4.Text = "Custom Antwort 4:";
+            this.labelCustomAntwort4.Visible = false;
             // 
             // labelCustomAntwort5
             // 
@@ -306,6 +314,7 @@
             this.labelCustomAntwort5.Size = new System.Drawing.Size(93, 13);
             this.labelCustomAntwort5.TabIndex = 32;
             this.labelCustomAntwort5.Text = "Custom Antwort 5:";
+            this.labelCustomAntwort5.Visible = false;
             // 
             // labelCustomAntwort1
             // 
@@ -315,11 +324,35 @@
             this.labelCustomAntwort1.Size = new System.Drawing.Size(93, 13);
             this.labelCustomAntwort1.TabIndex = 36;
             this.labelCustomAntwort1.Text = "Custom Antwort 1:";
+            this.labelCustomAntwort1.Visible = false;
+            // 
+            // comboBoxAnzahlAntworten
+            // 
+            this.comboBoxAnzahlAntworten.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxAnzahlAntworten.FormattingEnabled = true;
+            this.comboBoxAnzahlAntworten.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"});
+            this.comboBoxAnzahlAntworten.Location = new System.Drawing.Point(470, 74);
+            this.comboBoxAnzahlAntworten.Name = "comboBoxAnzahlAntworten";
+            this.comboBoxAnzahlAntworten.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxAnzahlAntworten.TabIndex = 37;
+            this.comboBoxAnzahlAntworten.Visible = false;
+            this.comboBoxAnzahlAntworten.SelectedIndexChanged += new System.EventHandler(this.comboBoxAnzahlAntworten_SelectedIndexChanged);
             // 
             // UserControlUmfrageErstellen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.comboBoxAnzahlAntworten);
             this.Controls.Add(this.labelCustomAntwort1);
             this.Controls.Add(this.labelCustomAntwort2);
             this.Controls.Add(this.labelCustomAntwort3);
@@ -385,5 +418,6 @@
         private System.Windows.Forms.Label labelCustomAntwort4;
         private System.Windows.Forms.Label labelCustomAntwort5;
         private System.Windows.Forms.Label labelCustomAntwort1;
+        private System.Windows.Forms.ComboBox comboBoxAnzahlAntworten;
     }
 }
