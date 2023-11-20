@@ -60,7 +60,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    </EmbeddedResource>
     <EmbeddedResource Include="UmfrageArchiv.resx">
       <DependentUpon>UmfrageArchiv.cs</DependentUpon>
     </EmbeddedResource>
