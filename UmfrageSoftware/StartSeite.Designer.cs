@@ -62,6 +62,7 @@
             // buttonBenutzerVerwalten
             // 
             this.buttonBenutzerVerwalten.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.buttonBenutzerVerwalten.Enabled = false;
             this.buttonBenutzerVerwalten.Location = new System.Drawing.Point(5, 134);
             this.buttonBenutzerVerwalten.Name = "buttonBenutzerVerwalten";
             this.buttonBenutzerVerwalten.Size = new System.Drawing.Size(142, 23);

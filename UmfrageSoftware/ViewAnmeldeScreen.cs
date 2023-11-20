@@ -32,14 +32,14 @@ namespace UmfrageSoftware
             User root = new User("root","",User.Benutzertypen.Admin);
 
             //guck in Datenbank nach ob es den Benutzer schon gibt
-            //falls ja, erstelle neuen Benutzer
+            //falls ja, erstelle neuen Benutzer vom Typ User
             
             //conn
             //if(ModelAnmelden.Anmelden(textBoxUsername.text, textBoxPasswort.text))
             //Magic
             //return Benutzertyp (somehow)
 
-            User loginUser = new User(textBoxUsername.Text,textBoxPasswort.Text,User.Benutzertypen.Benutzer);
+            //User loginUser = new User(textBoxUsername.Text,textBoxPasswort.Text,User.Benutzertypen.Benutzer);
             StartSeite hartSeite = new StartSeite(root);
             
             this.Hide();
