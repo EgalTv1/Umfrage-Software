@@ -55,9 +55,6 @@
     <Compile Include="UserControlUmfrageErstellen.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlUmfrageErstellen.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="UserControlUmfrageErstellen.Designer.cs">
       <DependentUpon>UserControlUmfrageErstellen.cs</DependentUpon>
     </Compile>
@@ -103,14 +100,14 @@
     <EmbeddedResource Include="UserControlUmfrageArchiv.resx">
       <DependentUpon>UserControlUmfrageArchiv.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControlUmfrageErstellen.resx">
+      <DependentUpon>UserControlUmfrageErstellen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControlUmfrageVollUebersicht.resx">
       <DependentUpon>UserControlUmfrageVollUebersicht.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlUserVerwalten.resx">
       <DependentUpon>UserControlUserVerwalten.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControlUmfrageErstellen.resx">
-      <DependentUpon>UserControlUmfrageErstellen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
