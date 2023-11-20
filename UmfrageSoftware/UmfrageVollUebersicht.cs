@@ -24,7 +24,6 @@ namespace UmfrageSoftware
 
         private void UmfrageVollUebersicht_Load(object sender, EventArgs e)
         {
-
         }
     }
 }
