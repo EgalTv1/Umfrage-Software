@@ -70,6 +70,18 @@
     <Compile Include="UmfrageArchiv.Designer.cs">
       <DependentUpon>UmfrageArchiv.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewUserVerwalten.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewUserVerwalten.Designer.cs">
+      <DependentUpon>ViewUserVerwalten.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAnmeldeScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewAnmeldeScreen.Designer.cs">
+      <DependentUpon>ViewAnmeldeScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="StartSeite.resx">
