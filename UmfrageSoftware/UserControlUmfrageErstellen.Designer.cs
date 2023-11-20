@@ -38,6 +38,24 @@
             this.textBoxUmfrageBeschreibung = new System.Windows.Forms.TextBox();
             this.textBoxUmfrageName = new System.Windows.Forms.TextBox();
             this.radioButtonTextAntwort = new System.Windows.Forms.RadioButton();
+            this.textBoxCustomAntwort1 = new System.Windows.Forms.TextBox();
+            this.textBoxCustomAntwort2 = new System.Windows.Forms.TextBox();
+            this.textBoxCustomAntwort3 = new System.Windows.Forms.TextBox();
+            this.textBoxCustomAntwort6 = new System.Windows.Forms.TextBox();
+            this.textBoxCustomAntwort5 = new System.Windows.Forms.TextBox();
+            this.textBoxCustomAntwort4 = new System.Windows.Forms.TextBox();
+            this.textBoxCustomAntwort9 = new System.Windows.Forms.TextBox();
+            this.textBoxCustomAntwort8 = new System.Windows.Forms.TextBox();
+            this.textBoxCustomAntwort7 = new System.Windows.Forms.TextBox();
+            this.labelCustomAntwort9 = new System.Windows.Forms.Label();
+            this.labelCustomAntwort8 = new System.Windows.Forms.Label();
+            this.labelCustomAntwort6 = new System.Windows.Forms.Label();
+            this.labelCustomAntwort7 = new System.Windows.Forms.Label();
+            this.labelCustomAntwort2 = new System.Windows.Forms.Label();
+            this.labelCustomAntwort3 = new System.Windows.Forms.Label();
+            this.labelCustomAntwort4 = new System.Windows.Forms.Label();
+            this.labelCustomAntwort5 = new System.Windows.Forms.Label();
+            this.labelCustomAntwort1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonSpeichern
@@ -49,6 +67,7 @@
             this.buttonSpeichern.TabIndex = 17;
             this.buttonSpeichern.Text = "Speichern";
             this.buttonSpeichern.UseVisualStyleBackColor = true;
+            this.buttonSpeichern.Click += new System.EventHandler(this.buttonSpeichern_Click);
             // 
             // buttonAbbrechen
             // 
@@ -59,6 +78,7 @@
             this.buttonAbbrechen.TabIndex = 16;
             this.buttonAbbrechen.Text = "Abbrechen";
             this.buttonAbbrechen.UseVisualStyleBackColor = true;
+            this.buttonAbbrechen.Click += new System.EventHandler(this.buttonAbbrechen_Click);
             // 
             // radioButtonCustomAntworten
             // 
@@ -69,6 +89,7 @@
             this.radioButtonCustomAntworten.TabIndex = 15;
             this.radioButtonCustomAntworten.Text = "Custom Antworten (1-9)";
             this.radioButtonCustomAntworten.UseVisualStyleBackColor = true;
+            this.radioButtonCustomAntworten.CheckedChanged += new System.EventHandler(this.radioButtonCustomAntworten_CheckedChanged);
             // 
             // radioButtonJaNein
             // 
@@ -81,6 +102,7 @@
             this.radioButtonJaNein.TabStop = true;
             this.radioButtonJaNein.Text = "Ja/Nein Antworten";
             this.radioButtonJaNein.UseVisualStyleBackColor = true;
+            this.radioButtonJaNein.CheckedChanged += new System.EventHandler(this.radioButtonJaNein_CheckedChanged);
             // 
             // label3
             // 
@@ -122,6 +144,7 @@
             // textBoxUmfrageName
             // 
             this.textBoxUmfrageName.Location = new System.Drawing.Point(597, 3);
+            this.textBoxUmfrageName.MaxLength = 255;
             this.textBoxUmfrageName.Name = "textBoxUmfrageName";
             this.textBoxUmfrageName.Size = new System.Drawing.Size(115, 20);
             this.textBoxUmfrageName.TabIndex = 9;
@@ -135,11 +158,186 @@
             this.radioButtonTextAntwort.TabIndex = 18;
             this.radioButtonTextAntwort.Text = "Text Antwort";
             this.radioButtonTextAntwort.UseVisualStyleBackColor = true;
+            this.radioButtonTextAntwort.CheckedChanged += new System.EventHandler(this.radioButtonTextAntwort_CheckedChanged);
             // 
-            // UserControllUmfrageErstellen
+            // textBoxCustomAntwort1
+            // 
+            this.textBoxCustomAntwort1.Location = new System.Drawing.Point(481, 197);
+            this.textBoxCustomAntwort1.MaxLength = 255;
+            this.textBoxCustomAntwort1.Name = "textBoxCustomAntwort1";
+            this.textBoxCustomAntwort1.Size = new System.Drawing.Size(251, 20);
+            this.textBoxCustomAntwort1.TabIndex = 19;
+            this.textBoxCustomAntwort1.Visible = false;
+            // 
+            // textBoxCustomAntwort2
+            // 
+            this.textBoxCustomAntwort2.Location = new System.Drawing.Point(481, 223);
+            this.textBoxCustomAntwort2.MaxLength = 255;
+            this.textBoxCustomAntwort2.Name = "textBoxCustomAntwort2";
+            this.textBoxCustomAntwort2.Size = new System.Drawing.Size(251, 20);
+            this.textBoxCustomAntwort2.TabIndex = 20;
+            this.textBoxCustomAntwort2.Visible = false;
+            // 
+            // textBoxCustomAntwort3
+            // 
+            this.textBoxCustomAntwort3.Location = new System.Drawing.Point(481, 249);
+            this.textBoxCustomAntwort3.Name = "textBoxCustomAntwort3";
+            this.textBoxCustomAntwort3.Size = new System.Drawing.Size(251, 20);
+            this.textBoxCustomAntwort3.TabIndex = 21;
+            this.textBoxCustomAntwort3.Visible = false;
+            // 
+            // textBoxCustomAntwort6
+            // 
+            this.textBoxCustomAntwort6.Location = new System.Drawing.Point(481, 327);
+            this.textBoxCustomAntwort6.Name = "textBoxCustomAntwort6";
+            this.textBoxCustomAntwort6.Size = new System.Drawing.Size(251, 20);
+            this.textBoxCustomAntwort6.TabIndex = 24;
+            this.textBoxCustomAntwort6.Visible = false;
+            // 
+            // textBoxCustomAntwort5
+            // 
+            this.textBoxCustomAntwort5.Location = new System.Drawing.Point(481, 301);
+            this.textBoxCustomAntwort5.Name = "textBoxCustomAntwort5";
+            this.textBoxCustomAntwort5.Size = new System.Drawing.Size(251, 20);
+            this.textBoxCustomAntwort5.TabIndex = 23;
+            this.textBoxCustomAntwort5.Visible = false;
+            // 
+            // textBoxCustomAntwort4
+            // 
+            this.textBoxCustomAntwort4.Location = new System.Drawing.Point(481, 275);
+            this.textBoxCustomAntwort4.Name = "textBoxCustomAntwort4";
+            this.textBoxCustomAntwort4.Size = new System.Drawing.Size(251, 20);
+            this.textBoxCustomAntwort4.TabIndex = 22;
+            this.textBoxCustomAntwort4.Visible = false;
+            // 
+            // textBoxCustomAntwort9
+            // 
+            this.textBoxCustomAntwort9.Location = new System.Drawing.Point(481, 405);
+            this.textBoxCustomAntwort9.MaxLength = 255;
+            this.textBoxCustomAntwort9.Name = "textBoxCustomAntwort9";
+            this.textBoxCustomAntwort9.Size = new System.Drawing.Size(251, 20);
+            this.textBoxCustomAntwort9.TabIndex = 27;
+            this.textBoxCustomAntwort9.Visible = false;
+            // 
+            // textBoxCustomAntwort8
+            // 
+            this.textBoxCustomAntwort8.Location = new System.Drawing.Point(481, 379);
+            this.textBoxCustomAntwort8.Name = "textBoxCustomAntwort8";
+            this.textBoxCustomAntwort8.Size = new System.Drawing.Size(251, 20);
+            this.textBoxCustomAntwort8.TabIndex = 26;
+            this.textBoxCustomAntwort8.Visible = false;
+            // 
+            // textBoxCustomAntwort7
+            // 
+            this.textBoxCustomAntwort7.Location = new System.Drawing.Point(481, 353);
+            this.textBoxCustomAntwort7.Name = "textBoxCustomAntwort7";
+            this.textBoxCustomAntwort7.Size = new System.Drawing.Size(251, 20);
+            this.textBoxCustomAntwort7.TabIndex = 25;
+            this.textBoxCustomAntwort7.Visible = false;
+            // 
+            // labelCustomAntwort9
+            // 
+            this.labelCustomAntwort9.AutoSize = true;
+            this.labelCustomAntwort9.Location = new System.Drawing.Point(385, 408);
+            this.labelCustomAntwort9.Name = "labelCustomAntwort9";
+            this.labelCustomAntwort9.Size = new System.Drawing.Size(93, 13);
+            this.labelCustomAntwort9.TabIndex = 28;
+            this.labelCustomAntwort9.Text = "Custom Antwort 9:";
+            // 
+            // labelCustomAntwort8
+            // 
+            this.labelCustomAntwort8.AutoSize = true;
+            this.labelCustomAntwort8.Location = new System.Drawing.Point(385, 382);
+            this.labelCustomAntwort8.Name = "labelCustomAntwort8";
+            this.labelCustomAntwort8.Size = new System.Drawing.Size(93, 13);
+            this.labelCustomAntwort8.TabIndex = 29;
+            this.labelCustomAntwort8.Text = "Custom Antwort 8:";
+            // 
+            // labelCustomAntwort6
+            // 
+            this.labelCustomAntwort6.AutoSize = true;
+            this.labelCustomAntwort6.Location = new System.Drawing.Point(385, 327);
+            this.labelCustomAntwort6.Name = "labelCustomAntwort6";
+            this.labelCustomAntwort6.Size = new System.Drawing.Size(93, 13);
+            this.labelCustomAntwort6.TabIndex = 31;
+            this.labelCustomAntwort6.Text = "Custom Antwort 6:";
+            // 
+            // labelCustomAntwort7
+            // 
+            this.labelCustomAntwort7.AutoSize = true;
+            this.labelCustomAntwort7.Location = new System.Drawing.Point(385, 353);
+            this.labelCustomAntwort7.Name = "labelCustomAntwort7";
+            this.labelCustomAntwort7.Size = new System.Drawing.Size(93, 13);
+            this.labelCustomAntwort7.TabIndex = 30;
+            this.labelCustomAntwort7.Text = "Custom Antwort 7:";
+            // 
+            // labelCustomAntwort2
+            // 
+            this.labelCustomAntwort2.AutoSize = true;
+            this.labelCustomAntwort2.Location = new System.Drawing.Point(385, 230);
+            this.labelCustomAntwort2.Name = "labelCustomAntwort2";
+            this.labelCustomAntwort2.Size = new System.Drawing.Size(93, 13);
+            this.labelCustomAntwort2.TabIndex = 35;
+            this.labelCustomAntwort2.Text = "Custom Antwort 2:";
+            // 
+            // labelCustomAntwort3
+            // 
+            this.labelCustomAntwort3.AutoSize = true;
+            this.labelCustomAntwort3.Location = new System.Drawing.Point(385, 256);
+            this.labelCustomAntwort3.Name = "labelCustomAntwort3";
+            this.labelCustomAntwort3.Size = new System.Drawing.Size(93, 13);
+            this.labelCustomAntwort3.TabIndex = 34;
+            this.labelCustomAntwort3.Text = "Custom Antwort 3:";
+            // 
+            // labelCustomAntwort4
+            // 
+            this.labelCustomAntwort4.AutoSize = true;
+            this.labelCustomAntwort4.Location = new System.Drawing.Point(385, 278);
+            this.labelCustomAntwort4.Name = "labelCustomAntwort4";
+            this.labelCustomAntwort4.Size = new System.Drawing.Size(93, 13);
+            this.labelCustomAntwort4.TabIndex = 33;
+            this.labelCustomAntwort4.Text = "Custom Antwort 4:";
+            // 
+            // labelCustomAntwort5
+            // 
+            this.labelCustomAntwort5.AutoSize = true;
+            this.labelCustomAntwort5.Location = new System.Drawing.Point(385, 304);
+            this.labelCustomAntwort5.Name = "labelCustomAntwort5";
+            this.labelCustomAntwort5.Size = new System.Drawing.Size(93, 13);
+            this.labelCustomAntwort5.TabIndex = 32;
+            this.labelCustomAntwort5.Text = "Custom Antwort 5:";
+            // 
+            // labelCustomAntwort1
+            // 
+            this.labelCustomAntwort1.AutoSize = true;
+            this.labelCustomAntwort1.Location = new System.Drawing.Point(385, 204);
+            this.labelCustomAntwort1.Name = "labelCustomAntwort1";
+            this.labelCustomAntwort1.Size = new System.Drawing.Size(93, 13);
+            this.labelCustomAntwort1.TabIndex = 36;
+            this.labelCustomAntwort1.Text = "Custom Antwort 1:";
+            // 
+            // UserControlUmfrageErstellen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.labelCustomAntwort1);
+            this.Controls.Add(this.labelCustomAntwort2);
+            this.Controls.Add(this.labelCustomAntwort3);
+            this.Controls.Add(this.labelCustomAntwort4);
+            this.Controls.Add(this.labelCustomAntwort5);
+            this.Controls.Add(this.labelCustomAntwort6);
+            this.Controls.Add(this.labelCustomAntwort7);
+            this.Controls.Add(this.labelCustomAntwort8);
+            this.Controls.Add(this.labelCustomAntwort9);
+            this.Controls.Add(this.textBoxCustomAntwort9);
+            this.Controls.Add(this.textBoxCustomAntwort8);
+            this.Controls.Add(this.textBoxCustomAntwort7);
+            this.Controls.Add(this.textBoxCustomAntwort6);
+            this.Controls.Add(this.textBoxCustomAntwort5);
+            this.Controls.Add(this.textBoxCustomAntwort4);
+            this.Controls.Add(this.textBoxCustomAntwort3);
+            this.Controls.Add(this.textBoxCustomAntwort2);
+            this.Controls.Add(this.textBoxCustomAntwort1);
             this.Controls.Add(this.radioButtonTextAntwort);
             this.Controls.Add(this.buttonSpeichern);
             this.Controls.Add(this.buttonAbbrechen);
@@ -150,7 +348,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxUmfrageBeschreibung);
             this.Controls.Add(this.textBoxUmfrageName);
-            this.Name = "UserControllUmfrageErstellen";
+            this.Name = "UserControlUmfrageErstellen";
             this.Size = new System.Drawing.Size(1177, 611);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -169,5 +367,23 @@
         private System.Windows.Forms.TextBox textBoxUmfrageBeschreibung;
         private System.Windows.Forms.TextBox textBoxUmfrageName;
         private System.Windows.Forms.RadioButton radioButtonTextAntwort;
+        private System.Windows.Forms.TextBox textBoxCustomAntwort1;
+        private System.Windows.Forms.TextBox textBoxCustomAntwort2;
+        private System.Windows.Forms.TextBox textBoxCustomAntwort3;
+        private System.Windows.Forms.TextBox textBoxCustomAntwort6;
+        private System.Windows.Forms.TextBox textBoxCustomAntwort5;
+        private System.Windows.Forms.TextBox textBoxCustomAntwort4;
+        private System.Windows.Forms.TextBox textBoxCustomAntwort9;
+        private System.Windows.Forms.TextBox textBoxCustomAntwort8;
+        private System.Windows.Forms.TextBox textBoxCustomAntwort7;
+        private System.Windows.Forms.Label labelCustomAntwort9;
+        private System.Windows.Forms.Label labelCustomAntwort8;
+        private System.Windows.Forms.Label labelCustomAntwort6;
+        private System.Windows.Forms.Label labelCustomAntwort7;
+        private System.Windows.Forms.Label labelCustomAntwort2;
+        private System.Windows.Forms.Label labelCustomAntwort3;
+        private System.Windows.Forms.Label labelCustomAntwort4;
+        private System.Windows.Forms.Label labelCustomAntwort5;
+        private System.Windows.Forms.Label labelCustomAntwort1;
     }
 }

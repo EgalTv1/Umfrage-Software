@@ -22,8 +22,8 @@ namespace UmfrageSoftware
             User Gast = new User("Gast","","Gast");
 
             StartSeite hartSeite = new StartSeite(Gast);
+            this.Hide();
             hartSeite.Show();
-            this.Close();
         }
 
         private void buttonAnmelden_Click(object sender, EventArgs e)
@@ -38,10 +38,12 @@ namespace UmfrageSoftware
             //if(ModelAnmelden.Anmelden(textBoxUsername.text, textBoxPasswort.text))
             //Magic
             //return Benutzertyp (somehow)
+
             User loginUser = new User(textBoxUsername.Text,textBoxPasswort.Text,User.Benutzertypen.Benutzer);
-            StartSeite hartSeite = new StartSeite(loginUser);
-            hartSeite.Show();
-            this.Close();
+            StartSeite hartSeite = new StartSeite(root);
+            
+            this.Hide();
+            hartSeite.ShowDialog();
         }
     }
 }

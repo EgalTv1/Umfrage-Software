@@ -49,8 +49,8 @@ namespace UmfrageSoftware
         private void buttonViewUmfrageErstellen_Click(object sender, EventArgs e)
         {
             panelViews.Controls.Clear();
-            //UserControlUmfrageErstellen userControlUmfrageErstellen = new UserControlUmfrageErstellen();
-            //panelViews.Controls.Add(userControlUmfrageErstellen);
+            UserControlUmfrageErstellen userControlUmfrageErstellen = new UserControlUmfrageErstellen();
+            panelViews.Controls.Add(userControlUmfrageErstellen);
         }
 
         private void buttonViewUmfragenArchiv_Click(object sender, EventArgs e)
@@ -71,7 +71,7 @@ namespace UmfrageSoftware
         {
             ViewAnmeldeScreen viewAnmeldeScreen = new ViewAnmeldeScreen();
             viewAnmeldeScreen.Show();
-            //thisView.close();
+            this.Hide();
         }
     }
 }

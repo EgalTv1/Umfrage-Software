@@ -39,6 +39,7 @@
             // 
             // buttonViewUmfragenUebersicht
             // 
+            this.buttonViewUmfragenUebersicht.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.buttonViewUmfragenUebersicht.Location = new System.Drawing.Point(5, 34);
             this.buttonViewUmfragenUebersicht.Name = "buttonViewUmfragenUebersicht";
             this.buttonViewUmfragenUebersicht.Size = new System.Drawing.Size(142, 23);
@@ -49,6 +50,7 @@
             // 
             // buttonViewUmfrageErstellen
             // 
+            this.buttonViewUmfrageErstellen.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.buttonViewUmfrageErstellen.Location = new System.Drawing.Point(5, 63);
             this.buttonViewUmfrageErstellen.Name = "buttonViewUmfrageErstellen";
             this.buttonViewUmfrageErstellen.Size = new System.Drawing.Size(142, 23);
@@ -59,6 +61,7 @@
             // 
             // buttonBenutzerVerwalten
             // 
+            this.buttonBenutzerVerwalten.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.buttonBenutzerVerwalten.Location = new System.Drawing.Point(5, 134);
             this.buttonBenutzerVerwalten.Name = "buttonBenutzerVerwalten";
             this.buttonBenutzerVerwalten.Size = new System.Drawing.Size(142, 23);
@@ -69,6 +72,7 @@
             // 
             // buttonViewUmfragenArchiv
             // 
+            this.buttonViewUmfragenArchiv.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.buttonViewUmfragenArchiv.Location = new System.Drawing.Point(5, 92);
             this.buttonViewUmfragenArchiv.Name = "buttonViewUmfragenArchiv";
             this.buttonViewUmfragenArchiv.Size = new System.Drawing.Size(142, 23);
@@ -79,6 +83,7 @@
             // 
             // panelViews
             // 
+            this.panelViews.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.panelViews.Location = new System.Drawing.Point(153, 34);
             this.panelViews.Name = "panelViews";
             this.panelViews.Size = new System.Drawing.Size(1177, 611);
