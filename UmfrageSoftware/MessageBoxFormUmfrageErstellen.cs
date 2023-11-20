@@ -10,21 +10,17 @@ using System.Windows.Forms;
 
 namespace UmfrageSoftware
 {
-    public partial class UserControlUserVerwalten : UserControl
+    public partial class MessageBoxFormUmfrageErstellen : Form
     {
-        public UserControlUserVerwalten()
+        public MessageBoxFormUmfrageErstellen()
         {
             InitializeComponent();
         }
 
-        private void buttonAbbrechen_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
-
-        private void buttonSpeichern_Click(object sender, EventArgs e)
+        private void buttonSend_Click(object sender, EventArgs e)
         {
 
+            this.Close();  
         }
     }
 }

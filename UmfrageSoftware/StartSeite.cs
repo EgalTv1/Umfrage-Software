@@ -29,21 +29,28 @@ namespace UmfrageSoftware
         private void StartSeite_Load(object sender, EventArgs e)
         {
             labelUserName.Text = Benutzer.Benutzername;
-            if (Benutzer.Benutzertyp != User.Benutzertypen.Admin)
+            if (Benutzer.Benutzertyp == User.Benutzertypen.Benutzer)
             {
                 buttonBenutzerVerwalten.Enabled = false;
+                buttonViewUmfrageErstellen.Enabled = true;
+            }
+            if (Benutzer.Benutzertyp == User.Benutzertypen.Admin)
+            {
+                buttonBenutzerVerwalten.Enabled = true;
             }
             else
             {
-                buttonBenutzerVerwalten.Enabled = true;
+                //Gast du opfer
+                buttonViewUmfrageErstellen.Enabled = false;
+                buttonBenutzerVerwalten.Enabled = false;
             }
         }
 
         private void buttonViewUmfragenUebersicht_Click(object sender, EventArgs e)
         {
             panelViews.Controls.Clear();
-            //UserControlUmfragenUebersicht userControlUmfragenUebersicht = new UserControlUmfragenUebersicht();
-            //panelViews.Controls.Add(userControlUmfragenUebersicht);
+            UserControlUmfrageVollUebersicht userControlUmfragenUebersicht = new UserControlUmfrageVollUebersicht();
+            panelViews.Controls.Add(userControlUmfragenUebersicht);
         }
 
         private void buttonViewUmfrageErstellen_Click(object sender, EventArgs e)
@@ -63,8 +70,8 @@ namespace UmfrageSoftware
         private void buttonBenutzerVerwalten_Click(object sender, EventArgs e)
         {
             panelViews.Controls.Clear();
-            //UserControlBenutzerVerwalten userControlBenutzerVerwalten = new UserControlBenutzerVerwalten();
-            //panelViews.Controls.Add(userControlBenutzerVerwalten);
+            UserControlUserVerwalten userControlBenutzerVerwalten = new UserControlUserVerwalten();
+            panelViews.Controls.Add(userControlBenutzerVerwalten);
         }
 
         private void buttonAbmelden_Click(object sender, EventArgs e)

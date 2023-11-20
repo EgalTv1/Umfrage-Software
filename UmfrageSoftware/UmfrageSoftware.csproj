@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MessageBoxFormUmfrageErstellen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageBoxFormUmfrageErstellen.Designer.cs">
+      <DependentUpon>MessageBoxFormUmfrageErstellen.cs</DependentUpon>
+    </Compile>
     <Compile Include="StartSeite.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MessageBoxFormUmfrageErstellen.resx">
+      <DependentUpon>MessageBoxFormUmfrageErstellen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StartSeite.resx">
       <DependentUpon>StartSeite.cs</DependentUpon>
     </EmbeddedResource>
@@ -108,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlUserVerwalten.resx">
       <DependentUpon>UserControlUserVerwalten.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewAnmeldeScreen.resx">
+      <DependentUpon>ViewAnmeldeScreen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
