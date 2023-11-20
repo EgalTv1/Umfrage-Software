@@ -28,27 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonSpeichern = new System.Windows.Forms.Button();
             this.buttonAbbrechen = new System.Windows.Forms.Button();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButtonCustomAntworten = new System.Windows.Forms.RadioButton();
+            this.radioButtonJaNein = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.textBoxUmfrageBeschreibung = new System.Windows.Forms.TextBox();
+            this.textBoxUmfrageName = new System.Windows.Forms.TextBox();
+            this.radioButtonTextAntwort = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
-            // button2
+            // buttonSpeichern
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button2.Location = new System.Drawing.Point(657, 154);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Speichern";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonSpeichern.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.buttonSpeichern.Location = new System.Drawing.Point(657, 154);
+            this.buttonSpeichern.Name = "buttonSpeichern";
+            this.buttonSpeichern.Size = new System.Drawing.Size(75, 23);
+            this.buttonSpeichern.TabIndex = 17;
+            this.buttonSpeichern.Text = "Speichern";
+            this.buttonSpeichern.UseVisualStyleBackColor = true;
             // 
             // buttonAbbrechen
             // 
@@ -60,27 +60,27 @@
             this.buttonAbbrechen.Text = "Abbrechen";
             this.buttonAbbrechen.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radioButtonCustomAntworten
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(597, 78);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(135, 17);
-            this.radioButton2.TabIndex = 15;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Custom Antworten (1-9)";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButtonCustomAntworten.AutoSize = true;
+            this.radioButtonCustomAntworten.Location = new System.Drawing.Point(597, 78);
+            this.radioButtonCustomAntworten.Name = "radioButtonCustomAntworten";
+            this.radioButtonCustomAntworten.Size = new System.Drawing.Size(135, 17);
+            this.radioButtonCustomAntworten.TabIndex = 15;
+            this.radioButtonCustomAntworten.Text = "Custom Antworten (1-9)";
+            this.radioButtonCustomAntworten.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // radioButtonJaNein
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(597, 55);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(114, 17);
-            this.radioButton1.TabIndex = 14;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Ja/Nein Antworten";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButtonJaNein.AutoSize = true;
+            this.radioButtonJaNein.Checked = true;
+            this.radioButtonJaNein.Location = new System.Drawing.Point(597, 55);
+            this.radioButtonJaNein.Name = "radioButtonJaNein";
+            this.radioButtonJaNein.Size = new System.Drawing.Size(114, 17);
+            this.radioButtonJaNein.TabIndex = 14;
+            this.radioButtonJaNein.TabStop = true;
+            this.radioButtonJaNein.Text = "Ja/Nein Antworten";
+            this.radioButtonJaNein.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -109,47 +109,47 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Umfrage Name";
             // 
-            // textBox2
+            // textBoxUmfrageBeschreibung
             // 
-            this.textBox2.Location = new System.Drawing.Point(597, 29);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(115, 20);
-            this.textBox2.TabIndex = 10;
-            this.textBox2.Text = "Umfrage Beschreibung";
+            this.textBoxUmfrageBeschreibung.AcceptsReturn = true;
+            this.textBoxUmfrageBeschreibung.Location = new System.Drawing.Point(597, 29);
+            this.textBoxUmfrageBeschreibung.Multiline = true;
+            this.textBoxUmfrageBeschreibung.Name = "textBoxUmfrageBeschreibung";
+            this.textBoxUmfrageBeschreibung.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textBoxUmfrageBeschreibung.Size = new System.Drawing.Size(115, 20);
+            this.textBoxUmfrageBeschreibung.TabIndex = 10;
             // 
-            // textBox1
+            // textBoxUmfrageName
             // 
-            this.textBox1.Location = new System.Drawing.Point(597, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 9;
-            this.textBox1.Text = "Umfrage Name";
+            this.textBoxUmfrageName.Location = new System.Drawing.Point(597, 3);
+            this.textBoxUmfrageName.Name = "textBoxUmfrageName";
+            this.textBoxUmfrageName.Size = new System.Drawing.Size(115, 20);
+            this.textBoxUmfrageName.TabIndex = 9;
             // 
-            // radioButton3
+            // radioButtonTextAntwort
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(597, 101);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(85, 17);
-            this.radioButton3.TabIndex = 18;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Text Antwort";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButtonTextAntwort.AutoSize = true;
+            this.radioButtonTextAntwort.Location = new System.Drawing.Point(597, 101);
+            this.radioButtonTextAntwort.Name = "radioButtonTextAntwort";
+            this.radioButtonTextAntwort.Size = new System.Drawing.Size(85, 17);
+            this.radioButtonTextAntwort.TabIndex = 18;
+            this.radioButtonTextAntwort.Text = "Text Antwort";
+            this.radioButtonTextAntwort.UseVisualStyleBackColor = true;
             // 
             // UserControllUmfrageErstellen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.radioButtonTextAntwort);
+            this.Controls.Add(this.buttonSpeichern);
             this.Controls.Add(this.buttonAbbrechen);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.radioButtonCustomAntworten);
+            this.Controls.Add(this.radioButtonJaNein);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxUmfrageBeschreibung);
+            this.Controls.Add(this.textBoxUmfrageName);
             this.Name = "UserControllUmfrageErstellen";
             this.Size = new System.Drawing.Size(1177, 611);
             this.ResumeLayout(false);
@@ -159,15 +159,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonSpeichern;
         private System.Windows.Forms.Button buttonAbbrechen;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButtonCustomAntworten;
+        private System.Windows.Forms.RadioButton radioButtonJaNein;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.TextBox textBoxUmfrageBeschreibung;
+        private System.Windows.Forms.TextBox textBoxUmfrageName;
+        private System.Windows.Forms.RadioButton radioButtonTextAntwort;
     }
 }
