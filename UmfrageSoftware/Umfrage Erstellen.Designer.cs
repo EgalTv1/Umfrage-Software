@@ -1,6 +1,6 @@
 ﻿namespace UmfrageSoftware
 {
-    partial class Form1
+    partial class UmfrageErstellen
     {
         /// <summary>
         /// Required designer variable.
@@ -41,7 +41,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 86);
+            this.textBox1.Location = new System.Drawing.Point(119, 9);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 0;
@@ -49,7 +49,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 112);
+            this.textBox2.Location = new System.Drawing.Point(146, 32);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(115, 20);
             this.textBox2.TabIndex = 1;
@@ -86,7 +86,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(12, 138);
+            this.radioButton1.Location = new System.Drawing.Point(117, 58);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(144, 17);
             this.radioButton1.TabIndex = 5;
@@ -97,7 +97,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(12, 161);
+            this.radioButton2.Location = new System.Drawing.Point(119, 81);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(103, 17);
             this.radioButton2.TabIndex = 6;
@@ -123,7 +123,7 @@
             this.button2.Text = "Speichern";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // UmfrageErstellen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -137,7 +137,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Name = "Form1";
+            this.Name = "UmfrageErstellen";
             this.Text = "Umfrage Erstellen";
             this.ResumeLayout(false);
             this.PerformLayout();

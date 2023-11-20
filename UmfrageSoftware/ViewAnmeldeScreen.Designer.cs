@@ -58,6 +58,7 @@
             this.buttonAnmelden.TabIndex = 2;
             this.buttonAnmelden.Text = "Anmelden";
             this.buttonAnmelden.UseVisualStyleBackColor = true;
+            this.buttonAnmelden.Click += new System.EventHandler(this.buttonAnmelden_Click);
             // 
             // buttonGastLogin
             // 
@@ -67,6 +68,7 @@
             this.buttonGastLogin.TabIndex = 3;
             this.buttonGastLogin.Text = "Gast Login";
             this.buttonGastLogin.UseVisualStyleBackColor = true;
+            this.buttonGastLogin.Click += new System.EventHandler(this.buttonGastLogin_Click);
             // 
             // ViewAnmeldeScreen
             // 
@@ -77,8 +79,9 @@
             this.Controls.Add(this.buttonAnmelden);
             this.Controls.Add(this.textBoxPasswort);
             this.Controls.Add(this.textBoxUsername);
+            this.MaximizeBox = false;
             this.Name = "ViewAnmeldeScreen";
-            this.Text = "Form1";
+            this.Text = "Anmelden";
             this.ResumeLayout(false);
             this.PerformLayout();
 

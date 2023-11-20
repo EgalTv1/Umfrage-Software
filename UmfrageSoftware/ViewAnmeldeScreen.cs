@@ -16,5 +16,16 @@ namespace UmfrageSoftware
         {
             InitializeComponent();
         }
+
+        private void buttonGastLogin_Click(object sender, EventArgs e)
+        {
+            StartSeite hartSeite = new StartSeite();
+            hartSeite.Show();
+        }
+
+        private void buttonAnmelden_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
