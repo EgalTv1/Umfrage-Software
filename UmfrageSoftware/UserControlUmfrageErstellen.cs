@@ -29,8 +29,15 @@ namespace UmfrageSoftware
         {
             if (radioButtonJaNein.Checked)
             {
-                ModelUmfrageErstellen.JaNeinUmfrageErstellen(textBoxUmfrageName.Text,
-                textBoxUmfrageBeschreibung.Text);
+                if (ModelUmfrageErstellen.JaNeinUmfrageErstellen(textBoxUmfrageName.Text,
+                    textBoxUmfrageBeschreibung.Text, monthCalendarFrist.SelectionStart))
+                {
+                    MessageBox.Show("Die Umfrage " + textBoxUmfrageName.Text + " wurde erstellt");
+                }
+                else
+                {
+                    MessageBox.Show("Die Umfrage konnte nicht erstellt werden");
+                }
             }
             else if (radioButtonCustomAntworten.Checked)
             {

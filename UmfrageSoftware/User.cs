@@ -17,12 +17,14 @@ namespace UmfrageSoftware
             Admin
         }
 
+        private int benutzerID;
         private string benutzername;
         private string passwort;
 
         public string Benutzername { get => benutzername; set => benutzername = value; }
         public string Passwort { get => passwort; set => passwort = value; }
         public Benutzertypen Benutzertyp { get; private set; } = Benutzertypen.Gast;
+        public int BenutzerID { get => benutzerID; set => benutzerID = value; }
 
         public User()
         { }
