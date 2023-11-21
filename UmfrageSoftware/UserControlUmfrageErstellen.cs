@@ -41,8 +41,18 @@ namespace UmfrageSoftware
             }
             else if (radioButtonCustomAntworten.Checked)
             {
-                //ModelUmfrageErstellen.CustomAntwortenUmfrageErstellen(textBoxUmfrageName.Text,
-                //textBoxUmfrageBeschreibung.Text, comboBoxAnzahlAntworten.SelectedIndex);
+                if (ModelUmfrageErstellen.CustomAntwortenUmfrageErstellen(textBoxUmfrageName.Text,
+                textBoxUmfrageBeschreibung.Text, comboBoxAnzahlAntworten.SelectedIndex, monthCalendarFrist.SelectionStart,
+                textBoxCustomAntwort1.Text,textBoxCustomAntwort2.Text,textBoxCustomAntwort3.Text,textBoxCustomAntwort4.Text,
+                textBoxCustomAntwort5.Text,textBoxCustomAntwort6.Text,textBoxCustomAntwort7.Text,textBoxCustomAntwort8.Text,
+                textBoxCustomAntwort9.Text))
+                {
+                    MessageBox.Show("Die Umfrage " + textBoxUmfrageName.Text + " wurde erstellt");
+                }
+                else
+                {
+                    MessageBox.Show("Die Umfrage konnte nicht erstellt werden");
+                }
             }
             else if (radioButtonTextAntwort.Checked)
             {
@@ -106,7 +116,7 @@ namespace UmfrageSoftware
                 case 0:
                     MehrereAntwortenVerstecken();
                     break;
-                    case 1:
+                case 1:
                     labelCustomAntwort1.Visible = true;
                     labelCustomAntwort2.Visible = false;
                     labelCustomAntwort3.Visible = false;
@@ -126,7 +136,7 @@ namespace UmfrageSoftware
                     textBoxCustomAntwort7.Visible = false;
                     textBoxCustomAntwort8.Visible = false;
                     textBoxCustomAntwort9.Visible = false;
-                    break;    
+                    break;
                 case 2:
                     labelCustomAntwort1.Visible = true;
                     labelCustomAntwort2.Visible = true;
@@ -148,7 +158,7 @@ namespace UmfrageSoftware
                     textBoxCustomAntwort8.Visible = false;
                     textBoxCustomAntwort9.Visible = false;
                     break;
-                    case 3:
+                case 3:
                     labelCustomAntwort1.Visible = true;
                     labelCustomAntwort2.Visible = true;
                     labelCustomAntwort3.Visible = true;
@@ -169,7 +179,7 @@ namespace UmfrageSoftware
                     textBoxCustomAntwort8.Visible = false;
                     textBoxCustomAntwort9.Visible = false;
                     break;
-                    case 4:
+                case 4:
                     labelCustomAntwort1.Visible = true;
                     labelCustomAntwort2.Visible = true;
                     labelCustomAntwort3.Visible = true;
@@ -211,7 +221,7 @@ namespace UmfrageSoftware
                     textBoxCustomAntwort8.Visible = false;
                     textBoxCustomAntwort9.Visible = false;
                     break;
-                    case 6:
+                case 6:
                     labelCustomAntwort1.Visible = true;
                     labelCustomAntwort2.Visible = true;
                     labelCustomAntwort3.Visible = true;
@@ -274,7 +284,7 @@ namespace UmfrageSoftware
                     textBoxCustomAntwort8.Visible = true;
                     textBoxCustomAntwort9.Visible = false;
                     break;
-                    case 9:
+                case 9:
                     labelCustomAntwort1.Visible = true;
                     labelCustomAntwort2.Visible = true;
                     labelCustomAntwort3.Visible = true;
@@ -295,7 +305,7 @@ namespace UmfrageSoftware
                     textBoxCustomAntwort8.Visible = true;
                     textBoxCustomAntwort9.Visible = true;
                     break;
-            }            
+            }
         }
         public void MehrereAntwortenVerstecken()
         {
