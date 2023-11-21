@@ -87,7 +87,7 @@ namespace UmfrageSoftware
             DatenbankVerbindung.DatenbankVerbindungSchliessen();
             return benutzerid;
         }
-        public void loeschen(User userdaten)
+        public static void loeschen(User userdaten)
         {
             string DatenbankBenutzername = "Null";
 

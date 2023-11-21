@@ -37,9 +37,8 @@ namespace UmfrageSoftware
 
         private void buttonLoeschen_Click(object sender, EventArgs e)
         {
-            ModelUserVerwalten modelUserVerwalten = new ModelUserVerwalten();
             User userdaten = new User(textBoxUsername.Text, textBoxPasswort.Text, comboBoxUserrolle.Text);
-            modelUserVerwalten.loeschen(userdaten);
+            ModelUserVerwalten.loeschen(userdaten);
         }
     }
 }
