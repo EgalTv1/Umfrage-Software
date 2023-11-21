@@ -21,5 +21,10 @@ namespace UmfrageSoftware
         {
 
         }
+
+        private void labelUmfrageAutor_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.buttonAbstimmen = new System.Windows.Forms.Button();
             this.radioButtonNein = new System.Windows.Forms.RadioButton();
             this.radioButtonJa = new System.Windows.Forms.RadioButton();
@@ -49,13 +50,19 @@
             this.textBoxUmfragenName = new System.Windows.Forms.TextBox();
             this.textBoxUmfragenBeschreibung = new System.Windows.Forms.TextBox();
             this.textBoxAutor = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonAbstimmen
             // 
-            this.buttonAbstimmen.Location = new System.Drawing.Point(172, 187);
+            this.buttonAbstimmen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAbstimmen.Location = new System.Drawing.Point(298, 405);
             this.buttonAbstimmen.Name = "buttonAbstimmen";
-            this.buttonAbstimmen.Size = new System.Drawing.Size(75, 23);
+            this.buttonAbstimmen.Size = new System.Drawing.Size(95, 23);
             this.buttonAbstimmen.TabIndex = 18;
             this.buttonAbstimmen.Text = "Abstimmen";
             this.buttonAbstimmen.UseVisualStyleBackColor = true;
@@ -63,9 +70,10 @@
             // radioButtonNein
             // 
             this.radioButtonNein.AutoSize = true;
-            this.radioButtonNein.Location = new System.Drawing.Point(108, 187);
+            this.radioButtonNein.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonNein.Location = new System.Drawing.Point(220, 105);
             this.radioButtonNein.Name = "radioButtonNein";
-            this.radioButtonNein.Size = new System.Drawing.Size(47, 17);
+            this.radioButtonNein.Size = new System.Drawing.Size(53, 20);
             this.radioButtonNein.TabIndex = 17;
             this.radioButtonNein.TabStop = true;
             this.radioButtonNein.Text = "Nein";
@@ -74,9 +82,10 @@
             // radioButtonJa
             // 
             this.radioButtonJa.AutoSize = true;
-            this.radioButtonJa.Location = new System.Drawing.Point(64, 187);
+            this.radioButtonJa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonJa.Location = new System.Drawing.Point(176, 103);
             this.radioButtonJa.Name = "radioButtonJa";
-            this.radioButtonJa.Size = new System.Drawing.Size(36, 17);
+            this.radioButtonJa.Size = new System.Drawing.Size(40, 20);
             this.radioButtonJa.TabIndex = 16;
             this.radioButtonJa.TabStop = true;
             this.radioButtonJa.Text = "Ja";
@@ -85,9 +94,10 @@
             // labelUmfragenName
             // 
             this.labelUmfragenName.AutoSize = true;
-            this.labelUmfragenName.Location = new System.Drawing.Point(14, 6);
+            this.labelUmfragenName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUmfragenName.Location = new System.Drawing.Point(16, 23);
             this.labelUmfragenName.Name = "labelUmfragenName";
-            this.labelUmfragenName.Size = new System.Drawing.Size(81, 13);
+            this.labelUmfragenName.Size = new System.Drawing.Size(102, 16);
             this.labelUmfragenName.TabIndex = 15;
             this.labelUmfragenName.Text = "Umfrage Name ";
             // 
@@ -95,185 +105,237 @@
             // 
             this.labelUmfragenBeschreibung.AutoEllipsis = true;
             this.labelUmfragenBeschreibung.AutoSize = true;
-            this.labelUmfragenBeschreibung.Location = new System.Drawing.Point(14, 32);
+            this.labelUmfragenBeschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUmfragenBeschreibung.Location = new System.Drawing.Point(16, 49);
             this.labelUmfragenBeschreibung.MaximumSize = new System.Drawing.Size(300, 0);
             this.labelUmfragenBeschreibung.Name = "labelUmfragenBeschreibung";
-            this.labelUmfragenBeschreibung.Size = new System.Drawing.Size(115, 13);
+            this.labelUmfragenBeschreibung.Size = new System.Drawing.Size(145, 16);
             this.labelUmfragenBeschreibung.TabIndex = 13;
             this.labelUmfragenBeschreibung.Text = "Umfrage Beschreibung";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 187);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(16, 105);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
+            this.label3.Size = new System.Drawing.Size(59, 16);
             this.label3.TabIndex = 12;
             this.label3.Text = "Stimmen";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 127);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(428, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 13);
+            this.label2.Size = new System.Drawing.Size(141, 16);
             this.label2.TabIndex = 11;
-            this.label2.Text = "Umfragen Ergebnisse";
+            this.label2.Text = "Umfragen Ergebnisse:";
             // 
             // labelAutor
             // 
             this.labelAutor.AutoSize = true;
-            this.labelAutor.Location = new System.Drawing.Point(14, 58);
+            this.labelAutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAutor.Location = new System.Drawing.Point(16, 75);
             this.labelAutor.Name = "labelAutor";
-            this.labelAutor.Size = new System.Drawing.Size(32, 13);
+            this.labelAutor.Size = new System.Drawing.Size(93, 16);
             this.labelAutor.TabIndex = 10;
-            this.labelAutor.Text = "Autor";
+            this.labelAutor.Text = "Umfrage Autor";
             // 
             // radioButtonCustomAntwort1
             // 
             this.radioButtonCustomAntwort1.AutoSize = true;
-            this.radioButtonCustomAntwort1.Location = new System.Drawing.Point(64, 210);
+            this.radioButtonCustomAntwort1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonCustomAntwort1.Location = new System.Drawing.Point(174, 131);
             this.radioButtonCustomAntwort1.Name = "radioButtonCustomAntwort1";
-            this.radioButtonCustomAntwort1.Size = new System.Drawing.Size(102, 17);
+            this.radioButtonCustomAntwort1.Size = new System.Drawing.Size(126, 20);
             this.radioButtonCustomAntwort1.TabIndex = 19;
             this.radioButtonCustomAntwort1.TabStop = true;
-            this.radioButtonCustomAntwort1.Text = "CustomAntwort1";
+            this.radioButtonCustomAntwort1.Text = "Custom Antwort 1";
             this.radioButtonCustomAntwort1.UseVisualStyleBackColor = true;
             this.radioButtonCustomAntwort1.Visible = false;
             // 
             // radioButtonCustomAntwort4
             // 
             this.radioButtonCustomAntwort4.AutoSize = true;
-            this.radioButtonCustomAntwort4.Location = new System.Drawing.Point(64, 282);
+            this.radioButtonCustomAntwort4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonCustomAntwort4.Location = new System.Drawing.Point(174, 209);
             this.radioButtonCustomAntwort4.Name = "radioButtonCustomAntwort4";
-            this.radioButtonCustomAntwort4.Size = new System.Drawing.Size(102, 17);
+            this.radioButtonCustomAntwort4.Size = new System.Drawing.Size(126, 20);
             this.radioButtonCustomAntwort4.TabIndex = 20;
             this.radioButtonCustomAntwort4.TabStop = true;
-            this.radioButtonCustomAntwort4.Text = "CustomAntwort4";
+            this.radioButtonCustomAntwort4.Text = "Custom Antwort 4";
             this.radioButtonCustomAntwort4.UseVisualStyleBackColor = true;
             this.radioButtonCustomAntwort4.Visible = false;
             // 
             // radioButtonCustomAntwort7
             // 
             this.radioButtonCustomAntwort7.AutoSize = true;
-            this.radioButtonCustomAntwort7.Location = new System.Drawing.Point(64, 354);
+            this.radioButtonCustomAntwort7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonCustomAntwort7.Location = new System.Drawing.Point(174, 287);
             this.radioButtonCustomAntwort7.Name = "radioButtonCustomAntwort7";
-            this.radioButtonCustomAntwort7.Size = new System.Drawing.Size(102, 17);
+            this.radioButtonCustomAntwort7.Size = new System.Drawing.Size(126, 20);
             this.radioButtonCustomAntwort7.TabIndex = 21;
             this.radioButtonCustomAntwort7.TabStop = true;
-            this.radioButtonCustomAntwort7.Text = "CustomAntwort7";
+            this.radioButtonCustomAntwort7.Text = "Custom Antwort 7";
             this.radioButtonCustomAntwort7.UseVisualStyleBackColor = true;
             this.radioButtonCustomAntwort7.Visible = false;
             // 
             // radioButtonCustomAntwort8
             // 
             this.radioButtonCustomAntwort8.AutoSize = true;
-            this.radioButtonCustomAntwort8.Location = new System.Drawing.Point(64, 380);
+            this.radioButtonCustomAntwort8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonCustomAntwort8.Location = new System.Drawing.Point(174, 313);
             this.radioButtonCustomAntwort8.Name = "radioButtonCustomAntwort8";
-            this.radioButtonCustomAntwort8.Size = new System.Drawing.Size(102, 17);
+            this.radioButtonCustomAntwort8.Size = new System.Drawing.Size(126, 20);
             this.radioButtonCustomAntwort8.TabIndex = 24;
             this.radioButtonCustomAntwort8.TabStop = true;
-            this.radioButtonCustomAntwort8.Text = "CustomAntwort8";
+            this.radioButtonCustomAntwort8.Text = "Custom Antwort 8";
             this.radioButtonCustomAntwort8.UseVisualStyleBackColor = true;
             this.radioButtonCustomAntwort8.Visible = false;
             // 
             // radioButtonCustomAntwort5
             // 
             this.radioButtonCustomAntwort5.AutoSize = true;
-            this.radioButtonCustomAntwort5.Location = new System.Drawing.Point(64, 308);
+            this.radioButtonCustomAntwort5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonCustomAntwort5.Location = new System.Drawing.Point(174, 235);
             this.radioButtonCustomAntwort5.Name = "radioButtonCustomAntwort5";
-            this.radioButtonCustomAntwort5.Size = new System.Drawing.Size(102, 17);
+            this.radioButtonCustomAntwort5.Size = new System.Drawing.Size(126, 20);
             this.radioButtonCustomAntwort5.TabIndex = 23;
             this.radioButtonCustomAntwort5.TabStop = true;
-            this.radioButtonCustomAntwort5.Text = "CustomAntwort5";
+            this.radioButtonCustomAntwort5.Text = "Custom Antwort 5";
             this.radioButtonCustomAntwort5.UseVisualStyleBackColor = true;
             this.radioButtonCustomAntwort5.Visible = false;
             // 
             // radioButtonCustomAntwort2
             // 
             this.radioButtonCustomAntwort2.AutoSize = true;
-            this.radioButtonCustomAntwort2.Location = new System.Drawing.Point(64, 236);
+            this.radioButtonCustomAntwort2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonCustomAntwort2.Location = new System.Drawing.Point(174, 157);
             this.radioButtonCustomAntwort2.Name = "radioButtonCustomAntwort2";
-            this.radioButtonCustomAntwort2.Size = new System.Drawing.Size(102, 17);
+            this.radioButtonCustomAntwort2.Size = new System.Drawing.Size(126, 20);
             this.radioButtonCustomAntwort2.TabIndex = 22;
             this.radioButtonCustomAntwort2.TabStop = true;
-            this.radioButtonCustomAntwort2.Text = "CustomAntwort2";
+            this.radioButtonCustomAntwort2.Text = "Custom Antwort 2";
             this.radioButtonCustomAntwort2.UseVisualStyleBackColor = true;
             this.radioButtonCustomAntwort2.Visible = false;
             // 
             // radioButtonCustomAntwort9
             // 
             this.radioButtonCustomAntwort9.AutoSize = true;
-            this.radioButtonCustomAntwort9.Location = new System.Drawing.Point(64, 403);
+            this.radioButtonCustomAntwort9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonCustomAntwort9.Location = new System.Drawing.Point(176, 339);
             this.radioButtonCustomAntwort9.Name = "radioButtonCustomAntwort9";
-            this.radioButtonCustomAntwort9.Size = new System.Drawing.Size(102, 17);
+            this.radioButtonCustomAntwort9.Size = new System.Drawing.Size(126, 20);
             this.radioButtonCustomAntwort9.TabIndex = 27;
             this.radioButtonCustomAntwort9.TabStop = true;
-            this.radioButtonCustomAntwort9.Text = "CustomAntwort9";
+            this.radioButtonCustomAntwort9.Text = "Custom Antwort 9";
             this.radioButtonCustomAntwort9.UseVisualStyleBackColor = true;
             this.radioButtonCustomAntwort9.Visible = false;
             // 
             // radioButtonCustomAntwort6
             // 
             this.radioButtonCustomAntwort6.AutoSize = true;
-            this.radioButtonCustomAntwort6.Location = new System.Drawing.Point(64, 331);
+            this.radioButtonCustomAntwort6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonCustomAntwort6.Location = new System.Drawing.Point(174, 261);
             this.radioButtonCustomAntwort6.Name = "radioButtonCustomAntwort6";
-            this.radioButtonCustomAntwort6.Size = new System.Drawing.Size(102, 17);
+            this.radioButtonCustomAntwort6.Size = new System.Drawing.Size(126, 20);
             this.radioButtonCustomAntwort6.TabIndex = 26;
             this.radioButtonCustomAntwort6.TabStop = true;
-            this.radioButtonCustomAntwort6.Text = "CustomAntwort6";
+            this.radioButtonCustomAntwort6.Text = "Custom Antwort 6";
             this.radioButtonCustomAntwort6.UseVisualStyleBackColor = true;
             this.radioButtonCustomAntwort6.Visible = false;
             // 
             // radioButtonCustomAntwort3
             // 
             this.radioButtonCustomAntwort3.AutoSize = true;
-            this.radioButtonCustomAntwort3.Location = new System.Drawing.Point(64, 259);
+            this.radioButtonCustomAntwort3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonCustomAntwort3.Location = new System.Drawing.Point(174, 183);
             this.radioButtonCustomAntwort3.Name = "radioButtonCustomAntwort3";
-            this.radioButtonCustomAntwort3.Size = new System.Drawing.Size(102, 17);
+            this.radioButtonCustomAntwort3.Size = new System.Drawing.Size(126, 20);
             this.radioButtonCustomAntwort3.TabIndex = 25;
             this.radioButtonCustomAntwort3.TabStop = true;
-            this.radioButtonCustomAntwort3.Text = "CustomAntwort3";
+            this.radioButtonCustomAntwort3.Text = "Custom Antwort 3";
             this.radioButtonCustomAntwort3.UseVisualStyleBackColor = true;
             this.radioButtonCustomAntwort3.Visible = false;
             // 
             // textBoxCustomTextAntwort
             // 
-            this.textBoxCustomTextAntwort.Location = new System.Drawing.Point(64, 426);
+            this.textBoxCustomTextAntwort.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCustomTextAntwort.Location = new System.Drawing.Point(176, 365);
             this.textBoxCustomTextAntwort.MaxLength = 255;
             this.textBoxCustomTextAntwort.Name = "textBoxCustomTextAntwort";
-            this.textBoxCustomTextAntwort.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCustomTextAntwort.Size = new System.Drawing.Size(100, 22);
             this.textBoxCustomTextAntwort.TabIndex = 28;
             this.textBoxCustomTextAntwort.Visible = false;
             // 
             // textBoxUmfragenName
             // 
-            this.textBoxUmfragenName.Location = new System.Drawing.Point(172, 3);
+            this.textBoxUmfragenName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxUmfragenName.Location = new System.Drawing.Point(174, 20);
             this.textBoxUmfragenName.Name = "textBoxUmfragenName";
             this.textBoxUmfragenName.ReadOnly = true;
-            this.textBoxUmfragenName.Size = new System.Drawing.Size(165, 20);
+            this.textBoxUmfragenName.Size = new System.Drawing.Size(219, 22);
             this.textBoxUmfragenName.TabIndex = 29;
             // 
             // textBoxUmfragenBeschreibung
             // 
-            this.textBoxUmfragenBeschreibung.Location = new System.Drawing.Point(172, 29);
+            this.textBoxUmfragenBeschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxUmfragenBeschreibung.Location = new System.Drawing.Point(174, 46);
             this.textBoxUmfragenBeschreibung.Name = "textBoxUmfragenBeschreibung";
             this.textBoxUmfragenBeschreibung.ReadOnly = true;
-            this.textBoxUmfragenBeschreibung.Size = new System.Drawing.Size(165, 20);
+            this.textBoxUmfragenBeschreibung.Size = new System.Drawing.Size(219, 22);
             this.textBoxUmfragenBeschreibung.TabIndex = 30;
             // 
             // textBoxAutor
             // 
-            this.textBoxAutor.Location = new System.Drawing.Point(172, 55);
+            this.textBoxAutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxAutor.Location = new System.Drawing.Point(174, 72);
             this.textBoxAutor.Name = "textBoxAutor";
             this.textBoxAutor.ReadOnly = true;
-            this.textBoxAutor.Size = new System.Drawing.Size(165, 20);
+            this.textBoxAutor.Size = new System.Drawing.Size(219, 22);
             this.textBoxAutor.TabIndex = 31;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(573, 26);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(483, 281);
+            this.dataGridView1.TabIndex = 32;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(174, 405);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(99, 23);
+            this.button1.TabIndex = 33;
+            this.button1.Text = "Abbrechen";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(332, 374);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(76, 13);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "ABSTAND: 40";
             // 
             // UserControlUmfrageVollUebersicht
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBoxAutor);
             this.Controls.Add(this.textBoxUmfragenBeschreibung);
             this.Controls.Add(this.textBoxUmfragenName);
@@ -298,6 +360,7 @@
             this.Name = "UserControlUmfrageVollUebersicht";
             this.Size = new System.Drawing.Size(1177, 611);
             this.Load += new System.EventHandler(this.UserControlUmfrageVollUebersicht_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -326,5 +389,9 @@
         private System.Windows.Forms.TextBox textBoxUmfragenName;
         private System.Windows.Forms.TextBox textBoxUmfragenBeschreibung;
         private System.Windows.Forms.TextBox textBoxAutor;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Label label1;
     }
 }
