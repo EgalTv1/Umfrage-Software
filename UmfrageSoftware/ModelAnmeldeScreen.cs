@@ -11,8 +11,9 @@ namespace umfragesoftware
 {
      internal static class ModelAnmeldeScreen
     {
-         public static string anmelden(string benutzername, string passwort)
+         public static User anmelden(string benutzername, string passwort)
         {
+            int DatenbankBenutzerID = 0;
             string DatenbankBenutzername = "Null";
             string DatenbankPasswort = "Null";
             string DatenbankRolle = "Null";
@@ -33,6 +34,7 @@ namespace umfragesoftware
 
                     while (reader.Read())
                     {
+                        DatenbankBenutzerID = Convert.ToInt32(reader["Benutzer_ID"]);
                         DatenbankBenutzername = reader["Benutzername"].ToString();
                         DatenbankPasswort = reader["Passwort"].ToString();
                         DatenbankRolle = reader["Rolle"].ToString();
@@ -61,7 +63,9 @@ namespace umfragesoftware
                 }
                 else if (verified)
                 {
-                    return DatenbankRolle;
+                    User anmeldung = new User(DatenbankBenutzername,"",DatenbankRolle,DatenbankBenutzerID);
+                    conn.Close();
+                    return anmeldung;
                 }
                 else
                 {

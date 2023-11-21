@@ -29,71 +29,34 @@ namespace UmfrageSoftware
 
         private void buttonAnmelden_Click(object sender, EventArgs e)
         {
-            string BenutzerRolle = "Gast";
-
+            User Benutzer;
 
             if (textBoxPasswort.Text == "" || textBoxUsername.Text == "")
             {
                 MessageBox.Show("Es darf keine leeren einträge geben");
+                //return;
             }
-            else if (textBoxPasswort.Text != "" && textBoxUsername.Text != "")
+            else if (textBoxPasswort.Text != "" && textBoxUsername.Text != "") // muss das da sein? Warheits tabelle sag nein
             {
-                BenutzerRolle = ModelAnmeldeScreen.anmelden(textBoxUsername.Text, textBoxPasswort.Text);
-                if (BenutzerRolle != null)
+                Benutzer = ModelAnmeldeScreen.anmelden(textBoxUsername.Text, textBoxPasswort.Text);
+                if (Benutzer != null)
                 {
-                    if (BenutzerRolle == "Admin")
-                    {
-                        User Benutzername = new User(textBoxUsername.Text, "", User.Benutzertypen.Admin);
-                        StartSeite hartSeite = new StartSeite(Benutzername);
-                        this.Hide();
-                        hartSeite.ShowDialog();
-
-
-                    }
-                    else if (BenutzerRolle == "Benutzer")
-                    {
-                        User Benutzername = new User(textBoxUsername.Text, "", User.Benutzertypen.Benutzer);
-                        StartSeite hartSeite = new StartSeite(Benutzername);
-                        this.Hide();
-                        hartSeite.ShowDialog();
-
-
-                    }
-                    else
-                    {
-                        User Benutzername = new User(textBoxUsername.Text, "", User.Benutzertypen.Gast);
-                        StartSeite hartSeite = new StartSeite(Benutzername);
-                        this.Hide();
-                        hartSeite.ShowDialog();
-                    }
+                    StartSeite hartSeite = new StartSeite(Benutzer);
+                    this.Hide();
+                    hartSeite.ShowDialog();
                 }
-
             }
             else
             {
                 MessageBox.Show("MATII WIE SCHON WIEDER");
             }
-
-
-
         }
-
+        //DEBUG ADMIN root
         private void buttonRoot_Click(object sender, EventArgs e)
-        {
-            //DEBUG ADMIN root
-            User root = new User("root", "", User.Benutzertypen.Admin);
+        {            
+            User root = new User("root", "", User.Benutzertypen.Admin,1);
 
-            //guck in Datenbank nach ob es den Benutzer schon gibt
-            //falls ja, erstelle neuen Benutzer vom Typ User
-
-            //conn
-            //if(ModelAnmelden.Anmelden(textBoxUsername.text, textBoxPasswort.text))
-            //Magic
-            //return Benutzertyp (somehow)
-
-            //User loginUser = new User(textBoxUsername.Text,textBoxPasswort.Text,User.Benutzertypen.Benutzer);
             StartSeite hartSeite = new StartSeite(root);
-
             this.Hide();
             hartSeite.ShowDialog();
         }
