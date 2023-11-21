@@ -17,8 +17,7 @@ namespace UmfrageSoftware
             string passwordHash = BCrypt.Net.BCrypt.HashPassword(userdaten.Passwort);
             string DatenbankBenutzername = "Null";
 
-            string myConnectionString = "server=localhost;uid=root;Password=;database=umfrage_software;";
-            MySqlConnection conn = new MySqlConnection(myConnectionString);
+            MySqlConnection conn = DatenbankVerbindung.DatenbankVerbinden();
 
             MySqlCommand mycommand = conn.CreateCommand();
 
@@ -28,11 +27,9 @@ namespace UmfrageSoftware
             mycommand.CommandText = SelectString;
 
             // fürs anmelden später
-            // bool verified = BCrypt.Net.BCrypt.Verify("Pa$$w0rd", passwordHash);
 
             try
             {
-                conn.Open();
                 MySqlDataReader reader = mycommand.ExecuteReader();
 
                 while (reader.Read())
@@ -61,6 +58,7 @@ namespace UmfrageSoftware
                 {
                     conn.Open();
                     mycommand.ExecuteNonQuery();
+                    MessageBox.Show("Der User mit dem namen " + userdaten.Benutzername + " wurde gespeichert");
                 }
                 catch (Exception e)
                 {
@@ -70,6 +68,7 @@ namespace UmfrageSoftware
             }
 
         }
+
 
         static public int suchen(string Benutzername)
         {
@@ -88,5 +87,61 @@ namespace UmfrageSoftware
             DatenbankVerbindung.DatenbankVerbindungSchliessen();
             return benutzerid;
         }
+        public void loeschen(User userdaten)
+        {
+            string DatenbankBenutzername = "Null";
+
+
+            MySqlConnection conn = DatenbankVerbindung.DatenbankVerbinden();
+
+            MySqlCommand mycommand = conn.CreateCommand();
+
+
+            string SelectString = "Select Benutzername from benutzer where Benutzername = '" + userdaten.Benutzername + "';";
+
+            mycommand.CommandText = SelectString;
+
+
+            try
+            {
+                
+                MySqlDataReader reader = mycommand.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    DatenbankBenutzername = reader["Benutzername"].ToString();
+
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            finally { conn.Close(); }
+
+            if (DatenbankBenutzername == userdaten.Benutzername)
+            {
+                string DeleteString = "Delete from benutzer where Benutzername = '" + userdaten.Benutzername + "';";
+                mycommand.CommandText = DeleteString;
+
+                try
+                {
+                    conn.Open();
+                    mycommand.ExecuteNonQuery();
+                    MessageBox.Show(userdaten.Benutzername + " wurde erfolgreich gelöscht");
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message);
+
+                }
+                finally { conn.Close(); }
+            }
+            else
+            {
+                MessageBox.Show("Es wurde keine User mit dem namen " + userdaten.Benutzername + " gefunden. ");
+            }
+        }
+
     }
 }

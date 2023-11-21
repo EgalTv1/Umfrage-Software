@@ -34,12 +34,13 @@
             this.buttonGastLogin = new System.Windows.Forms.Button();
             this.labelBenutzername = new System.Windows.Forms.Label();
             this.labelPasswort = new System.Windows.Forms.Label();
+            this.buttonRoot = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxUsername
             // 
             this.textBoxUsername.Location = new System.Drawing.Point(114, 25);
-            this.textBoxUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxUsername.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(923, 22);
             this.textBoxUsername.TabIndex = 0;
@@ -47,7 +48,7 @@
             // textBoxPasswort
             // 
             this.textBoxPasswort.Location = new System.Drawing.Point(114, 66);
-            this.textBoxPasswort.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxPasswort.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxPasswort.Name = "textBoxPasswort";
             this.textBoxPasswort.Size = new System.Drawing.Size(923, 22);
             this.textBoxPasswort.TabIndex = 1;
@@ -55,7 +56,7 @@
             // buttonAnmelden
             // 
             this.buttonAnmelden.Location = new System.Drawing.Point(937, 112);
-            this.buttonAnmelden.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonAnmelden.Margin = new System.Windows.Forms.Padding(4);
             this.buttonAnmelden.Name = "buttonAnmelden";
             this.buttonAnmelden.Size = new System.Drawing.Size(100, 28);
             this.buttonAnmelden.TabIndex = 2;
@@ -66,7 +67,7 @@
             // buttonGastLogin
             // 
             this.buttonGastLogin.Location = new System.Drawing.Point(13, 112);
-            this.buttonGastLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonGastLogin.Margin = new System.Windows.Forms.Padding(4);
             this.buttonGastLogin.Name = "buttonGastLogin";
             this.buttonGastLogin.Size = new System.Drawing.Size(100, 28);
             this.buttonGastLogin.TabIndex = 3;
@@ -94,11 +95,23 @@
             this.labelPasswort.TabIndex = 5;
             this.labelPasswort.Text = "Passwort";
             // 
+            // buttonRoot
+            // 
+            this.buttonRoot.Location = new System.Drawing.Point(479, 112);
+            this.buttonRoot.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonRoot.Name = "buttonRoot";
+            this.buttonRoot.Size = new System.Drawing.Size(214, 28);
+            this.buttonRoot.TabIndex = 6;
+            this.buttonRoot.Text = "Als Root weiter (Debuging)";
+            this.buttonRoot.UseVisualStyleBackColor = true;
+            this.buttonRoot.Click += new System.EventHandler(this.buttonRoot_Click);
+            // 
             // ViewAnmeldeScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.buttonRoot);
             this.Controls.Add(this.labelPasswort);
             this.Controls.Add(this.labelBenutzername);
             this.Controls.Add(this.buttonGastLogin);
@@ -106,7 +119,7 @@
             this.Controls.Add(this.textBoxPasswort);
             this.Controls.Add(this.textBoxUsername);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "ViewAnmeldeScreen";
             this.Text = "Anmelden";
@@ -123,6 +136,7 @@
         private System.Windows.Forms.Button buttonGastLogin;
         private System.Windows.Forms.Label labelBenutzername;
         private System.Windows.Forms.Label labelPasswort;
+        private System.Windows.Forms.Button buttonRoot;
     }
 }
 

@@ -142,6 +142,7 @@
             this.buttonLoeschen.TabIndex = 12;
             this.buttonLoeschen.Text = "Löschen";
             this.buttonLoeschen.UseVisualStyleBackColor = true;
+            this.buttonLoeschen.Click += new System.EventHandler(this.buttonLoeschen_Click);
             // 
             // UserControlUserVerwalten
             // 
