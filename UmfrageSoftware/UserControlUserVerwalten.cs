@@ -30,5 +30,10 @@ namespace UmfrageSoftware
             User userdaten = new User(textBoxUsername.Text, textBoxPasswort.Text, comboBoxUserrolle.Text);
             modelUserVerwalten.speichern(userdaten);
         }
+
+        private void labelPasswort_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
