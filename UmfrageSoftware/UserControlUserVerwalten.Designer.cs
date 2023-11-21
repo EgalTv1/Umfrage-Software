@@ -43,44 +43,49 @@
             // comboBoxUserrolle
             // 
             this.comboBoxUserrolle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxUserrolle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxUserrolle.FormattingEnabled = true;
             this.comboBoxUserrolle.Items.AddRange(new object[] {
             "Admin",
             "Benutzer"});
-            this.comboBoxUserrolle.Location = new System.Drawing.Point(85, 83);
+            this.comboBoxUserrolle.Location = new System.Drawing.Point(383, 9);
             this.comboBoxUserrolle.Name = "comboBoxUserrolle";
-            this.comboBoxUserrolle.Size = new System.Drawing.Size(123, 21);
+            this.comboBoxUserrolle.Size = new System.Drawing.Size(140, 24);
             this.comboBoxUserrolle.TabIndex = 5;
             // 
             // textBoxPasswort
             // 
-            this.textBoxPasswort.Location = new System.Drawing.Point(85, 41);
+            this.textBoxPasswort.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPasswort.Location = new System.Drawing.Point(123, 48);
             this.textBoxPasswort.Name = "textBoxPasswort";
-            this.textBoxPasswort.Size = new System.Drawing.Size(123, 20);
+            this.textBoxPasswort.Size = new System.Drawing.Size(140, 22);
             this.textBoxPasswort.TabIndex = 4;
             this.textBoxPasswort.UseSystemPasswordChar = true;
             // 
             // textBoxUsername
             // 
-            this.textBoxUsername.Location = new System.Drawing.Point(85, 4);
+            this.textBoxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxUsername.Location = new System.Drawing.Point(123, 11);
             this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(123, 20);
+            this.textBoxUsername.Size = new System.Drawing.Size(140, 22);
             this.textBoxUsername.TabIndex = 3;
             // 
             // labelUsername
             // 
             this.labelUsername.AutoSize = true;
-            this.labelUsername.Location = new System.Drawing.Point(21, 7);
+            this.labelUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUsername.Location = new System.Drawing.Point(20, 17);
             this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(58, 13);
+            this.labelUsername.Size = new System.Drawing.Size(73, 16);
             this.labelUsername.TabIndex = 6;
             this.labelUsername.Text = "Username:";
             // 
             // buttonSpeichern
             // 
-            this.buttonSpeichern.Location = new System.Drawing.Point(133, 123);
+            this.buttonSpeichern.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSpeichern.Location = new System.Drawing.Point(176, 109);
             this.buttonSpeichern.Name = "buttonSpeichern";
-            this.buttonSpeichern.Size = new System.Drawing.Size(75, 23);
+            this.buttonSpeichern.Size = new System.Drawing.Size(87, 23);
             this.buttonSpeichern.TabIndex = 7;
             this.buttonSpeichern.Text = "Speichern";
             this.buttonSpeichern.UseVisualStyleBackColor = true;
@@ -89,17 +94,20 @@
             // labelPasswort
             // 
             this.labelPasswort.AutoSize = true;
-            this.labelPasswort.Location = new System.Drawing.Point(21, 44);
+            this.labelPasswort.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPasswort.Location = new System.Drawing.Point(20, 54);
             this.labelPasswort.Name = "labelPasswort";
-            this.labelPasswort.Size = new System.Drawing.Size(53, 13);
+            this.labelPasswort.Size = new System.Drawing.Size(65, 16);
             this.labelPasswort.TabIndex = 8;
             this.labelPasswort.Text = "Passwort:";
+            this.labelPasswort.Click += new System.EventHandler(this.labelPasswort_Click);
             // 
             // buttonAbbrechen
             // 
-            this.buttonAbbrechen.Location = new System.Drawing.Point(52, 152);
+            this.buttonAbbrechen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAbbrechen.Location = new System.Drawing.Point(23, 109);
             this.buttonAbbrechen.Name = "buttonAbbrechen";
-            this.buttonAbbrechen.Size = new System.Drawing.Size(75, 23);
+            this.buttonAbbrechen.Size = new System.Drawing.Size(94, 23);
             this.buttonAbbrechen.TabIndex = 9;
             this.buttonAbbrechen.Text = "Abbrechen";
             this.buttonAbbrechen.UseVisualStyleBackColor = true;
@@ -108,26 +116,29 @@
             // labelBenutzerRolle
             // 
             this.labelBenutzerRolle.AutoSize = true;
-            this.labelBenutzerRolle.Location = new System.Drawing.Point(3, 86);
+            this.labelBenutzerRolle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBenutzerRolle.Location = new System.Drawing.Point(280, 17);
             this.labelBenutzerRolle.Name = "labelBenutzerRolle";
-            this.labelBenutzerRolle.Size = new System.Drawing.Size(79, 13);
+            this.labelBenutzerRolle.Size = new System.Drawing.Size(97, 16);
             this.labelBenutzerRolle.TabIndex = 10;
             this.labelBenutzerRolle.Text = "Benutzer Rolle:";
             // 
             // buttonUserSuchen
             // 
-            this.buttonUserSuchen.Location = new System.Drawing.Point(214, 123);
+            this.buttonUserSuchen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonUserSuchen.Location = new System.Drawing.Point(23, 195);
             this.buttonUserSuchen.Name = "buttonUserSuchen";
-            this.buttonUserSuchen.Size = new System.Drawing.Size(75, 23);
+            this.buttonUserSuchen.Size = new System.Drawing.Size(94, 23);
             this.buttonUserSuchen.TabIndex = 11;
             this.buttonUserSuchen.Text = "Suchen";
             this.buttonUserSuchen.UseVisualStyleBackColor = true;
             // 
             // buttonLoeschen
             // 
-            this.buttonLoeschen.Location = new System.Drawing.Point(52, 123);
+            this.buttonLoeschen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLoeschen.Location = new System.Drawing.Point(23, 151);
             this.buttonLoeschen.Name = "buttonLoeschen";
-            this.buttonLoeschen.Size = new System.Drawing.Size(75, 23);
+            this.buttonLoeschen.Size = new System.Drawing.Size(94, 24);
             this.buttonLoeschen.TabIndex = 12;
             this.buttonLoeschen.Text = "Löschen";
             this.buttonLoeschen.UseVisualStyleBackColor = true;
