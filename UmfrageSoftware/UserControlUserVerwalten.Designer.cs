@@ -100,7 +100,6 @@
             this.labelPasswort.Size = new System.Drawing.Size(65, 16);
             this.labelPasswort.TabIndex = 8;
             this.labelPasswort.Text = "Passwort:";
-            this.labelPasswort.Click += new System.EventHandler(this.labelPasswort_Click);
             // 
             // buttonAbbrechen
             // 
@@ -132,6 +131,7 @@
             this.buttonUserSuchen.TabIndex = 11;
             this.buttonUserSuchen.Text = "Suchen";
             this.buttonUserSuchen.UseVisualStyleBackColor = true;
+            this.buttonUserSuchen.Click += new System.EventHandler(this.buttonUserSuchen_Click);
             // 
             // buttonLoeschen
             // 

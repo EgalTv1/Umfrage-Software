@@ -9,10 +9,10 @@ using System.Windows.Forms;
 
 namespace UmfrageSoftware
 {
-    internal class ModelUserVerwalten
+    static internal class ModelUserVerwalten
     {
 
-        public void speichern(User userdaten)
+        static public void speichern(User userdaten)
         {
             string passwordHash = BCrypt.Net.BCrypt.HashPassword(userdaten.Passwort);
             string DatenbankBenutzername = "Null";
@@ -69,6 +69,24 @@ namespace UmfrageSoftware
 
         }
 
+
+        static public int suchen(string Benutzername)
+        {
+            int benutzerid = 0;
+            MySqlConnection connection = DatenbankVerbindung.DatenbankVerbinden();
+
+            MySqlCommand commandsuchen = connection.CreateCommand();
+            commandsuchen.CommandText = "SELECT Benutzer_ID FROM benutzer WHERE Benutzername = '" + Benutzername + "'";
+
+            MySqlDataReader reader = commandsuchen.ExecuteReader();
+            while (reader.Read())
+            {
+                benutzerid = Convert.ToInt32(reader["Benutzer_ID"]);
+            }
+            
+            DatenbankVerbindung.DatenbankVerbindungSchliessen();
+            return benutzerid;
+        }
         public void loeschen(User userdaten)
         {
             string DatenbankBenutzername = "Null";
@@ -124,7 +142,6 @@ namespace UmfrageSoftware
                 MessageBox.Show("Es wurde keine User mit dem namen " + userdaten.Benutzername + " gefunden. ");
             }
         }
-
 
     }
 }

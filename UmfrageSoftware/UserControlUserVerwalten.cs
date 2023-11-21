@@ -26,14 +26,13 @@ namespace UmfrageSoftware
 
         private void buttonSpeichern_Click(object sender, EventArgs e)
         {
-            ModelUserVerwalten modelUserVerwalten = new ModelUserVerwalten();
             User userdaten = new User(textBoxUsername.Text, textBoxPasswort.Text, comboBoxUserrolle.Text);
-            modelUserVerwalten.speichern(userdaten);
+            ModelUserVerwalten.speichern(userdaten);
         }
 
-        private void labelPasswort_Click(object sender, EventArgs e)
+        private void buttonUserSuchen_Click(object sender, EventArgs e)
         {
-
+            //ModelUserVerwalten.suchen();
         }
 
         private void buttonLoeschen_Click(object sender, EventArgs e)

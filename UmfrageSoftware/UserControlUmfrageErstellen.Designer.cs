@@ -58,7 +58,7 @@
             this.labelCustomAntwort5 = new System.Windows.Forms.Label();
             this.labelCustomAntwort1 = new System.Windows.Forms.Label();
             this.comboBoxAnzahlAntworten = new System.Windows.Forms.ComboBox();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.monthCalendarFrist = new System.Windows.Forms.MonthCalendar();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -381,12 +381,12 @@
             this.comboBoxAnzahlAntworten.Visible = false;
             this.comboBoxAnzahlAntworten.SelectedIndexChanged += new System.EventHandler(this.comboBoxAnzahlAntworten_SelectedIndexChanged);
             // 
-            // monthCalendar1
+            // monthCalendarFrist
             // 
-            this.monthCalendar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.monthCalendar1.Location = new System.Drawing.Point(168, 182);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 38;
+            this.monthCalendarFrist.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monthCalendarFrist.Location = new System.Drawing.Point(168, 182);
+            this.monthCalendarFrist.Name = "monthCalendarFrist";
+            this.monthCalendarFrist.TabIndex = 38;
             // 
             // contextMenuStrip1
             // 
@@ -408,7 +408,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.monthCalendar1);
+            this.Controls.Add(this.monthCalendarFrist);
             this.Controls.Add(this.comboBoxAnzahlAntworten);
             this.Controls.Add(this.labelCustomAntwort1);
             this.Controls.Add(this.labelCustomAntwort2);
@@ -476,7 +476,7 @@
         private System.Windows.Forms.Label labelCustomAntwort5;
         private System.Windows.Forms.Label labelCustomAntwort1;
         private System.Windows.Forms.ComboBox comboBoxAnzahlAntworten;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.MonthCalendar monthCalendarFrist;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label label5;
     }
