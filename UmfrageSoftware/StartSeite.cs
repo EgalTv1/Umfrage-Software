@@ -15,7 +15,7 @@ namespace UmfrageSoftware
 
         //StartSeite soll einen User besitzen
         //User static machen?
-        static User Benutzer;
+        internal static User Benutzer;
 
         public StartSeite()
         {
