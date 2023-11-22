@@ -13,8 +13,6 @@ namespace UmfrageSoftware
 {
     public partial class UserControlUmfrageErstellen : UserControl
     {
-        int maxAntwortZahl;
-
         public UserControlUmfrageErstellen()
         {
             InitializeComponent();
