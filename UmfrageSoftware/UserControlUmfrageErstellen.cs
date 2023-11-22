@@ -56,8 +56,15 @@ namespace UmfrageSoftware
             }
             else if (radioButtonTextAntwort.Checked)
             {
-                //ModelUmfrageErstellen.TextAntwortUmfrageErstellen(textBoxUmfrageName.Text,
-                //textBoxUmfrageBeschreibung.Text);
+                if (ModelUmfrageErstellen.TextAntwortUmfrageErstellen(textBoxUmfrageName.Text,
+                textBoxUmfrageBeschreibung.Text, monthCalendarFrist.SelectionStart))
+                {
+                    MessageBox.Show("Die Umfrage " + textBoxUmfrageName.Text + " wurde erstellt");
+                }
+                else
+                {
+                    MessageBox.Show("Die Umfrage konnte nicht erstellt werden");
+                }
             }
             else
             {

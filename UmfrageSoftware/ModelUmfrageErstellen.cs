@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,6 +19,7 @@ namespace UmfrageSoftware
             {
                 int umfragenID = 0;
                 DateTime loeschDatum = frist.AddDays(14);
+                umfragenName = LeerzeichenErsetzen(umfragenName);
 
                 MySqlCommand commandErstellen = connection.CreateCommand();
                 MySqlCommand commandHinzufuegen = connection.CreateCommand();
@@ -28,7 +30,15 @@ namespace UmfrageSoftware
                 MySqlDataReader idreader = commandIDFinden.ExecuteReader();
                 while (idreader.Read())
                 {
-                    umfragenID = Convert.ToInt32(idreader["Umfrage_ID"]);
+                    var umfragenIDNULL = idreader["Umfrage_ID"];
+                    if (umfragenIDNULL.GetType().ToString() == "System.DBNull")
+                    {
+                        umfragenID = 0;
+                    }
+                    else
+                    {
+                        umfragenID = Convert.ToInt32(idreader["Umfrage_ID"]);
+                    }
                 }
                 idreader.Close();
                 umfragenID++;
@@ -79,6 +89,7 @@ namespace UmfrageSoftware
             {
                 int umfragenID = 0;
                 DateTime loeschDatum = frist.AddDays(14);
+                umfragenName = LeerzeichenErsetzen(umfragenName);
 
                 MySqlCommand commandErstellen = connection.CreateCommand();
                 MySqlCommand commandHinzufuegen = connection.CreateCommand();
@@ -89,7 +100,15 @@ namespace UmfrageSoftware
                 MySqlDataReader idreader = commandIDFinden.ExecuteReader();
                 while (idreader.Read())
                 {
-                    umfragenID = Convert.ToInt32(idreader["Umfrage_ID"]);
+                    var umfragenIDNULL = idreader["Umfrage_ID"];
+                    if (umfragenIDNULL.GetType().ToString() == "System.DBNull")
+                    {
+                        umfragenID = 0;
+                    }
+                    else
+                    {
+                        umfragenID = Convert.ToInt32(idreader["Umfrage_ID"]);
+                    }
                 }
                 idreader.Close();
                 umfragenID++;
@@ -226,5 +245,79 @@ namespace UmfrageSoftware
             }
         }
 
+        internal static bool TextAntwortUmfrageErstellen(string umfragenName, string umfragenBeschreibung, DateTime frist)
+        {
+            MySqlConnection connection = DatenbankVerbindung.DatenbankVerbinden();
+            if (connection != null)
+            {
+                int umfragenID = 0;
+                DateTime loeschDatum = frist.AddDays(14);
+                umfragenName = LeerzeichenErsetzen(umfragenName);
+
+                MySqlCommand commandErstellen = connection.CreateCommand();
+                MySqlCommand commandHinzufuegen = connection.CreateCommand();
+                MySqlCommand commandFuellen = connection.CreateCommand();
+                MySqlCommand commandIDFinden = connection.CreateCommand();
+
+                commandIDFinden.CommandText = "SELECT MAX(Umfrage_ID) AS Umfrage_ID FROM Umfragen";
+                MySqlDataReader idreader = commandIDFinden.ExecuteReader();
+                while (idreader.Read())
+                {
+                    var umfragenIDNULL = idreader["Umfrage_ID"];
+                    if (umfragenIDNULL.GetType().ToString() == "System.DBNull")
+                    {
+                        umfragenID = 0;
+                    }
+                    else
+                    {
+                        umfragenID = Convert.ToInt32(idreader["Umfrage_ID"]);
+                    }
+                }
+                idreader.Close();
+                umfragenID++;
+
+
+                commandErstellen.CommandText = "CREATE TABLE " + umfragenName +
+                    "(umfragenID INT, Umfragenbeschreibung TEXT, Antwort VARCHAR(255)," +
+                    " PRIMARY KEY (umfragenID));";
+
+                //füge Umfrage in Umfragen Tabelle hinzu
+                commandHinzufuegen.CommandText = "INSERT INTO Umfragen Values ('Null','" + umfragenName + "','" +
+                    umfragenBeschreibung +
+                    "','" + DateTime.Now.Year + "-" + DateTime.Now.Month + "-" + DateTime.Now.Date.Day +
+                    " " + DateTime.Now.TimeOfDay + "','" +
+                frist.Year + "-" + frist.Month + "-" + frist.Day + " " + frist.TimeOfDay + "','" +
+                StartSeite.Benutzer.BenutzerID + "','" + loeschDatum.Year + "-" + loeschDatum.Month + "-" + loeschDatum.Day + " " +
+                    loeschDatum.TimeOfDay + "', 'Aktiv', 'Nein');";
+
+                //fülle die Neue Umfrage mit den Antworten
+                commandFuellen.CommandText = "INSERT INTO " + umfragenName + " VALUES" +
+                    "(" + umfragenID + ",'" + umfragenBeschreibung + "' , Null)";
+
+
+                // smth smth, fabian guck mal drüber:
+                // connection.BeginTransaction();
+
+                commandErstellen.ExecuteNonQuery();
+                commandHinzufuegen.ExecuteNonQuery();
+                commandFuellen.ExecuteNonQuery();
+
+                connection.Close();
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("Es scheint keine Datenbank Verbindung zu geben.", "Fehler");
+                //keine Verbindung mit Datenbank
+                return false;
+            }
+        }
+        private static string LeerzeichenErsetzen(string text)
+        {
+            text = text.Trim();
+            text = text.Replace(" ", "_");
+
+            return text;
+        }
     }
 }
