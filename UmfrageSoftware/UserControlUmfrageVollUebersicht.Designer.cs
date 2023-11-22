@@ -51,7 +51,7 @@
             this.textBoxUmfragenBeschreibung = new System.Windows.Forms.TextBox();
             this.textBoxAutor = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonAbbrechen = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -66,6 +66,7 @@
             this.buttonAbstimmen.TabIndex = 18;
             this.buttonAbstimmen.Text = "Abstimmen";
             this.buttonAbstimmen.UseVisualStyleBackColor = true;
+            this.buttonAbstimmen.Click += new System.EventHandler(this.buttonAbstimmen_Click);
             // 
             // radioButtonNein
             // 
@@ -83,7 +84,7 @@
             // 
             this.radioButtonJa.AutoSize = true;
             this.radioButtonJa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonJa.Location = new System.Drawing.Point(176, 103);
+            this.radioButtonJa.Location = new System.Drawing.Point(176, 105);
             this.radioButtonJa.Name = "radioButtonJa";
             this.radioButtonJa.Size = new System.Drawing.Size(40, 20);
             this.radioButtonJa.TabIndex = 16;
@@ -305,15 +306,16 @@
             this.dataGridView1.Size = new System.Drawing.Size(483, 281);
             this.dataGridView1.TabIndex = 32;
             // 
-            // button1
+            // buttonAbbrechen
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(174, 405);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 23);
-            this.button1.TabIndex = 33;
-            this.button1.Text = "Abbrechen";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonAbbrechen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAbbrechen.Location = new System.Drawing.Point(174, 405);
+            this.buttonAbbrechen.Name = "buttonAbbrechen";
+            this.buttonAbbrechen.Size = new System.Drawing.Size(99, 23);
+            this.buttonAbbrechen.TabIndex = 33;
+            this.buttonAbbrechen.Text = "Abbrechen";
+            this.buttonAbbrechen.UseVisualStyleBackColor = true;
+            this.buttonAbbrechen.Click += new System.EventHandler(this.buttonAbbrechen_Click);
             // 
             // contextMenuStrip1
             // 
@@ -334,7 +336,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonAbbrechen);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBoxAutor);
             this.Controls.Add(this.textBoxUmfragenBeschreibung);
@@ -390,7 +392,7 @@
         private System.Windows.Forms.TextBox textBoxUmfragenBeschreibung;
         private System.Windows.Forms.TextBox textBoxAutor;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonAbbrechen;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label label1;
     }

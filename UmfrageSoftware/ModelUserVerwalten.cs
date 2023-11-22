@@ -18,15 +18,10 @@ namespace UmfrageSoftware
             string DatenbankBenutzername = "Null";
 
             MySqlConnection conn = DatenbankVerbindung.DatenbankVerbinden();
-
             MySqlCommand mycommand = conn.CreateCommand();
-
-
             string SelectString = "Select Benutzername from benutzer where Benutzername = '" + userdaten.Benutzername + "';";
 
             mycommand.CommandText = SelectString;
-
-            // fürs anmelden später
 
             try
             {
@@ -35,7 +30,6 @@ namespace UmfrageSoftware
                 while (reader.Read())
                 {
                     DatenbankBenutzername = reader["Benutzername"].ToString();
-
                 }
             }
             catch (Exception e)
@@ -48,7 +42,6 @@ namespace UmfrageSoftware
             if (userdaten.Benutzername == DatenbankBenutzername)
             {
                 MessageBox.Show("Es gibt bereits einen User mit dem Namen " + userdaten.Benutzername);
-
             }
             else
             {
@@ -66,10 +59,7 @@ namespace UmfrageSoftware
                 }
                 finally { conn.Close(); }
             }
-
         }
-
-
         static public int suchen(string Benutzername)
         {
             int benutzerid = 0;
@@ -83,34 +73,23 @@ namespace UmfrageSoftware
             {
                 benutzerid = Convert.ToInt32(reader["Benutzer_ID"]);
             }
-            
+
             DatenbankVerbindung.DatenbankVerbindungSchliessen();
             return benutzerid;
         }
         public static void loeschen(User userdaten)
         {
             string DatenbankBenutzername = "Null";
-
-
             MySqlConnection conn = DatenbankVerbindung.DatenbankVerbinden();
-
             MySqlCommand mycommand = conn.CreateCommand();
-
-
             string SelectString = "Select Benutzername from benutzer where Benutzername = '" + userdaten.Benutzername + "';";
-
             mycommand.CommandText = SelectString;
-
-
             try
             {
-                
                 MySqlDataReader reader = mycommand.ExecuteReader();
-
                 while (reader.Read())
                 {
                     DatenbankBenutzername = reader["Benutzername"].ToString();
-
                 }
             }
             catch (Exception e)
@@ -123,7 +102,6 @@ namespace UmfrageSoftware
             {
                 string DeleteString = "Delete from benutzer where Benutzername = '" + userdaten.Benutzername + "';";
                 mycommand.CommandText = DeleteString;
-
                 try
                 {
                     conn.Open();
@@ -133,7 +111,6 @@ namespace UmfrageSoftware
                 catch (Exception e)
                 {
                     MessageBox.Show(e.Message);
-
                 }
                 finally { conn.Close(); }
             }
@@ -142,6 +119,5 @@ namespace UmfrageSoftware
                 MessageBox.Show("Es wurde keine User mit dem namen " + userdaten.Benutzername + " gefunden. ");
             }
         }
-
     }
 }

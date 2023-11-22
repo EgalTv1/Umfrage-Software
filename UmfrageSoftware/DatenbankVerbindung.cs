@@ -27,5 +27,23 @@ namespace UmfrageSoftware
             MySqlConnection myConnection = new MySqlConnection();
             myConnection.Close();
         }
+        public static string SonderzeichenErsetzen(string text)
+        {
+            text = text.Trim();
+            text = text.Replace(" ", "_");
+            text = text.Replace("?", "");
+            text = text.Replace("!", "");
+            text = text.Replace(";", "");
+            text = text.Replace(",", "");
+            text = text.Replace(".", "");
+            text = text.Replace(":", "");
+            text = text.Replace("-", "");
+            text = text.Replace("ö", "oe");
+            text = text.Replace("ü", "ue");
+            text = text.Replace("ä", "ae");
+            text = text.Replace("ß", "ss");
+
+            return text;
+        }
     }
 }

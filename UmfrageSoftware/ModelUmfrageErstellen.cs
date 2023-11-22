@@ -19,7 +19,7 @@ namespace UmfrageSoftware
             {
                 int umfragenID = 0;
                 DateTime loeschDatum = frist.AddDays(14);
-                umfragenName = SonderzeichenErsetzen(umfragenName);
+                umfragenName = DatenbankVerbindung.SonderzeichenErsetzen(umfragenName);
                 umfragenName = "UMF_" + umfragenName;
 
                 MySqlCommand commandErstellen = connection.CreateCommand();
@@ -90,7 +90,7 @@ namespace UmfrageSoftware
             {
                 int umfragenID = 0;
                 DateTime loeschDatum = frist.AddDays(14);
-                umfragenName = SonderzeichenErsetzen(umfragenName);
+                umfragenName = DatenbankVerbindung.SonderzeichenErsetzen(umfragenName);
                 umfragenName = "UMF_" + umfragenName;
 
                 MySqlCommand commandErstellen = connection.CreateCommand();
@@ -254,7 +254,7 @@ namespace UmfrageSoftware
             {
                 int umfragenID = 0;
                 DateTime loeschDatum = frist.AddDays(14);
-                umfragenName = SonderzeichenErsetzen(umfragenName);
+                umfragenName = DatenbankVerbindung.SonderzeichenErsetzen(umfragenName);
                 umfragenName = "UMF_" + umfragenName;
 
                 MySqlCommand commandErstellen = connection.CreateCommand();
@@ -314,24 +314,6 @@ namespace UmfrageSoftware
                 //keine Verbindung mit Datenbank
                 return false;
             }
-        }
-        private static string SonderzeichenErsetzen(string text)
-        {
-            text = text.Trim();
-            text = text.Replace(" ", "_");
-            text = text.Replace("?", "");
-            text = text.Replace("!", "");
-            text = text.Replace(";", "");
-            text = text.Replace(",", "");
-            text = text.Replace(".", "");
-            text = text.Replace(":", "");
-            text = text.Replace("-", "");
-            text = text.Replace("ö", "oe");
-            text = text.Replace("ü", "ue");
-            text = text.Replace("ä", "ae");
-            text = text.Replace("ß", "ss");           
-
-            return text;
         }
     }
 }

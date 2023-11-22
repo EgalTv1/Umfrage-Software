@@ -103,6 +103,7 @@
   <ItemGroup>
     <Compile Include="DatenbankVerbindung.cs" />
     <Compile Include="ModelAnmeldeScreen.cs" />
+    <Compile Include="ModelUmfrageAbstimmen.cs" />
     <Compile Include="ModelUmfrageErstellen.cs" />
     <Compile Include="ModelUserVerwalten.cs" />
     <Compile Include="StartSeite.cs">
@@ -111,6 +112,7 @@
     <Compile Include="StartSeite.Designer.cs">
       <DependentUpon>StartSeite.cs</DependentUpon>
     </Compile>
+    <Compile Include="Umfrage.cs" />
     <Compile Include="UserControlUmfrageErstellen.cs">
       <SubType>UserControl</SubType>
     </Compile>

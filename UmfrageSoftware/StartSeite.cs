@@ -33,8 +33,7 @@ namespace UmfrageSoftware
             {
                 //Gast du opfer
                 buttonViewUmfrageErstellen.Enabled = false;
-            }           
-
+            }
             if (Benutzer.Benutzertyp == User.Benutzertypen.Admin)
             {
                 buttonBenutzerVerwalten.Enabled = true;
@@ -44,7 +43,8 @@ namespace UmfrageSoftware
         private void buttonViewUmfragenUebersicht_Click(object sender, EventArgs e)
         {
             panelViews.Controls.Clear();
-            UserControlUmfrageVollUebersicht userControlUmfragenUebersicht = new UserControlUmfrageVollUebersicht();
+            Umfrage testUmfrage = new Umfrage("TestUmfrage","TestBeschreibung","root",7,Umfrage.umfragenTypen.Ja_Nein);
+            UserControlUmfrageVollUebersicht userControlUmfragenUebersicht = new UserControlUmfrageVollUebersicht(testUmfrage);
             panelViews.Controls.Add(userControlUmfragenUebersicht);
         }
 
