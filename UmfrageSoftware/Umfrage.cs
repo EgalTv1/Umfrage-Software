@@ -50,72 +50,78 @@ namespace UmfrageSoftware
 
         public Umfrage()
         { }
-        public Umfrage(string Name, string UmfragenBeschreibung, string Autor, umfragenTypen umfragenTyp)
+        public Umfrage(string Name, string UmfragenBeschreibung, string Autor, int UmfrageID, umfragenTypen umfragenTyp)
         {
             umfragenName = Name;
             umfragenBeschreibung = UmfragenBeschreibung;
             autor = Autor;
+            umfragenID = UmfrageID;
             UmfrageTyp = umfragenTyp;
-            
+
         }
-        public Umfrage(string Name, string Autor, umfragenTypen umfragenTyp)
+        public Umfrage(string Name, string Autor, int UmfrageID, umfragenTypen umfragenTyp)
         {
             umfragenName = Name;
             autor = Autor;
+            umfragenID = UmfrageID;
             UmfrageTyp = umfragenTyp;
         }
         #region CustomKonstruktoren
-
-        public Umfrage(string Name, string UmfragenBeschreibung, string Autor, int AntwortAnzahl,
+        public Umfrage(string Name, string UmfragenBeschreibung, string Autor, int UmfrageID, int AntwortAnzahl,
             string Antwort1, umfragenTypen umfragenTyp)
         {
             umfragenName = Name;
             umfragenBeschreibung = UmfragenBeschreibung;
             autor = Autor;
+            umfragenID = UmfrageID;
             customAntwortAnzahl = AntwortAnzahl;
             UmfrageTyp = umfragenTyp;
 
             antwort1 = Antwort1;
         }
-        public Umfrage(string Name, string Autor, int AntwortAnzahl, string Antwort1,
+        public Umfrage(string Name, string Autor, int UmfrageID, int AntwortAnzahl, string Antwort1,
             umfragenTypen umfragenTyp)
         {
             umfragenName = Name;
             autor = Autor;
+            umfragenID = UmfrageID;
             customAntwortAnzahl = AntwortAnzahl;
             UmfrageTyp = umfragenTyp;
 
             antwort1 = Antwort1;
         }
-        public Umfrage(string Name, string UmfragenBeschreibung, string Autor, int AntwortAnzahl,
+        public Umfrage(string Name, string UmfragenBeschreibung, string Autor, int UmfrageID, int AntwortAnzahl,
             string Antwort1, string Antwort2, umfragenTypen umfragenTyp)
         {
             umfragenName = Name;
             umfragenBeschreibung = UmfragenBeschreibung;
             autor = Autor;
+            umfragenID = UmfrageID;
             customAntwortAnzahl = AntwortAnzahl;
             UmfrageTyp = umfragenTyp;
 
             antwort1 = Antwort1;
             antwort2 = Antwort2;
         }
-        public Umfrage(string Name, string Autor, int AntwortAnzahl, string Antwort1, string Antwort2,
+        public Umfrage(string Name, string Autor, int UmfrageID, int AntwortAnzahl, string Antwort1, string Antwort2,
             umfragenTypen umfragenTyp)
         {
             umfragenName = Name;
             autor = Autor;
+            umfragenID = UmfrageID;
             customAntwortAnzahl = AntwortAnzahl;
             UmfrageTyp = umfragenTyp;
 
             antwort1 = Antwort1;
             antwort2 = Antwort2;
         }
-        public Umfrage(string Name, string UmfragenBeschreibung, string Autor, int AntwortAnzahl,
+        public Umfrage(string Name, string UmfragenBeschreibung, string Autor, int UmfrageID, int AntwortAnzahl,
             string Antwort1, string Antwort2, string Antwort3, umfragenTypen umfragenTyp)
         {
             umfragenName = Name;
             umfragenBeschreibung = UmfragenBeschreibung;
             autor = Autor;
+            umfragenID = UmfrageID;
             customAntwortAnzahl = AntwortAnzahl;
             UmfrageTyp = umfragenTyp;
 
@@ -123,11 +129,12 @@ namespace UmfrageSoftware
             antwort2 = Antwort2;
             antwort3 = Antwort3;
         }
-        public Umfrage(string Name, string Autor, int AntwortAnzahl, string Antwort1, string Antwort2, string Antwort3,
+        public Umfrage(string Name, string Autor, int UmfrageID, int AntwortAnzahl, string Antwort1, string Antwort2, string Antwort3,
             umfragenTypen umfragenTyp)
         {
             umfragenName = Name;
             autor = Autor;
+            umfragenID = UmfrageID;
             customAntwortAnzahl = AntwortAnzahl;
             UmfrageTyp = umfragenTyp;
 
@@ -135,12 +142,13 @@ namespace UmfrageSoftware
             antwort2 = Antwort2;
             antwort3 = Antwort3;
         }
-        public Umfrage(string Name, string UmfragenBeschreibung, string Autor, int AntwortAnzahl,
+        public Umfrage(string Name, string UmfragenBeschreibung, string Autor, int UmfrageID, int AntwortAnzahl,
             string Antwort1, string Antwort2, string Antwort3, string Antwort4, umfragenTypen umfragenTyp)
         {
             umfragenName = Name;
             umfragenBeschreibung = UmfragenBeschreibung;
             autor = Autor;
+            umfragenID = UmfrageID;
             customAntwortAnzahl = AntwortAnzahl;
             UmfrageTyp = umfragenTyp;
 
@@ -149,11 +157,12 @@ namespace UmfrageSoftware
             antwort3 = Antwort3;
             antwort4 = Antwort4;
         }
-        public Umfrage(string Name, string Autor, int AntwortAnzahl, string Antwort1, string Antwort2, string Antwort3,
+        public Umfrage(string Name, string Autor, int UmfrageID, int AntwortAnzahl, string Antwort1, string Antwort2, string Antwort3,
             string Antwort4, umfragenTypen umfragenTyp)
         {
             umfragenName = Name;
             autor = Autor;
+            umfragenID = UmfrageID;
             customAntwortAnzahl = AntwortAnzahl;
             UmfrageTyp = umfragenTyp;
 
@@ -162,13 +171,14 @@ namespace UmfrageSoftware
             antwort3 = Antwort3;
             antwort4 = Antwort4;
         }
-        public Umfrage(string Name, string UmfragenBeschreibung, string Autor, int AntwortAnzahl,
+        public Umfrage(string Name, string UmfragenBeschreibung, string Autor, int UmfrageID, int AntwortAnzahl,
             string Antwort1, string Antwort2, string Antwort3, string Antwort4, string Antwort5,
             umfragenTypen umfragenTyp)
         {
             umfragenName = Name;
             umfragenBeschreibung = UmfragenBeschreibung;
             autor = Autor;
+            umfragenID = UmfrageID;
             customAntwortAnzahl = AntwortAnzahl;
             UmfrageTyp = umfragenTyp;
 
@@ -178,11 +188,12 @@ namespace UmfrageSoftware
             antwort4 = Antwort4;
             antwort5 = Antwort5;
         }
-        public Umfrage(string Name, string Autor, int AntwortAnzahl, string Antwort1, string Antwort2, string Antwort3,
+        public Umfrage(string Name, string Autor, int UmfrageID, int AntwortAnzahl, string Antwort1, string Antwort2, string Antwort3,
             string Antwort4, string Antwort5, umfragenTypen umfragenTyp)
         {
             umfragenName = Name;
             autor = Autor;
+            umfragenID = UmfrageID;
             customAntwortAnzahl = AntwortAnzahl;
             UmfrageTyp = umfragenTyp;
 
@@ -192,13 +203,14 @@ namespace UmfrageSoftware
             antwort4 = Antwort4;
             antwort5 = Antwort5;
         }
-        public Umfrage(string Name, string UmfragenBeschreibung, string Autor, int AntwortAnzahl,
+        public Umfrage(string Name, string UmfragenBeschreibung, string Autor, int UmfrageID, int AntwortAnzahl,
             string Antwort1, string Antwort2, string Antwort3, string Antwort4, string Antwort5,
             string Antwort6, umfragenTypen umfragenTyp)
         {
             umfragenName = Name;
             umfragenBeschreibung = UmfragenBeschreibung;
             autor = Autor;
+            umfragenID = UmfrageID;
             customAntwortAnzahl = AntwortAnzahl;
             UmfrageTyp = umfragenTyp;
 
@@ -209,11 +221,12 @@ namespace UmfrageSoftware
             antwort5 = Antwort5;
             antwort6 = Antwort6;
         }
-        public Umfrage(string Name, string Autor, int AntwortAnzahl, string Antwort1, string Antwort2, string Antwort3,
+        public Umfrage(string Name, string Autor, int UmfrageID, int AntwortAnzahl, string Antwort1, string Antwort2, string Antwort3,
             string Antwort4, string Antwort5, string Antwort6, umfragenTypen umfragenTyp)
         {
             umfragenName = Name;
             autor = Autor;
+            umfragenID = UmfrageID;
             customAntwortAnzahl = AntwortAnzahl;
             UmfrageTyp = umfragenTyp;
 
@@ -224,13 +237,14 @@ namespace UmfrageSoftware
             antwort5 = Antwort5;
             antwort6 = Antwort6;
         }
-        public Umfrage(string Name, string UmfragenBeschreibung, string Autor, int AntwortAnzahl,
+        public Umfrage(string Name, string UmfragenBeschreibung, string Autor, int UmfrageID, int AntwortAnzahl,
             string Antwort1, string Antwort2, string Antwort3, string Antwort4, string Antwort5,
             string Antwort6, string Antwort7, umfragenTypen umfragenTyp)
         {
             umfragenName = Name;
             umfragenBeschreibung = UmfragenBeschreibung;
             autor = Autor;
+            umfragenID = UmfrageID;
             customAntwortAnzahl = AntwortAnzahl;
             UmfrageTyp = umfragenTyp;
 
@@ -242,11 +256,12 @@ namespace UmfrageSoftware
             antwort6 = Antwort6;
             antwort7 = Antwort7;
         }
-        public Umfrage(string Name, string Autor, int AntwortAnzahl, string Antwort1, string Antwort2, string Antwort3,
+        public Umfrage(string Name, string Autor, int UmfrageID, int AntwortAnzahl, string Antwort1, string Antwort2, string Antwort3,
             string Antwort4, string Antwort5, string Antwort6, string Antwort7, umfragenTypen umfragenTyp)
         {
             umfragenName = Name;
             autor = Autor;
+            umfragenID = UmfrageID;
             customAntwortAnzahl = AntwortAnzahl;
             UmfrageTyp = umfragenTyp;
 
@@ -258,13 +273,14 @@ namespace UmfrageSoftware
             antwort6 = Antwort6;
             antwort7 = Antwort7;
         }
-        public Umfrage(string Name, string UmfragenBeschreibung, string Autor, int AntwortAnzahl,
+        public Umfrage(string Name, string UmfragenBeschreibung, string Autor, int UmfrageID, int AntwortAnzahl,
             string Antwort1, string Antwort2, string Antwort3, string Antwort4, string Antwort5,
             string Antwort6, string Antwort7, string Antwort8, umfragenTypen umfragenTyp)
         {
             umfragenName = Name;
             umfragenBeschreibung = UmfragenBeschreibung;
             autor = Autor;
+            umfragenID = UmfrageID;
             customAntwortAnzahl = AntwortAnzahl;
             UmfrageTyp = umfragenTyp;
 
@@ -277,11 +293,12 @@ namespace UmfrageSoftware
             antwort7 = Antwort7;
             antwort8 = Antwort8;
         }
-        public Umfrage(string Name, string Autor, int AntwortAnzahl, string Antwort1, string Antwort2, string Antwort3,
+        public Umfrage(string Name, string Autor, int UmfrageID, int AntwortAnzahl, string Antwort1, string Antwort2, string Antwort3,
             string Antwort4, string Antwort5, string Antwort6, string Antwort7, string Antwort8, umfragenTypen umfragenTyp)
         {
             umfragenName = Name;
             autor = Autor;
+            umfragenID = UmfrageID;
             customAntwortAnzahl = AntwortAnzahl;
             UmfrageTyp = umfragenTyp;
 
@@ -294,13 +311,14 @@ namespace UmfrageSoftware
             antwort7 = Antwort7;
             antwort8 = Antwort8;
         }
-        public Umfrage(string Name, string UmfragenBeschreibung, string Autor, int AntwortAnzahl,
+        public Umfrage(string Name, string UmfragenBeschreibung, string Autor, int UmfrageID, int AntwortAnzahl,
             string Antwort1, string Antwort2, string Antwort3, string Antwort4, string Antwort5,
             string Antwort6, string Antwort7, string Antwort8, string Antwort9, umfragenTypen umfragenTyp)
         {
             umfragenName = Name;
             umfragenBeschreibung = UmfragenBeschreibung;
             autor = Autor;
+            umfragenID = UmfrageID;
             customAntwortAnzahl = AntwortAnzahl;
             UmfrageTyp = umfragenTyp;
 
@@ -314,12 +332,13 @@ namespace UmfrageSoftware
             antwort8 = Antwort8;
             antwort9 = Antwort9;
         }
-        public Umfrage(string Name, string Autor, int AntwortAnzahl, string Antwort1, string Antwort2, string Antwort3,
+        public Umfrage(string Name, string Autor, int UmfrageID, int AntwortAnzahl, string Antwort1, string Antwort2, string Antwort3,
             string Antwort4, string Antwort5, string Antwort6, string Antwort7, string Antwort8, string Antwort9,
             umfragenTypen umfragenTyp)
         {
             umfragenName = Name;
             autor = Autor;
+            umfragenID = UmfrageID;
             customAntwortAnzahl = AntwortAnzahl;
             UmfrageTyp = umfragenTyp;
 
