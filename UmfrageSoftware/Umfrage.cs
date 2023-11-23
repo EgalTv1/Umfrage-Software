@@ -14,7 +14,9 @@ namespace UmfrageSoftware
             Custom,
             Text
         }
-        private int antwortAnzahl;
+
+        private int customAntwortAnzahl;
+        private int umfragenID;
         private string umfragenName;
         private string umfragenBeschreibung;
         private string autor;
@@ -29,7 +31,8 @@ namespace UmfrageSoftware
         private string antwort8;
         private string antwort9;
 
-        public int AntwortAnzahl { get => antwortAnzahl; set => antwortAnzahl = value; }
+        public int UmfragenID { get => umfragenID; set => umfragenID = value; }
+        public int CustomAntwortAnzahl { get => customAntwortAnzahl; set => customAntwortAnzahl = value; }
         public string UmfragenName { get => umfragenName; set => umfragenName = value; }
         public umfragenTypen UmfrageTyp { get; private set; }
         public string UmfragenBeschreibung { get => umfragenBeschreibung; internal set => umfragenBeschreibung = value; }
@@ -44,39 +47,292 @@ namespace UmfrageSoftware
         public string Antwort8 { get => antwort8; set => antwort8 = value; }
         public string Antwort9 { get => antwort9; set => antwort9 = value; }
 
+
         public Umfrage()
         { }
-        public Umfrage(string Name, string UmfragenBeschreibung, string Autor, int AntwortAnzahl, umfragenTypen umfragenTyp)
+        public Umfrage(string Name, string UmfragenBeschreibung, string Autor, umfragenTypen umfragenTyp)
         {
             umfragenName = Name;
             umfragenBeschreibung = UmfragenBeschreibung;
             autor = Autor;
-            antwortAnzahl = AntwortAnzahl;
             UmfrageTyp = umfragenTyp;
-            if (umfragenTyp == Umfrage.umfragenTypen.Ja_Nein)
-            {
-                antwortAnzahl = 2;
-            }
-            if (umfragenTyp == umfragenTypen.Text)
-            {
-                antwortAnzahl = 1;
-            }
+            
         }
-        public Umfrage(string Name, string Autor, int AntwortAnzahl, umfragenTypen umfragenTyp)
+        public Umfrage(string Name, string Autor, umfragenTypen umfragenTyp)
         {
             umfragenName = Name;
             autor = Autor;
-            antwortAnzahl = AntwortAnzahl;
             UmfrageTyp = umfragenTyp;
-            if (umfragenTyp == Umfrage.umfragenTypen.Ja_Nein)
-            {
-                antwortAnzahl = 2;
-            }
-            if (umfragenTyp == umfragenTypen.Text)
-            {
-                antwortAnzahl = 1;
-            }
-
         }
+        #region CustomKonstruktoren
+
+        public Umfrage(string Name, string UmfragenBeschreibung, string Autor, int AntwortAnzahl,
+            string Antwort1, umfragenTypen umfragenTyp)
+        {
+            umfragenName = Name;
+            umfragenBeschreibung = UmfragenBeschreibung;
+            autor = Autor;
+            customAntwortAnzahl = AntwortAnzahl;
+            UmfrageTyp = umfragenTyp;
+
+            antwort1 = Antwort1;
+        }
+        public Umfrage(string Name, string Autor, int AntwortAnzahl, string Antwort1,
+            umfragenTypen umfragenTyp)
+        {
+            umfragenName = Name;
+            autor = Autor;
+            customAntwortAnzahl = AntwortAnzahl;
+            UmfrageTyp = umfragenTyp;
+
+            antwort1 = Antwort1;
+        }
+        public Umfrage(string Name, string UmfragenBeschreibung, string Autor, int AntwortAnzahl,
+            string Antwort1, string Antwort2, umfragenTypen umfragenTyp)
+        {
+            umfragenName = Name;
+            umfragenBeschreibung = UmfragenBeschreibung;
+            autor = Autor;
+            customAntwortAnzahl = AntwortAnzahl;
+            UmfrageTyp = umfragenTyp;
+
+            antwort1 = Antwort1;
+            antwort2 = Antwort2;
+        }
+        public Umfrage(string Name, string Autor, int AntwortAnzahl, string Antwort1, string Antwort2,
+            umfragenTypen umfragenTyp)
+        {
+            umfragenName = Name;
+            autor = Autor;
+            customAntwortAnzahl = AntwortAnzahl;
+            UmfrageTyp = umfragenTyp;
+
+            antwort1 = Antwort1;
+            antwort2 = Antwort2;
+        }
+        public Umfrage(string Name, string UmfragenBeschreibung, string Autor, int AntwortAnzahl,
+            string Antwort1, string Antwort2, string Antwort3, umfragenTypen umfragenTyp)
+        {
+            umfragenName = Name;
+            umfragenBeschreibung = UmfragenBeschreibung;
+            autor = Autor;
+            customAntwortAnzahl = AntwortAnzahl;
+            UmfrageTyp = umfragenTyp;
+
+            antwort1 = Antwort1;
+            antwort2 = Antwort2;
+            antwort3 = Antwort3;
+        }
+        public Umfrage(string Name, string Autor, int AntwortAnzahl, string Antwort1, string Antwort2, string Antwort3,
+            umfragenTypen umfragenTyp)
+        {
+            umfragenName = Name;
+            autor = Autor;
+            customAntwortAnzahl = AntwortAnzahl;
+            UmfrageTyp = umfragenTyp;
+
+            antwort1 = Antwort1;
+            antwort2 = Antwort2;
+            antwort3 = Antwort3;
+        }
+        public Umfrage(string Name, string UmfragenBeschreibung, string Autor, int AntwortAnzahl,
+            string Antwort1, string Antwort2, string Antwort3, string Antwort4, umfragenTypen umfragenTyp)
+        {
+            umfragenName = Name;
+            umfragenBeschreibung = UmfragenBeschreibung;
+            autor = Autor;
+            customAntwortAnzahl = AntwortAnzahl;
+            UmfrageTyp = umfragenTyp;
+
+            antwort1 = Antwort1;
+            antwort2 = Antwort2;
+            antwort3 = Antwort3;
+            antwort4 = Antwort4;
+        }
+        public Umfrage(string Name, string Autor, int AntwortAnzahl, string Antwort1, string Antwort2, string Antwort3,
+            string Antwort4, umfragenTypen umfragenTyp)
+        {
+            umfragenName = Name;
+            autor = Autor;
+            customAntwortAnzahl = AntwortAnzahl;
+            UmfrageTyp = umfragenTyp;
+
+            antwort1 = Antwort1;
+            antwort2 = Antwort2;
+            antwort3 = Antwort3;
+            antwort4 = Antwort4;
+        }
+        public Umfrage(string Name, string UmfragenBeschreibung, string Autor, int AntwortAnzahl,
+            string Antwort1, string Antwort2, string Antwort3, string Antwort4, string Antwort5,
+            umfragenTypen umfragenTyp)
+        {
+            umfragenName = Name;
+            umfragenBeschreibung = UmfragenBeschreibung;
+            autor = Autor;
+            customAntwortAnzahl = AntwortAnzahl;
+            UmfrageTyp = umfragenTyp;
+
+            antwort1 = Antwort1;
+            antwort2 = Antwort2;
+            antwort3 = Antwort3;
+            antwort4 = Antwort4;
+            antwort5 = Antwort5;
+        }
+        public Umfrage(string Name, string Autor, int AntwortAnzahl, string Antwort1, string Antwort2, string Antwort3,
+            string Antwort4, string Antwort5, umfragenTypen umfragenTyp)
+        {
+            umfragenName = Name;
+            autor = Autor;
+            customAntwortAnzahl = AntwortAnzahl;
+            UmfrageTyp = umfragenTyp;
+
+            antwort1 = Antwort1;
+            antwort2 = Antwort2;
+            antwort3 = Antwort3;
+            antwort4 = Antwort4;
+            antwort5 = Antwort5;
+        }
+        public Umfrage(string Name, string UmfragenBeschreibung, string Autor, int AntwortAnzahl,
+            string Antwort1, string Antwort2, string Antwort3, string Antwort4, string Antwort5,
+            string Antwort6, umfragenTypen umfragenTyp)
+        {
+            umfragenName = Name;
+            umfragenBeschreibung = UmfragenBeschreibung;
+            autor = Autor;
+            customAntwortAnzahl = AntwortAnzahl;
+            UmfrageTyp = umfragenTyp;
+
+            antwort1 = Antwort1;
+            antwort2 = Antwort2;
+            antwort3 = Antwort3;
+            antwort4 = Antwort4;
+            antwort5 = Antwort5;
+            antwort6 = Antwort6;
+        }
+        public Umfrage(string Name, string Autor, int AntwortAnzahl, string Antwort1, string Antwort2, string Antwort3,
+            string Antwort4, string Antwort5, string Antwort6, umfragenTypen umfragenTyp)
+        {
+            umfragenName = Name;
+            autor = Autor;
+            customAntwortAnzahl = AntwortAnzahl;
+            UmfrageTyp = umfragenTyp;
+
+            antwort1 = Antwort1;
+            antwort2 = Antwort2;
+            antwort3 = Antwort3;
+            antwort4 = Antwort4;
+            antwort5 = Antwort5;
+            antwort6 = Antwort6;
+        }
+        public Umfrage(string Name, string UmfragenBeschreibung, string Autor, int AntwortAnzahl,
+            string Antwort1, string Antwort2, string Antwort3, string Antwort4, string Antwort5,
+            string Antwort6, string Antwort7, umfragenTypen umfragenTyp)
+        {
+            umfragenName = Name;
+            umfragenBeschreibung = UmfragenBeschreibung;
+            autor = Autor;
+            customAntwortAnzahl = AntwortAnzahl;
+            UmfrageTyp = umfragenTyp;
+
+            antwort1 = Antwort1;
+            antwort2 = Antwort2;
+            antwort3 = Antwort3;
+            antwort4 = Antwort4;
+            antwort5 = Antwort5;
+            antwort6 = Antwort6;
+            antwort7 = Antwort7;
+        }
+        public Umfrage(string Name, string Autor, int AntwortAnzahl, string Antwort1, string Antwort2, string Antwort3,
+            string Antwort4, string Antwort5, string Antwort6, string Antwort7, umfragenTypen umfragenTyp)
+        {
+            umfragenName = Name;
+            autor = Autor;
+            customAntwortAnzahl = AntwortAnzahl;
+            UmfrageTyp = umfragenTyp;
+
+            antwort1 = Antwort1;
+            antwort2 = Antwort2;
+            antwort3 = Antwort3;
+            antwort4 = Antwort4;
+            antwort5 = Antwort5;
+            antwort6 = Antwort6;
+            antwort7 = Antwort7;
+        }
+        public Umfrage(string Name, string UmfragenBeschreibung, string Autor, int AntwortAnzahl,
+            string Antwort1, string Antwort2, string Antwort3, string Antwort4, string Antwort5,
+            string Antwort6, string Antwort7, string Antwort8, umfragenTypen umfragenTyp)
+        {
+            umfragenName = Name;
+            umfragenBeschreibung = UmfragenBeschreibung;
+            autor = Autor;
+            customAntwortAnzahl = AntwortAnzahl;
+            UmfrageTyp = umfragenTyp;
+
+            antwort1 = Antwort1;
+            antwort2 = Antwort2;
+            antwort3 = Antwort3;
+            antwort4 = Antwort4;
+            antwort5 = Antwort5;
+            antwort6 = Antwort6;
+            antwort7 = Antwort7;
+            antwort8 = Antwort8;
+        }
+        public Umfrage(string Name, string Autor, int AntwortAnzahl, string Antwort1, string Antwort2, string Antwort3,
+            string Antwort4, string Antwort5, string Antwort6, string Antwort7, string Antwort8, umfragenTypen umfragenTyp)
+        {
+            umfragenName = Name;
+            autor = Autor;
+            customAntwortAnzahl = AntwortAnzahl;
+            UmfrageTyp = umfragenTyp;
+
+            antwort1 = Antwort1;
+            antwort2 = Antwort2;
+            antwort3 = Antwort3;
+            antwort4 = Antwort4;
+            antwort5 = Antwort5;
+            antwort6 = Antwort6;
+            antwort7 = Antwort7;
+            antwort8 = Antwort8;
+        }
+        public Umfrage(string Name, string UmfragenBeschreibung, string Autor, int AntwortAnzahl,
+            string Antwort1, string Antwort2, string Antwort3, string Antwort4, string Antwort5,
+            string Antwort6, string Antwort7, string Antwort8, string Antwort9, umfragenTypen umfragenTyp)
+        {
+            umfragenName = Name;
+            umfragenBeschreibung = UmfragenBeschreibung;
+            autor = Autor;
+            customAntwortAnzahl = AntwortAnzahl;
+            UmfrageTyp = umfragenTyp;
+
+            antwort1 = Antwort1;
+            antwort2 = Antwort2;
+            antwort3 = Antwort3;
+            antwort4 = Antwort4;
+            antwort5 = Antwort5;
+            antwort6 = Antwort6;
+            antwort7 = Antwort7;
+            antwort8 = Antwort8;
+            antwort9 = Antwort9;
+        }
+        public Umfrage(string Name, string Autor, int AntwortAnzahl, string Antwort1, string Antwort2, string Antwort3,
+            string Antwort4, string Antwort5, string Antwort6, string Antwort7, string Antwort8, string Antwort9,
+            umfragenTypen umfragenTyp)
+        {
+            umfragenName = Name;
+            autor = Autor;
+            customAntwortAnzahl = AntwortAnzahl;
+            UmfrageTyp = umfragenTyp;
+
+            antwort1 = Antwort1;
+            antwort2 = Antwort2;
+            antwort3 = Antwort3;
+            antwort4 = Antwort4;
+            antwort5 = Antwort5;
+            antwort6 = Antwort6;
+            antwort7 = Antwort7;
+            antwort8 = Antwort8;
+            antwort9 = Antwort9;
+        }
+        #endregion CustomKonstruktoren
     }
 }

@@ -43,9 +43,12 @@ namespace UmfrageSoftware
         private void buttonViewUmfragenUebersicht_Click(object sender, EventArgs e)
         {
             panelViews.Controls.Clear();
-            Umfrage testUmfrage = new Umfrage("TestUmfrage","TestBeschreibung","root",7,Umfrage.umfragenTypen.Ja_Nein);
+            Umfrage testUmfrage = new Umfrage("TextTest2", "TestBeschreibung", "root", Umfrage.umfragenTypen.Text); ;
             UserControlUmfrageVollUebersicht userControlUmfragenUebersicht = new UserControlUmfrageVollUebersicht(testUmfrage);
             panelViews.Controls.Add(userControlUmfragenUebersicht);
+        // Bei Abstimmen, wird in Tabelle Antworten Benutzer ID mit Umfrage ID verknüpft
+        //Antworten wird zusammenhang zwischen Abgestimmte Umfragen von Benutzern bilden
+        //Tabelle Antowrten: UmfrageID | BenutzerID
         }
 
         private void buttonViewUmfrageErstellen_Click(object sender, EventArgs e)

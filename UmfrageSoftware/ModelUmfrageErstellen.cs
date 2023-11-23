@@ -281,8 +281,7 @@ namespace UmfrageSoftware
 
 
                 commandErstellen.CommandText = "CREATE TABLE " + umfragenName +
-                    "(umfragenID INT, Umfragenbeschreibung TEXT, Antwort VARCHAR(255)," +
-                    " PRIMARY KEY (umfragenID));";
+                    "(umfragenID INT, Umfragenbeschreibung TEXT, Antwort VARCHAR(255))";
 
                 //füge Umfrage in Umfragen Tabelle hinzu
                 commandHinzufuegen.CommandText = "INSERT INTO Umfragen Values ('Null','" + umfragenName + "','" +
