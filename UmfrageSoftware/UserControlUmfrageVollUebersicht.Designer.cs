@@ -50,11 +50,10 @@
             this.textBoxUmfragenName = new System.Windows.Forms.TextBox();
             this.textBoxUmfragenBeschreibung = new System.Windows.Forms.TextBox();
             this.textBoxAutor = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridErgebnisse = new System.Windows.Forms.DataGridView();
             this.buttonAbbrechen = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridErgebnisse)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonAbstimmen
@@ -298,13 +297,13 @@
             this.textBoxAutor.Size = new System.Drawing.Size(219, 22);
             this.textBoxAutor.TabIndex = 31;
             // 
-            // dataGridView1
+            // dataGridErgebnisse
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(573, 26);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(483, 281);
-            this.dataGridView1.TabIndex = 32;
+            this.dataGridErgebnisse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridErgebnisse.Location = new System.Drawing.Point(573, 26);
+            this.dataGridErgebnisse.Name = "dataGridErgebnisse";
+            this.dataGridErgebnisse.Size = new System.Drawing.Size(483, 281);
+            this.dataGridErgebnisse.TabIndex = 32;
             // 
             // buttonAbbrechen
             // 
@@ -322,22 +321,12 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(332, 374);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 13);
-            this.label1.TabIndex = 36;
-            this.label1.Text = "ABSTAND: 40";
-            // 
             // UserControlUmfrageVollUebersicht
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonAbbrechen);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridErgebnisse);
             this.Controls.Add(this.textBoxAutor);
             this.Controls.Add(this.textBoxUmfragenBeschreibung);
             this.Controls.Add(this.textBoxUmfragenName);
@@ -362,7 +351,7 @@
             this.Name = "UserControlUmfrageVollUebersicht";
             this.Size = new System.Drawing.Size(1177, 611);
             this.Load += new System.EventHandler(this.UserControlUmfrageVollUebersicht_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridErgebnisse)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -391,9 +380,8 @@
         private System.Windows.Forms.TextBox textBoxUmfragenName;
         private System.Windows.Forms.TextBox textBoxUmfragenBeschreibung;
         private System.Windows.Forms.TextBox textBoxAutor;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridErgebnisse;
         private System.Windows.Forms.Button buttonAbbrechen;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.Label label1;
     }
 }

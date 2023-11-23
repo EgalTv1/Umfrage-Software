@@ -246,7 +246,7 @@ namespace UmfrageSoftware
                         break;
                 }
             }
-
+            //dataGridErgebnisse.quelle = Umfrage;
         }
 
         private void buttonAbstimmen_Click(object sender, EventArgs e)
