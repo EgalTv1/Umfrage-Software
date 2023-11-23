@@ -78,7 +78,6 @@ namespace UmfrageSoftware
                 radioButtonCustomAntwort9.Location = new System.Drawing.Point(radioButtonCustomAntwort1.Location.X,
                     radioButtonCustomAntwort8.Location.Y + abstandRadio);
 
-
                 switch (UmfrageWahl.CustomAntwortAnzahl)
                 {
                     default:
