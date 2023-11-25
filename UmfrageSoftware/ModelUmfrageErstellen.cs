@@ -50,13 +50,13 @@ namespace UmfrageSoftware
                     " PRIMARY KEY (umfragenID));";
 
                 //füge Umfrage in Umfragen Tabelle hinzu
-                commandHinzufuegen.CommandText = "INSERT INTO Umfragen Values ('Null','" + umfragenName + "','" +
-                    umfragenBeschreibung +
-                    "','" + DateTime.Now.Year + "-" + DateTime.Now.Month + "-" + DateTime.Now.Date.Day +
-                    " " + DateTime.Now.TimeOfDay + "','" +
-                    frist.Year + "-" + frist.Month + "-" + frist.Day + " " + frist.TimeOfDay + "','" +
-                    StartSeite.Benutzer.BenutzerID + "','" + loeschDatum.Year + "-" + loeschDatum.Month + "-" + loeschDatum.Day + " " +
-                    loeschDatum.TimeOfDay + "', 'Aktiv', 'Nein');";
+                commandHinzufuegen.CommandText = "INSERT INTO Umfragen Values ('Null','" + umfragenName + "','"
+                    + umfragenBeschreibung + " 'Ja/Nein' "
+                    + "','" + DateTime.Now.Year + "-" + DateTime.Now.Month + "-" + DateTime.Now.Date.Day
+                    + " " + DateTime.Now.TimeOfDay + "','"
+                    + frist.Year + "-" + frist.Month + "-" + frist.Day + " " + frist.TimeOfDay + "','"
+                    + StartSeite.Benutzer.BenutzerID + "','" + loeschDatum.Year + "-" + loeschDatum.Month + "-" + loeschDatum.Day + " "
+                    + loeschDatum.TimeOfDay + "', 'Aktiv', 'Nein');";
 
                 //fülle die Neue Umfrage mit den Antworten
                 commandFuellen.CommandText = "INSERT INTO " + umfragenName + " VALUES" +
@@ -226,13 +226,13 @@ namespace UmfrageSoftware
                         break;
                 }
 
-                commandHinzufuegen.CommandText = "INSERT INTO Umfragen Values ('Null','" + umfragenName + "','" +
-                umfragenBeschreibung +
-                "','" + DateTime.Now.Year + "-" + DateTime.Now.Month + "-" + DateTime.Now.Date.Day +
-                " " + DateTime.Now.TimeOfDay + "','" +
-                frist.Year + "-" + frist.Month + "-" + frist.Day + " " + frist.TimeOfDay + "','" +
-                StartSeite.Benutzer.BenutzerID + "','" + loeschDatum.Year + "-" + loeschDatum.Month + "-" + loeschDatum.Day + " " +
-                loeschDatum.TimeOfDay + "', 'Aktiv', 'Nein');";
+                commandHinzufuegen.CommandText = "INSERT INTO Umfragen Values ('Null','" + umfragenName + "','"
+                    + umfragenBeschreibung + " 'Custom(" + anzahlAntworten + "') "
+                    + "','" + DateTime.Now.Year + "-" + DateTime.Now.Month + "-" + DateTime.Now.Date.Day
+                    + " " + DateTime.Now.TimeOfDay + "','"
+                    + frist.Year + "-" + frist.Month + "-" + frist.Day + " " + frist.TimeOfDay + "','"
+                    + StartSeite.Benutzer.BenutzerID + "','" + loeschDatum.Year + "-" + loeschDatum.Month + "-" + loeschDatum.Day + " "
+                    + loeschDatum.TimeOfDay + "', 'Aktiv', 'Nein');";
 
                 commandErstellen.ExecuteNonQuery();
                 commandHinzufuegen.ExecuteNonQuery();
@@ -284,13 +284,13 @@ namespace UmfrageSoftware
                     "(umfragenID INT, Umfragenbeschreibung TEXT, Antwort VARCHAR(255))";
 
                 //füge Umfrage in Umfragen Tabelle hinzu
-                commandHinzufuegen.CommandText = "INSERT INTO Umfragen Values ('Null','" + umfragenName + "','" +
-                    umfragenBeschreibung +
-                    "','" + DateTime.Now.Year + "-" + DateTime.Now.Month + "-" + DateTime.Now.Date.Day +
-                    " " + DateTime.Now.TimeOfDay + "','" +
-                frist.Year + "-" + frist.Month + "-" + frist.Day + " " + frist.TimeOfDay + "','" +
-                StartSeite.Benutzer.BenutzerID + "','" + loeschDatum.Year + "-" + loeschDatum.Month + "-" + loeschDatum.Day + " " +
-                    loeschDatum.TimeOfDay + "', 'Aktiv', 'Nein');";
+                commandHinzufuegen.CommandText = "INSERT INTO Umfragen Values ('Null','" + umfragenName + "','" 
+                    + umfragenBeschreibung + " 'Text' "
+                    + "','" + DateTime.Now.Year + "-" + DateTime.Now.Month + "-" + DateTime.Now.Date.Day 
+                    + " " + DateTime.Now.TimeOfDay + "','" 
+                    + frist.Year + "-" + frist.Month + "-" + frist.Day + " " + frist.TimeOfDay + "','" 
+                    + StartSeite.Benutzer.BenutzerID + "','" + loeschDatum.Year + "-" + loeschDatum.Month + "-" + loeschDatum.Day + " " 
+                    + loeschDatum.TimeOfDay + "', 'Aktiv', 'Nein');";
 
                 //fülle die Neue Umfrage mit den Antworten
                 commandFuellen.CommandText = "INSERT INTO " + umfragenName + " VALUES" +

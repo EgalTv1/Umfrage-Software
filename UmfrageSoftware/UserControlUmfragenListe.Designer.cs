@@ -57,6 +57,7 @@
             this.buttonSuchen.TabIndex = 6;
             this.buttonSuchen.Text = "Suchen";
             this.buttonSuchen.UseVisualStyleBackColor = true;
+            this.buttonSuchen.Click += new System.EventHandler(this.buttonSuchen_Click);
             // 
             // textBoxUmfrageSuchen
             // 
@@ -116,6 +117,7 @@
             this.Controls.Add(this.dataGridViewUmfragenListe);
             this.Name = "UserControlUmfragenListe";
             this.Size = new System.Drawing.Size(1177, 611);
+            this.Load += new System.EventHandler(this.UserControlUmfragenListe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUmfragenListe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
