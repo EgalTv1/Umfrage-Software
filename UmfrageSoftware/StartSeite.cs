@@ -78,5 +78,12 @@ namespace UmfrageSoftware
             viewAnmeldeScreen.Show();
             this.Hide();
         }
+
+        private void buttonUmfragenListe_Click(object sender, EventArgs e)
+        {
+            panelViews.Controls.Clear();
+            UserControlUmfragenListe userControlUmfragenListe = new UserControlUmfragenListe();
+            panelViews.Controls.Add(userControlUmfragenListe);
+        }
     }
 }

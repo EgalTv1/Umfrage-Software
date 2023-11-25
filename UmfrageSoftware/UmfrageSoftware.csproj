@@ -105,6 +105,7 @@
     <Compile Include="ModelAnmeldeScreen.cs" />
     <Compile Include="ModelUmfrageAbstimmen.cs" />
     <Compile Include="ModelUmfrageErstellen.cs" />
+    <Compile Include="ModelUmfragenListe.cs" />
     <Compile Include="ModelUserVerwalten.cs" />
     <Compile Include="StartSeite.cs">
       <SubType>Form</SubType>
@@ -113,6 +114,12 @@
       <DependentUpon>StartSeite.cs</DependentUpon>
     </Compile>
     <Compile Include="Umfrage.cs" />
+    <Compile Include="UserControlUmfragenListe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlUmfragenListe.Designer.cs">
+      <DependentUpon>UserControlUmfragenListe.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlUmfrageErstellen.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -128,9 +135,11 @@
     <Compile Include="User.cs" />
     <Compile Include="UserControlUmfrageArchiv.cs">
       <SubType>UserControl</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="UserControlUmfrageArchiv.Designer.cs">
       <DependentUpon>UserControlUmfrageArchiv.cs</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="UserControlUserVerwalten.cs">
       <SubType>UserControl</SubType>
@@ -161,8 +170,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserControlUmfragenListe.resx">
+      <DependentUpon>UserControlUmfragenListe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControlUmfrageArchiv.resx">
       <DependentUpon>UserControlUmfrageArchiv.cs</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlUmfrageErstellen.resx">
       <DependentUpon>UserControlUmfrageErstellen.cs</DependentUpon>
