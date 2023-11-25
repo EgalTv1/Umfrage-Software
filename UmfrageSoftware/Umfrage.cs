@@ -59,6 +59,16 @@ namespace UmfrageSoftware
             UmfrageTyp = umfragenTyp;
 
         }
+
+        public Umfrage(string Name, string UmfragenBeschreibung, string Autor)
+        {
+            umfragenName = Name;
+            umfragenBeschreibung = UmfragenBeschreibung;
+            autor = Autor;
+        }
+
+
+
         public Umfrage(string Name, string Autor, int UmfrageID, umfragenTypen umfragenTyp)
         {
             umfragenName = Name;

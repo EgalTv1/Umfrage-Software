@@ -7,10 +7,12 @@ namespace UmfrageSoftware
 {
     internal class ModelUmfragenListe
     {
-        public static void UmfragenSammeln()
+        public static List<Umfrage> UmfragenSammeln()
         {
             List<string> UmfragenTabellen = new List<string>();
             MySqlConnection connection = DatenbankVerbindung.DatenbankVerbinden();
+
+            Umfrage UmfragenDatenFinal;
 
             if (connection != null)
             {
@@ -28,33 +30,33 @@ namespace UmfrageSoftware
 
                 MessageBox.Show(string.Join(Environment.NewLine, UmfragenTabellen));
 
-                List<Umfrage> UmfragenData = new List<Umfrage>();
+                List<Umfrage> UmfragenDataList = new List<Umfrage>();
 
                 foreach (string tableName in UmfragenTabellen)
                 {
                     MySqlCommand CommandUmfragenDaten = connection.CreateCommand();
                     CommandUmfragenDaten.CommandText = $"SELECT UmfragenBeschreibung FROM {tableName};";
 
-                    using (MySqlDataReader DatenReader = CommandUmfragenDaten.ExecuteReader())
+                    using (MySqlDataReader BeschreibungIdReader = CommandUmfragenDaten.ExecuteReader())
                     {
-                        while (DatenReader.Read())
+                        while (BeschreibungIdReader.Read())
                         {
-                            Umfrage umfrage = new Umfrage
+                            Umfrage umfragedaten = new Umfrage
                             {
-                                UmfragenBeschreibung = DatenReader.IsDBNull(0) ? null : DatenReader.GetString(0),
+                                UmfragenBeschreibung = BeschreibungIdReader.IsDBNull(0) ? null : BeschreibungIdReader.GetString(0),
                                 UmfragenName = tableName.Substring(4), // Entferne das Präfix "UMF_"
                             };
 
-                            UmfragenData.Add(umfrage);
+                            UmfragenDataList.Add(umfragedaten);
                         }
+                        
                     }
                 }
 
-                foreach (Umfrage umfrage in UmfragenData)
-                {
-                    MessageBox.Show($"UmfragenName: {umfrage.UmfragenName}, UmfragenBeschreibung: {umfrage.UmfragenBeschreibung}");
-                }
+                return UmfragenDataList;
             }
+
+            return null;
         }
     }
 }
