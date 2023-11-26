@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace UmfrageSoftware
@@ -48,15 +49,42 @@ namespace UmfrageSoftware
                             };
 
                             UmfragenDataList.Add(umfragedaten);
-                        }
-                        
+                        }                        
                     }
                 }
-
-                return UmfragenDataList;
+                connection.Close();
+                return UmfragenDataList;                
             }
-
             return null;
+        }
+        public static List<Umfrage> UmfragenAnzeigen()
+        {
+            List<Umfrage> umfrages = new List<Umfrage>();
+            MySqlConnection connection = DatenbankVerbindung.DatenbankVerbinden();
+            if(connection != null)
+            {
+                int anzahlAntworten = 0;
+                MySqlCommand umfragenAnzeigen = connection.CreateCommand();
+                umfragenAnzeigen.CommandText = "SELECT * FROM Umfragen";
+                
+                MySqlDataReader umfragenReader = umfragenAnzeigen.ExecuteReader();
+                while (umfragenReader.Read())
+                    //Baue die einzelnen Umfragen 
+                {
+                    int umfrageID = Convert.ToInt32(umfragenReader["Umfrage_ID"]);
+                    string umfrageName = umfragenReader["Titel"].ToString();
+                    string umfrageBeschreibung = umfragenReader["Beschreibung"].ToString();
+                    string umfrageTyp = umfragenReader["UmfragenTyp"].ToString();
+                    if (umfrageTyp.StartsWith("C")) //Wenn es Custom ist, suche nach anzahl von Antworten
+                    {
+                        anzahlAntworten = Convert.ToInt32(umfrageTyp.Substring(7,1));
+                    }
+                    //int AutorID = Convert.ToInt32(umfragenReader["Autor"]);
+                    Umfrage umfrageItem = new Umfrage(umfrageID,umfrageName.Substring(4),umfrageBeschreibung,"root",anzahlAntworten,umfrageTyp);
+                    umfrages.Add(umfrageItem);
+                }
+            }
+            return umfrages;
         }
     }
 }

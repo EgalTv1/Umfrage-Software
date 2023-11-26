@@ -57,6 +57,7 @@
             this.buttonSuchen.TabIndex = 6;
             this.buttonSuchen.Text = "Suchen";
             this.buttonSuchen.UseVisualStyleBackColor = true;
+            this.buttonSuchen.Click += new System.EventHandler(this.buttonSuchen_Click);
             // 
             // textBoxUmfrageSuchen
             // 
@@ -76,8 +77,10 @@
             this.dataGridViewUmfragenListe.Location = new System.Drawing.Point(0, 68);
             this.dataGridViewUmfragenListe.Name = "dataGridViewUmfragenListe";
             this.dataGridViewUmfragenListe.ReadOnly = true;
+            this.dataGridViewUmfragenListe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewUmfragenListe.Size = new System.Drawing.Size(1177, 537);
             this.dataGridViewUmfragenListe.TabIndex = 4;
+            this.dataGridViewUmfragenListe.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUmfragenListe_CellDoubleClick);
             // 
             // UmfragenName
             // 
@@ -116,6 +119,7 @@
             this.Controls.Add(this.dataGridViewUmfragenListe);
             this.Name = "UserControlUmfragenListe";
             this.Size = new System.Drawing.Size(1177, 611);
+            this.Load += new System.EventHandler(this.UserControlUmfragenListe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUmfragenListe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

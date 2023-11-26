@@ -184,7 +184,5 @@ namespace UmfrageSoftware
 
             stimmeAbgeben.ExecuteNonQuery();
         }
-
     }
-
 }
