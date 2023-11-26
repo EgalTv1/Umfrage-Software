@@ -77,8 +77,10 @@
             this.dataGridViewUmfragenListe.Location = new System.Drawing.Point(0, 68);
             this.dataGridViewUmfragenListe.Name = "dataGridViewUmfragenListe";
             this.dataGridViewUmfragenListe.ReadOnly = true;
+            this.dataGridViewUmfragenListe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewUmfragenListe.Size = new System.Drawing.Size(1177, 537);
             this.dataGridViewUmfragenListe.TabIndex = 4;
+            this.dataGridViewUmfragenListe.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUmfragenListe_CellDoubleClick);
             // 
             // UmfragenName
             // 

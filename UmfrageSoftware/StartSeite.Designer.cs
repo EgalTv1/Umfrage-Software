@@ -157,9 +157,9 @@
         private System.Windows.Forms.Button buttonViewUmfrageErstellen;
         private System.Windows.Forms.Button buttonBenutzerVerwalten;
         private System.Windows.Forms.Button buttonViewUmfragenArchiv;
-        private System.Windows.Forms.Panel panelViews;
         private System.Windows.Forms.Button buttonAbmelden;
         private System.Windows.Forms.Label labelUserName;
         private System.Windows.Forms.Button buttonUmfragenListe;
+        private System.Windows.Forms.Panel panelViews;
     }
 }

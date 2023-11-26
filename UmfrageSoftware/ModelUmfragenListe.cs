@@ -71,24 +71,17 @@ namespace UmfrageSoftware
                 while (umfragenReader.Read())
                     //Baue die einzelnen Umfragen 
                 {
-                    int umfrageID = Convert.ToInt32(umfragenReader["UmfrageID"]);
+                    int umfrageID = Convert.ToInt32(umfragenReader["Umfrage_ID"]);
                     string umfrageName = umfragenReader["Titel"].ToString();
-                    string umfrageBeschreibung = umfragenReader["UmfragenBeschreibung"].ToString();
+                    string umfrageBeschreibung = umfragenReader["Beschreibung"].ToString();
                     string umfrageTyp = umfragenReader["UmfragenTyp"].ToString();
                     if (umfrageTyp.StartsWith("C")) //Wenn es Custom ist, suche nach anzahl von Antworten
                     {
-                        anzahlAntworten = Convert.ToInt32(umfrageTyp.Substring(6,1));
-                        switch (anzahlAntworten)
-                        {
-                            default:
-                                break;
-                                //Suche die Antwort Anzahl heraus und baue demnach eine Instanz von Umfrage mit der richtigen AntwortZahl
-                        }
+                        anzahlAntworten = Convert.ToInt32(umfrageTyp.Substring(7,1));
                     }
                     //int AutorID = Convert.ToInt32(umfragenReader["Autor"]);
-
-
-                    Umfrage umfrageItem = new Umfrage(umfrageID,umfrageName,umfrageBeschreibung,"root",umfrageTyp);
+                    Umfrage umfrageItem = new Umfrage(umfrageID,umfrageName.Substring(4),umfrageBeschreibung,"root",anzahlAntworten,umfrageTyp);
+                    umfrages.Add(umfrageItem);
                 }
             }
             return umfrages;

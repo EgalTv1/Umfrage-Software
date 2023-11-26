@@ -87,6 +87,31 @@ namespace UmfrageSoftware
         }
         #region CustomKonstruktoren
         public Umfrage(int UmfrageID, string Name, string UmfragenBeschreibung, string Autor, int AntwortAnzahl,
+            umfragenTypen umfragenTyp)
+        {
+            umfragenID = UmfrageID;
+            umfragenName = Name;
+            umfragenBeschreibung = UmfragenBeschreibung;
+            autor = Autor;
+            customAntwortAnzahl = AntwortAnzahl;
+            UmfrageTyp = umfragenTyp;
+        }
+        public Umfrage(int UmfrageID, string Name, string UmfragenBeschreibung, string Autor, int AntwortAnzahl,
+            string umfragenTyp)
+        {
+            umfragenID = UmfrageID;
+            umfragenName = Name;
+            umfragenBeschreibung = UmfragenBeschreibung;
+            autor = Autor;
+            customAntwortAnzahl = AntwortAnzahl;
+            if (umfragenTyp == "Ja/Nein")
+                UmfrageTyp = umfragenTypen.Ja_Nein;
+            if (umfragenTyp == "Text")
+                UmfrageTyp = umfragenTypen.Text;
+            else
+                UmfrageTyp = umfragenTypen.Custom;
+        }
+        public Umfrage(int UmfrageID, string Name, string UmfragenBeschreibung, string Autor, int AntwortAnzahl,
             string Antwort1, umfragenTypen umfragenTyp)
         {
             umfragenID = UmfrageID;
