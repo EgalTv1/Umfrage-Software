@@ -51,7 +51,7 @@ namespace UmfrageSoftware
 
                 //füge Umfrage in Umfragen Tabelle hinzu
                 commandHinzufuegen.CommandText = "INSERT INTO Umfragen Values ('Null','" + umfragenName + "','"
-                    + umfragenBeschreibung + ", 'Ja/Nein' , '"
+                    + umfragenBeschreibung + "', 'Ja/Nein' , '"
                     + DateTime.Now.Year + "-" + DateTime.Now.Month + "-" + DateTime.Now.Date.Day
                     + " " + DateTime.Now.TimeOfDay + "','"
                     + frist.Year + "-" + frist.Month + "-" + frist.Day + " " + frist.TimeOfDay + "','"
