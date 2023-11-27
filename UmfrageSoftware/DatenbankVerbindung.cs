@@ -45,5 +45,15 @@ namespace UmfrageSoftware
 
             return text;
         }
+
+        public static string SonderzeichenRedo(string text)
+        {
+            text = text.Replace("_", " ");
+            //text = text.Replace("oe", "ö");
+            //text = text.Replace("ue", "ü");
+            //text = text.Replace("ae", "ä");
+
+            return text;
+        }
     }
 }

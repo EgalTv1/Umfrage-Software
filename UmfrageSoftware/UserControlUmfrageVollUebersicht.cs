@@ -86,7 +86,7 @@ namespace UmfrageSoftware
                             buttonAbstimmen.Enabled = false;
                             break;
                         case 1:
-                            radioButtonCustomAntwort1.Text = UmfrageWahl.Antwort1;
+                            radioButtonCustomAntwort1.Text = UmfrageWahl.Antwort1.Substring(8);
                             radioButtonCustomAntwort1.Visible = true;
                             buttonAbbrechen.Location = new System.Drawing.Point(buttonAbbrechen.Location.X,
                                 radioButtonCustomAntwort1.Location.Y + abstandButtons);
@@ -97,8 +97,8 @@ namespace UmfrageSoftware
                             radioButtonCustomAntwort1.Visible = true;
                             radioButtonCustomAntwort2.Visible = true;
 
-                            radioButtonCustomAntwort1.Text = UmfrageWahl.Antwort1;
-                            radioButtonCustomAntwort2.Text = UmfrageWahl.Antwort2;
+                            radioButtonCustomAntwort1.Text = UmfrageWahl.Antwort1.Substring(8);
+                            radioButtonCustomAntwort2.Text = UmfrageWahl.Antwort2.Substring(8);
 
                             buttonAbbrechen.Location = new System.Drawing.Point(buttonAbbrechen.Location.X,
                                 radioButtonCustomAntwort2.Location.Y + abstandButtons);
@@ -110,9 +110,9 @@ namespace UmfrageSoftware
                             radioButtonCustomAntwort2.Visible = true;
                             radioButtonCustomAntwort3.Visible = true;
 
-                            radioButtonCustomAntwort1.Text = UmfrageWahl.Antwort1;
-                            radioButtonCustomAntwort2.Text = UmfrageWahl.Antwort2;
-                            radioButtonCustomAntwort3.Text = UmfrageWahl.Antwort3;
+                            radioButtonCustomAntwort1.Text = UmfrageWahl.Antwort1.Substring(8);
+                            radioButtonCustomAntwort2.Text = UmfrageWahl.Antwort2.Substring(8);
+                            radioButtonCustomAntwort3.Text = UmfrageWahl.Antwort3.Substring(8);
 
                             buttonAbbrechen.Location = new System.Drawing.Point(buttonAbbrechen.Location.X,
                                 radioButtonCustomAntwort3.Location.Y + abstandButtons);
@@ -125,10 +125,10 @@ namespace UmfrageSoftware
                             radioButtonCustomAntwort3.Visible = true;
                             radioButtonCustomAntwort4.Visible = true;
 
-                            radioButtonCustomAntwort1.Text = UmfrageWahl.Antwort1;
-                            radioButtonCustomAntwort2.Text = UmfrageWahl.Antwort2;
-                            radioButtonCustomAntwort3.Text = UmfrageWahl.Antwort3;
-                            radioButtonCustomAntwort4.Text = UmfrageWahl.Antwort4;
+                            radioButtonCustomAntwort1.Text = UmfrageWahl.Antwort1.Substring(8);
+                            radioButtonCustomAntwort2.Text = UmfrageWahl.Antwort2.Substring(8);
+                            radioButtonCustomAntwort3.Text = UmfrageWahl.Antwort3.Substring(8);
+                            radioButtonCustomAntwort4.Text = UmfrageWahl.Antwort4.Substring(8);
 
                             buttonAbbrechen.Location = new System.Drawing.Point(buttonAbbrechen.Location.X,
                                 radioButtonCustomAntwort4.Location.Y + abstandButtons);
@@ -142,11 +142,11 @@ namespace UmfrageSoftware
                             radioButtonCustomAntwort4.Visible = true;
                             radioButtonCustomAntwort5.Visible = true;
 
-                            radioButtonCustomAntwort1.Text = UmfrageWahl.Antwort1;
-                            radioButtonCustomAntwort2.Text = UmfrageWahl.Antwort2;
-                            radioButtonCustomAntwort3.Text = UmfrageWahl.Antwort3;
-                            radioButtonCustomAntwort4.Text = UmfrageWahl.Antwort4;
-                            radioButtonCustomAntwort5.Text = UmfrageWahl.Antwort5;
+                            radioButtonCustomAntwort1.Text = UmfrageWahl.Antwort1.Substring(8);
+                            radioButtonCustomAntwort2.Text = UmfrageWahl.Antwort2.Substring(8);
+                            radioButtonCustomAntwort3.Text = UmfrageWahl.Antwort3.Substring(8);
+                            radioButtonCustomAntwort4.Text = UmfrageWahl.Antwort4.Substring(8);
+                            radioButtonCustomAntwort5.Text = UmfrageWahl.Antwort5.Substring(8);
 
                             buttonAbbrechen.Location = new System.Drawing.Point(buttonAbbrechen.Location.X,
                                 radioButtonCustomAntwort5.Location.Y + abstandButtons);
@@ -161,12 +161,12 @@ namespace UmfrageSoftware
                             radioButtonCustomAntwort5.Visible = true;
                             radioButtonCustomAntwort6.Visible = true;
 
-                            radioButtonCustomAntwort1.Text = UmfrageWahl.Antwort1;
-                            radioButtonCustomAntwort2.Text = UmfrageWahl.Antwort2;
-                            radioButtonCustomAntwort3.Text = UmfrageWahl.Antwort3;
-                            radioButtonCustomAntwort4.Text = UmfrageWahl.Antwort4;
-                            radioButtonCustomAntwort5.Text = UmfrageWahl.Antwort5;
-                            radioButtonCustomAntwort6.Text = UmfrageWahl.Antwort6;
+                            radioButtonCustomAntwort1.Text = UmfrageWahl.Antwort1.Substring(8);
+                            radioButtonCustomAntwort2.Text = UmfrageWahl.Antwort2.Substring(8);
+                            radioButtonCustomAntwort3.Text = UmfrageWahl.Antwort3.Substring(8);
+                            radioButtonCustomAntwort4.Text = UmfrageWahl.Antwort4.Substring(8);
+                            radioButtonCustomAntwort5.Text = UmfrageWahl.Antwort5.Substring(8);
+                            radioButtonCustomAntwort6.Text = UmfrageWahl.Antwort6.Substring(8);
 
                             buttonAbbrechen.Location = new System.Drawing.Point(buttonAbbrechen.Location.X,
                                 radioButtonCustomAntwort6.Location.Y + abstandButtons);
@@ -182,13 +182,13 @@ namespace UmfrageSoftware
                             radioButtonCustomAntwort6.Visible = true;
                             radioButtonCustomAntwort7.Visible = true;
 
-                            radioButtonCustomAntwort1.Text = UmfrageWahl.Antwort1;
-                            radioButtonCustomAntwort2.Text = UmfrageWahl.Antwort2;
-                            radioButtonCustomAntwort3.Text = UmfrageWahl.Antwort3;
-                            radioButtonCustomAntwort4.Text = UmfrageWahl.Antwort4;
-                            radioButtonCustomAntwort5.Text = UmfrageWahl.Antwort5;
-                            radioButtonCustomAntwort6.Text = UmfrageWahl.Antwort6;
-                            radioButtonCustomAntwort7.Text = UmfrageWahl.Antwort7;
+                            radioButtonCustomAntwort1.Text = UmfrageWahl.Antwort1.Substring(8);
+                            radioButtonCustomAntwort2.Text = UmfrageWahl.Antwort2.Substring(8);
+                            radioButtonCustomAntwort3.Text = UmfrageWahl.Antwort3.Substring(8);
+                            radioButtonCustomAntwort4.Text = UmfrageWahl.Antwort4.Substring(8);
+                            radioButtonCustomAntwort5.Text = UmfrageWahl.Antwort5.Substring(8);
+                            radioButtonCustomAntwort6.Text = UmfrageWahl.Antwort6.Substring(8);
+                            radioButtonCustomAntwort7.Text = UmfrageWahl.Antwort7.Substring(8);
 
                             buttonAbbrechen.Location = new System.Drawing.Point(buttonAbbrechen.Location.X,
                                 radioButtonCustomAntwort7.Location.Y + abstandButtons);
@@ -205,14 +205,14 @@ namespace UmfrageSoftware
                             radioButtonCustomAntwort7.Visible = true;
                             radioButtonCustomAntwort8.Visible = true;
 
-                            radioButtonCustomAntwort1.Text = UmfrageWahl.Antwort1;
-                            radioButtonCustomAntwort2.Text = UmfrageWahl.Antwort2;
-                            radioButtonCustomAntwort3.Text = UmfrageWahl.Antwort3;
-                            radioButtonCustomAntwort4.Text = UmfrageWahl.Antwort4;
-                            radioButtonCustomAntwort5.Text = UmfrageWahl.Antwort5;
-                            radioButtonCustomAntwort6.Text = UmfrageWahl.Antwort6;
-                            radioButtonCustomAntwort7.Text = UmfrageWahl.Antwort7;
-                            radioButtonCustomAntwort8.Text = UmfrageWahl.Antwort8;
+                            radioButtonCustomAntwort1.Text = UmfrageWahl.Antwort1.Substring(8);
+                            radioButtonCustomAntwort2.Text = UmfrageWahl.Antwort2.Substring(8);
+                            radioButtonCustomAntwort3.Text = UmfrageWahl.Antwort3.Substring(8);
+                            radioButtonCustomAntwort4.Text = UmfrageWahl.Antwort4.Substring(8);
+                            radioButtonCustomAntwort5.Text = UmfrageWahl.Antwort5.Substring(8);
+                            radioButtonCustomAntwort6.Text = UmfrageWahl.Antwort6.Substring(8);
+                            radioButtonCustomAntwort7.Text = UmfrageWahl.Antwort7.Substring(8);
+                            radioButtonCustomAntwort8.Text = UmfrageWahl.Antwort8.Substring(8);
 
                             buttonAbbrechen.Location = new System.Drawing.Point(buttonAbbrechen.Location.X,
                                 radioButtonCustomAntwort8.Location.Y + abstandButtons);
@@ -230,15 +230,15 @@ namespace UmfrageSoftware
                             radioButtonCustomAntwort8.Visible = true;
                             radioButtonCustomAntwort9.Visible = true;
 
-                            radioButtonCustomAntwort1.Text = UmfrageWahl.Antwort1;
-                            radioButtonCustomAntwort2.Text = UmfrageWahl.Antwort2;
-                            radioButtonCustomAntwort3.Text = UmfrageWahl.Antwort3;
-                            radioButtonCustomAntwort4.Text = UmfrageWahl.Antwort4;
-                            radioButtonCustomAntwort5.Text = UmfrageWahl.Antwort5;
-                            radioButtonCustomAntwort6.Text = UmfrageWahl.Antwort6;
-                            radioButtonCustomAntwort7.Text = UmfrageWahl.Antwort7;
-                            radioButtonCustomAntwort8.Text = UmfrageWahl.Antwort8;
-                            radioButtonCustomAntwort9.Text = UmfrageWahl.Antwort9;
+                            radioButtonCustomAntwort1.Text = UmfrageWahl.Antwort1.Substring(8);
+                            radioButtonCustomAntwort2.Text = UmfrageWahl.Antwort2.Substring(8);
+                            radioButtonCustomAntwort3.Text = UmfrageWahl.Antwort3.Substring(8);
+                            radioButtonCustomAntwort4.Text = UmfrageWahl.Antwort4.Substring(8);
+                            radioButtonCustomAntwort5.Text = UmfrageWahl.Antwort5.Substring(8);
+                            radioButtonCustomAntwort6.Text = UmfrageWahl.Antwort6.Substring(8);
+                            radioButtonCustomAntwort7.Text = UmfrageWahl.Antwort7.Substring(8);
+                            radioButtonCustomAntwort8.Text = UmfrageWahl.Antwort8.Substring(8);
+                            radioButtonCustomAntwort9.Text = UmfrageWahl.Antwort9.Substring(8);
 
                             buttonAbbrechen.Location = new System.Drawing.Point(buttonAbbrechen.Location.X,
                                 radioButtonCustomAntwort9.Location.Y + abstandButtons);
@@ -337,7 +337,7 @@ namespace UmfrageSoftware
                 #endregion AntwortChecks
                 if (ModelUmfrageAbstimmen.Custom(antwort))
                 {
-                    MessageBox.Show("Sie haben bei der Umfrage " + UmfrageWahl.UmfragenName + " mit " + antwortText + " gestimmt");
+                    MessageBox.Show("Sie haben bei der Umfrage " + UmfrageWahl.UmfragenName + " mit " + antwortText.Substring(8) + " gestimmt");
                 }
                 else
                 {

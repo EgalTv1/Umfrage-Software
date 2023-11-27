@@ -25,6 +25,7 @@ namespace UmfrageSoftware
             MySqlConnection connection = DatenbankVerbindung.DatenbankVerbinden();
             if (connection != null)
             {
+
                 if (StimmePruefen(connection))
                 {
                     MessageBox.Show("Sie haben für diese Umfrage schon abgestimmt");
@@ -34,12 +35,12 @@ namespace UmfrageSoftware
 
                 if (antwort)
                 {
-                    stimme.CommandText = "UPDATE UMF_" + UserControlUmfrageVollUebersicht.UmfrageWahl.UmfragenName +
+                    stimme.CommandText = "UPDATE UMF_" + DatenbankVerbindung.SonderzeichenErsetzen(UserControlUmfrageVollUebersicht.UmfrageWahl.UmfragenName) +
                     " SET Stimmen_Ja = Stimmen_Ja + 1";
                 }
                 else
                 {
-                    stimme.CommandText = "UPDATE UMF_" + UserControlUmfrageVollUebersicht.UmfrageWahl.UmfragenName +
+                    stimme.CommandText = "UPDATE UMF_" + DatenbankVerbindung.SonderzeichenErsetzen(UserControlUmfrageVollUebersicht.UmfrageWahl.UmfragenName) +
                        " SET Stimmen_Nein = Stimmen_Nein + 1";
                 }
                 stimme.ExecuteNonQuery();
@@ -71,48 +72,48 @@ namespace UmfrageSoftware
                         MessageBox.Show("WIE HAST DU ES HIERHIN GESCHAFFT!?!", "MATI!?!");
                         break;
                     case 1:
-                        stimme.CommandText = "UPDATE UMF_" + UserControlUmfrageVollUebersicht.UmfrageWahl.UmfragenName +
-                            " SET Stimmen_" + UserControlUmfrageVollUebersicht.UmfrageWahl.Antwort1 + " = Stimmen_" +
+                        stimme.CommandText = "UPDATE UMF_" + DatenbankVerbindung.SonderzeichenErsetzen(UserControlUmfrageVollUebersicht.UmfrageWahl.UmfragenName) +
+                            " SET " + UserControlUmfrageVollUebersicht.UmfrageWahl.Antwort1 + " = " +
                             UserControlUmfrageVollUebersicht.UmfrageWahl.Antwort1 + " + 1";
                         break;
                     case 2:
-                        stimme.CommandText = "UPDATE UMF_" + UserControlUmfrageVollUebersicht.UmfrageWahl.UmfragenName +
-                            " SET Stimmen_" + UserControlUmfrageVollUebersicht.UmfrageWahl.Antwort2 + " = Stimmen_" +
+                        stimme.CommandText = "UPDATE UMF_" + DatenbankVerbindung.SonderzeichenErsetzen(UserControlUmfrageVollUebersicht.UmfrageWahl.UmfragenName) +
+                            " SET " + UserControlUmfrageVollUebersicht.UmfrageWahl.Antwort2 + " = " +
                             UserControlUmfrageVollUebersicht.UmfrageWahl.Antwort2 + " + 1";
                         break;
                     case 3:
-                        stimme.CommandText = "UPDATE UMF_" + UserControlUmfrageVollUebersicht.UmfrageWahl.UmfragenName +
-                            " SET Stimmen_" + UserControlUmfrageVollUebersicht.UmfrageWahl.Antwort3 + " = Stimmen_" +
+                        stimme.CommandText = "UPDATE UMF_" + DatenbankVerbindung.SonderzeichenErsetzen(UserControlUmfrageVollUebersicht.UmfrageWahl.UmfragenName) +
+                            " SET " + UserControlUmfrageVollUebersicht.UmfrageWahl.Antwort3 + " = " +
                             UserControlUmfrageVollUebersicht.UmfrageWahl.Antwort3 + " + 1";
                         break;
                     case 4:
-                        stimme.CommandText = "UPDATE UMF_" + UserControlUmfrageVollUebersicht.UmfrageWahl.UmfragenName +
-                            " SET Stimmen_" + UserControlUmfrageVollUebersicht.UmfrageWahl.Antwort4 + " = Stimmen_" +
+                        stimme.CommandText = "UPDATE UMF_" + DatenbankVerbindung.SonderzeichenErsetzen(UserControlUmfrageVollUebersicht.UmfrageWahl.UmfragenName) +
+                            " SET " + UserControlUmfrageVollUebersicht.UmfrageWahl.Antwort4 + " = " +
                             UserControlUmfrageVollUebersicht.UmfrageWahl.Antwort4 + " + 1";
                         break;
                     case 5:
-                        stimme.CommandText = "UPDATE UMF_" + UserControlUmfrageVollUebersicht.UmfrageWahl.UmfragenName +
-                            " SET Stimmen_" + UserControlUmfrageVollUebersicht.UmfrageWahl.Antwort5 + " = Stimmen_" +
+                        stimme.CommandText = "UPDATE UMF_" + DatenbankVerbindung.SonderzeichenErsetzen(UserControlUmfrageVollUebersicht.UmfrageWahl.UmfragenName) +
+                            " SET " + UserControlUmfrageVollUebersicht.UmfrageWahl.Antwort5 + " = " +
                             UserControlUmfrageVollUebersicht.UmfrageWahl.Antwort5 + " + 1";
                         break;
                     case 6:
-                        stimme.CommandText = "UPDATE UMF_" + UserControlUmfrageVollUebersicht.UmfrageWahl.UmfragenName +
-                            " SET Stimmen_" + UserControlUmfrageVollUebersicht.UmfrageWahl.Antwort6 + " = Stimmen_" +
+                        stimme.CommandText = "UPDATE UMF_" + DatenbankVerbindung.SonderzeichenErsetzen(UserControlUmfrageVollUebersicht.UmfrageWahl.UmfragenName) +
+                            " SET " + UserControlUmfrageVollUebersicht.UmfrageWahl.Antwort6 + " = " +
                             UserControlUmfrageVollUebersicht.UmfrageWahl.Antwort6 + " + 1";
                         break;
                     case 7:
-                        stimme.CommandText = "UPDATE UMF_" + UserControlUmfrageVollUebersicht.UmfrageWahl.UmfragenName +
-                            " SET Stimmen_" + UserControlUmfrageVollUebersicht.UmfrageWahl.Antwort7 + " = Stimmen_" +
+                        stimme.CommandText = "UPDATE UMF_" + DatenbankVerbindung.SonderzeichenErsetzen(UserControlUmfrageVollUebersicht.UmfrageWahl.UmfragenName) +
+                            " SET " + UserControlUmfrageVollUebersicht.UmfrageWahl.Antwort7 + " = " +
                             UserControlUmfrageVollUebersicht.UmfrageWahl.Antwort7 + " + 1";
                         break;
                     case 8:
-                        stimme.CommandText = "UPDATE UMF_" + UserControlUmfrageVollUebersicht.UmfrageWahl.UmfragenName +
-                            " SET Stimmen_" + UserControlUmfrageVollUebersicht.UmfrageWahl.Antwort8 + " = Stimmen_" +
+                        stimme.CommandText = "UPDATE UMF_" + DatenbankVerbindung.SonderzeichenErsetzen(UserControlUmfrageVollUebersicht.UmfrageWahl.UmfragenName) +
+                            " SET " + UserControlUmfrageVollUebersicht.UmfrageWahl.Antwort8 + " = " +
                             UserControlUmfrageVollUebersicht.UmfrageWahl.Antwort8 + " + 1";
                         break;
                     case 9:
-                        stimme.CommandText = "UPDATE UMF_" + UserControlUmfrageVollUebersicht.UmfrageWahl.UmfragenName +
-                            " SET Stimmen_" + UserControlUmfrageVollUebersicht.UmfrageWahl.Antwort9 + " = Stimmen_" +
+                        stimme.CommandText = "UPDATE UMF_" + DatenbankVerbindung.SonderzeichenErsetzen(UserControlUmfrageVollUebersicht.UmfrageWahl.UmfragenName) +
+                            " SET " + UserControlUmfrageVollUebersicht.UmfrageWahl.Antwort9 + " = " +
                             UserControlUmfrageVollUebersicht.UmfrageWahl.Antwort9 + " + 1";
                         break;
                 }
@@ -139,7 +140,7 @@ namespace UmfrageSoftware
                     return true;
                 }
                 MySqlCommand stimme = connection.CreateCommand();
-                stimme.CommandText = "INSERT INTO UMF_" + UserControlUmfrageVollUebersicht.UmfrageWahl.UmfragenName +
+                stimme.CommandText = "INSERT INTO UMF_" + DatenbankVerbindung.SonderzeichenErsetzen(UserControlUmfrageVollUebersicht.UmfrageWahl.UmfragenName) +
                     " (Antwort) VALUES ('" + antwort + "')";
 
                 stimme.ExecuteNonQuery();
@@ -183,6 +184,34 @@ namespace UmfrageSoftware
                 ", " + StartSeite.Benutzer.BenutzerID + ")";
 
             stimmeAbgeben.ExecuteNonQuery();
+        }
+        internal static List<string> StimmenHolen(string UmfragenName)
+        {            
+            MySqlConnection connection = DatenbankVerbindung.DatenbankVerbinden();
+            if (connection != null)
+            {
+                List<string> Antworten = new List<string>();
+
+                UmfragenName = "UMF_" + UmfragenName;
+                UmfragenName = DatenbankVerbindung.SonderzeichenErsetzen(UmfragenName);
+                //für Antwort Anzahl, hole alle Antworten raus und gebe sie am ende in einer Liste zurück
+                MySqlCommand stimmenHolen = connection.CreateCommand();         
+                
+                stimmenHolen.CommandText = "SELECT * FROM " + UmfragenName;
+
+                MySqlDataReader reader = stimmenHolen.ExecuteReader();
+                while (reader.Read())
+                {
+                    //wenn Spalte mit: "Stimmen_" Amfängt, füge die ganze Spalte zur Liste hinzu
+                    for (int i = 2; i < reader.FieldCount; i++)
+                    {
+                        Antworten.Add(reader.GetName(i));
+                    }
+                }
+                reader.Close();
+                return Antworten;
+            }
+            return null;
         }
     }
 }

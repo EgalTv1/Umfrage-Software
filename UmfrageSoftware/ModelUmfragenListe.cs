@@ -11,12 +11,9 @@ namespace UmfrageSoftware
 
         public static List<Umfrage> UmfragenAnzeigen()
         {
-
-
-
             List<Umfrage> umfrages = new List<Umfrage>();
             MySqlConnection connection = DatenbankVerbindung.DatenbankVerbinden();
-           
+
             if (connection != null)
             {
                 int umfrageID = 0;
@@ -28,7 +25,6 @@ namespace UmfrageSoftware
                 int anzahlAntworten = 0;
                 MySqlCommand umfragenAnzeigen = connection.CreateCommand();
                 umfragenAnzeigen.CommandText = "SELECT * FROM Umfragen";
-
 
                 MySqlDataReader umfragenReader = umfragenAnzeigen.ExecuteReader();
                 while (umfragenReader.Read())
@@ -56,7 +52,6 @@ namespace UmfrageSoftware
                                 AutorName = NamenReader["Benutzername"].ToString();
                             }
                         }
-
                     }
                     Umfrage umfrageItem = new Umfrage(umfrageID, umfrageName.Substring(4), umfrageBeschreibung, AutorName, anzahlAntworten, umfrageTyp);
                     umfrages.Add(umfrageItem);
