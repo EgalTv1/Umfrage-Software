@@ -25,48 +25,55 @@ namespace UmfrageSoftware
 
         private void buttonSpeichern_Click(object sender, EventArgs e)
         {
-            if (radioButtonJaNein.Checked)
+            if (textBoxUmfrageName.Text != null)
             {
-                if (ModelUmfrageErstellen.JaNeinUmfrageErstellen(textBoxUmfrageName.Text,
+                if (radioButtonJaNein.Checked)
+                {
+                    if (ModelUmfrageErstellen.JaNeinUmfrageErstellen(textBoxUmfrageName.Text,
+                        textBoxUmfrageBeschreibung.Text, monthCalendarFrist.SelectionStart))
+                    {
+                        MessageBox.Show("Die Umfrage " + textBoxUmfrageName.Text + " wurde erstellt");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Die Umfrage konnte nicht erstellt werden");
+                    }
+                }
+                else if (radioButtonCustomAntworten.Checked)
+                {
+                    if (ModelUmfrageErstellen.CustomAntwortenUmfrageErstellen(textBoxUmfrageName.Text,
+                    textBoxUmfrageBeschreibung.Text, comboBoxAnzahlAntworten.SelectedIndex, monthCalendarFrist.SelectionStart,
+                    textBoxCustomAntwort1.Text, textBoxCustomAntwort2.Text, textBoxCustomAntwort3.Text, textBoxCustomAntwort4.Text,
+                    textBoxCustomAntwort5.Text, textBoxCustomAntwort6.Text, textBoxCustomAntwort7.Text, textBoxCustomAntwort8.Text,
+                    textBoxCustomAntwort9.Text))
+                    {
+                        MessageBox.Show("Die Umfrage " + textBoxUmfrageName.Text + " wurde erstellt");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Die Umfrage konnte nicht erstellt werden");
+                    }
+                }
+                else if (radioButtonTextAntwort.Checked)
+                {
+                    if (ModelUmfrageErstellen.TextAntwortUmfrageErstellen(textBoxUmfrageName.Text,
                     textBoxUmfrageBeschreibung.Text, monthCalendarFrist.SelectionStart))
-                {
-                    MessageBox.Show("Die Umfrage " + textBoxUmfrageName.Text + " wurde erstellt");
+                    {
+                        MessageBox.Show("Die Umfrage " + textBoxUmfrageName.Text + " wurde erstellt");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Die Umfrage konnte nicht erstellt werden");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Die Umfrage konnte nicht erstellt werden");
-                }
-            }
-            else if (radioButtonCustomAntworten.Checked)
-            {
-                if (ModelUmfrageErstellen.CustomAntwortenUmfrageErstellen(textBoxUmfrageName.Text,
-                textBoxUmfrageBeschreibung.Text, comboBoxAnzahlAntworten.SelectedIndex, monthCalendarFrist.SelectionStart,
-                textBoxCustomAntwort1.Text,textBoxCustomAntwort2.Text,textBoxCustomAntwort3.Text,textBoxCustomAntwort4.Text,
-                textBoxCustomAntwort5.Text,textBoxCustomAntwort6.Text,textBoxCustomAntwort7.Text,textBoxCustomAntwort8.Text,
-                textBoxCustomAntwort9.Text))
-                {
-                    MessageBox.Show("Die Umfrage " + textBoxUmfrageName.Text + " wurde erstellt");
-                }
-                else
-                {
-                    MessageBox.Show("Die Umfrage konnte nicht erstellt werden");
-                }
-            }
-            else if (radioButtonTextAntwort.Checked)
-            {
-                if (ModelUmfrageErstellen.TextAntwortUmfrageErstellen(textBoxUmfrageName.Text,
-                textBoxUmfrageBeschreibung.Text, monthCalendarFrist.SelectionStart))
-                {
-                    MessageBox.Show("Die Umfrage " + textBoxUmfrageName.Text + " wurde erstellt");
-                }
-                else
-                {
-                    MessageBox.Show("Die Umfrage konnte nicht erstellt werden");
+                    MessageBox.Show("What the hell happened?? MATI!");
                 }
             }
             else
             {
-                MessageBox.Show("What the hell happened?? MATI!");
+                MessageBox.Show("Bitte einen Namen für die Umfrage eingeben");
             }
             //Do the Speichering
         }
@@ -95,7 +102,6 @@ namespace UmfrageSoftware
             comboBoxAnzahlAntworten.Visible = true;
         }
 
-
         private void radioButtonTextAntwort_CheckedChanged(object sender, EventArgs e)
         {
             if (radioButtonTextAntwort.Checked != true)
@@ -109,12 +115,6 @@ namespace UmfrageSoftware
 
         private void comboBoxAnzahlAntworten_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //for (int i = 0; i < comboBoxAnzahlAntworten.SelectedIndex; i++)
-            //{
-
-            //}
-
-
             switch (comboBoxAnzahlAntworten.SelectedIndex)
             {
                 default: break;
