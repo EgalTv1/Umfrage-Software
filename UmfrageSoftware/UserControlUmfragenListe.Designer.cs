@@ -32,6 +32,7 @@
             this.buttonSuchen = new System.Windows.Forms.Button();
             this.textBoxUmfrageSuchen = new System.Windows.Forms.TextBox();
             this.dataGridViewUmfragenListe = new System.Windows.Forms.DataGridView();
+            this.Umfragen_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UmfragenName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UmfragenBeschreibung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UmfragenAutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,6 +73,7 @@
             // 
             this.dataGridViewUmfragenListe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewUmfragenListe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Umfragen_ID,
             this.UmfragenName,
             this.UmfragenBeschreibung,
             this.UmfragenAutor,
@@ -84,9 +86,14 @@
             this.dataGridViewUmfragenListe.TabIndex = 4;
             this.dataGridViewUmfragenListe.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUmfragenListe_CellDoubleClick);
             // 
+            // Umfragen_ID
+            // 
+            this.Umfragen_ID.HeaderText = "Umfragen_ID";
+            this.Umfragen_ID.Name = "Umfragen_ID";
+            this.Umfragen_ID.ReadOnly = true;
+            // 
             // UmfragenName
             // 
-            this.UmfragenName.Frozen = true;
             this.UmfragenName.HeaderText = "Umfragen Name";
             this.UmfragenName.Name = "UmfragenName";
             this.UmfragenName.ReadOnly = true;
@@ -94,7 +101,6 @@
             // 
             // UmfragenBeschreibung
             // 
-            this.UmfragenBeschreibung.Frozen = true;
             this.UmfragenBeschreibung.HeaderText = "Umfragen Beschreibung";
             this.UmfragenBeschreibung.Name = "UmfragenBeschreibung";
             this.UmfragenBeschreibung.ReadOnly = true;
@@ -102,7 +108,6 @@
             // 
             // UmfragenAutor
             // 
-            this.UmfragenAutor.Frozen = true;
             this.UmfragenAutor.HeaderText = "Umfragen Autor";
             this.UmfragenAutor.Name = "UmfragenAutor";
             this.UmfragenAutor.ReadOnly = true;
@@ -138,6 +143,7 @@
         private System.Windows.Forms.Button buttonSuchen;
         private System.Windows.Forms.TextBox textBoxUmfrageSuchen;
         private System.Windows.Forms.DataGridView dataGridViewUmfragenListe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Umfragen_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn UmfragenName;
         private System.Windows.Forms.DataGridViewTextBoxColumn UmfragenBeschreibung;
         private System.Windows.Forms.DataGridViewTextBoxColumn UmfragenAutor;

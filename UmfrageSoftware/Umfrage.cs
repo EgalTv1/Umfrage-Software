@@ -64,12 +64,18 @@ namespace UmfrageSoftware
             umfragenName = Name;
             umfragenBeschreibung = UmfragenBeschreibung;
             autor = Autor;
-            if (umfragenTyp == "Ja/Nein")
+            if (umfragenTyp == "Ja/Nein" || umfragenTyp == "Ja_Nein")
+            {
                 UmfrageTyp = umfragenTypen.Ja_Nein;
-            if (umfragenTyp == "Text")
+            }
+            else if (umfragenTyp == "Text")
+            {
                 UmfrageTyp = umfragenTypen.Text;
+            }
             else
+            {
                 UmfrageTyp = umfragenTypen.Custom;
+            }
         }
         public Umfrage(string Name, string UmfragenBeschreibung, string Autor)
         {
@@ -104,12 +110,18 @@ namespace UmfrageSoftware
             umfragenBeschreibung = UmfragenBeschreibung;
             autor = Autor;
             customAntwortAnzahl = AntwortAnzahl;
-            if (umfragenTyp == "Ja/Nein")
+            if (umfragenTyp == "Ja/Nein" || umfragenTyp == "Ja_Nein")
+            {
                 UmfrageTyp = umfragenTypen.Ja_Nein;
-            if (umfragenTyp == "Text")
+            }
+            else if (umfragenTyp == "Text")
+            {
                 UmfrageTyp = umfragenTypen.Text;
+            }
             else
+            {
                 UmfrageTyp = umfragenTypen.Custom;
+            }
         }
         public Umfrage(int UmfrageID, string Name, string UmfragenBeschreibung, string Autor, int AntwortAnzahl,
             string Antwort1, umfragenTypen umfragenTyp)
@@ -377,12 +389,13 @@ namespace UmfrageSoftware
             antwort8 = Antwort8;
             antwort9 = Antwort9;
         }
-        public Umfrage(int UmfrageID, string Name, string Autor, int AntwortAnzahl, string Antwort1, string Antwort2, string Antwort3,
+        public Umfrage(int UmfrageID, string Name,string UmfragenBeschreibung, string Autor, int AntwortAnzahl, string Antwort1, string Antwort2, string Antwort3,
             string Antwort4, string Antwort5, string Antwort6, string Antwort7, string Antwort8, string Antwort9,
             umfragenTypen umfragenTyp)
         {
             umfragenID = UmfrageID;
             umfragenName = Name;
+            umfragenBeschreibung = UmfragenBeschreibung;
             autor = Autor;
             customAntwortAnzahl = AntwortAnzahl;
             UmfrageTyp = umfragenTyp;
