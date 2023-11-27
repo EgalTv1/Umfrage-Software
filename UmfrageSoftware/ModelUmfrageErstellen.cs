@@ -93,6 +93,16 @@ namespace UmfrageSoftware
                 umfragenName = DatenbankVerbindung.SonderzeichenErsetzen(umfragenName);
                 umfragenName = "UMF_" + umfragenName;
 
+                antwort1 = DatenbankVerbindung.SonderzeichenErsetzen(antwort1);
+                antwort2 = DatenbankVerbindung.SonderzeichenErsetzen(antwort2);
+                antwort3 = DatenbankVerbindung.SonderzeichenErsetzen(antwort3);
+                antwort4 = DatenbankVerbindung.SonderzeichenErsetzen(antwort4);
+                antwort5 = DatenbankVerbindung.SonderzeichenErsetzen(antwort5);
+                antwort6 = DatenbankVerbindung.SonderzeichenErsetzen(antwort6);
+                antwort7 = DatenbankVerbindung.SonderzeichenErsetzen(antwort7);
+                antwort8 = DatenbankVerbindung.SonderzeichenErsetzen(antwort8);
+                antwort9 = DatenbankVerbindung.SonderzeichenErsetzen(antwort9);
+
                 MySqlCommand commandErstellen = connection.CreateCommand();
                 MySqlCommand commandHinzufuegen = connection.CreateCommand();
                 MySqlCommand commandFuellen = connection.CreateCommand();
@@ -227,7 +237,7 @@ namespace UmfrageSoftware
                 }
 
                 commandHinzufuegen.CommandText = "INSERT INTO Umfragen Values ('Null','" + umfragenName + "','"
-                    + umfragenBeschreibung + " ,'Custom(" + anzahlAntworten + ")',' "
+                    + umfragenBeschreibung + "' ,'Custom(" + anzahlAntworten + ")',' "
                     + DateTime.Now.Year + "-" + DateTime.Now.Month + "-" + DateTime.Now.Date.Day
                     + " " + DateTime.Now.TimeOfDay + "','"
                     + frist.Year + "-" + frist.Month + "-" + frist.Day + " " + frist.TimeOfDay + "','"
