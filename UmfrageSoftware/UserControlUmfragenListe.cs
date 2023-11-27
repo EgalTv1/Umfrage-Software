@@ -17,7 +17,7 @@ namespace UmfrageSoftware
             foreach (Umfrage umfrage in UmfrageDaten)
             {
                 //MessageBox.Show($"UmfragenName: {umfrage.UmfragenName}, UmfragenBeschreibung: {umfrage.UmfragenBeschreibung}");
-                dataGridViewUmfragenListe.Rows.Add(umfrage.UmfragenName, umfrage.UmfragenBeschreibung, umfrage.Autor);
+                dataGridViewUmfragenListe.Rows.Add(umfrage.UmfragenName, umfrage.UmfragenBeschreibung, umfrage.Autor, umfrage.UmfrageTyp);
             }
         }
         private void buttonSuchen_Click(object sender, EventArgs e)
@@ -27,7 +27,7 @@ namespace UmfrageSoftware
             foreach (Umfrage umfrage in UmfrageDaten)
             {
                 //MessageBox.Show($"UmfragenName: {umfrage.UmfragenName}, UmfragenBeschreibung: {umfrage.UmfragenBeschreibung}");
-                dataGridViewUmfragenListe.Rows.Add(umfrage.UmfragenName, umfrage.UmfragenBeschreibung, umfrage.Autor);
+                dataGridViewUmfragenListe.Rows.Add(umfrage.UmfragenName, umfrage.UmfragenBeschreibung, umfrage.Autor, umfrage.UmfrageTyp);
             }
         }
 
@@ -39,6 +39,11 @@ namespace UmfrageSoftware
             string umfragenName = dataGridViewUmfragenListe[0, e.RowIndex].Value.ToString();
             string umfragenBeschreibung = dataGridViewUmfragenListe[1, e.RowIndex].Value.ToString();
             string umfragenAutor = dataGridViewUmfragenListe[2, e.RowIndex].Value.ToString();
+
+            string umfragenTyp = dataGridViewUmfragenListe[3, e.RowIndex].Value.ToString();
+
+
+            // Alex du musst hier noch umfragen typ übergeben bei mir will das irgendwie nicht
 
             Umfrage umfrageAuswahl = new Umfrage(umfragenName, umfragenBeschreibung, umfragenAutor);
 

@@ -16,17 +16,19 @@ namespace UmfrageSoftware
 
             List<Umfrage> umfrages = new List<Umfrage>();
             MySqlConnection connection = DatenbankVerbindung.DatenbankVerbinden();
+           
             if (connection != null)
             {
                 int umfrageID = 0;
-                string umfrageName = "Null";
-                string umfrageBeschreibung = "Null";
-                string umfrageTyp = "Null";
+                string umfrageName = null;
+                string umfrageBeschreibung = null;
+                string umfrageTyp = null;
                 int AutorID = 0;
-                string AutorName;
+                string AutorName = null;
                 int anzahlAntworten = 0;
                 MySqlCommand umfragenAnzeigen = connection.CreateCommand();
                 umfragenAnzeigen.CommandText = "SELECT * FROM Umfragen";
+
 
                 MySqlDataReader umfragenReader = umfragenAnzeigen.ExecuteReader();
                 while (umfragenReader.Read())
@@ -42,24 +44,24 @@ namespace UmfrageSoftware
                     }
                     AutorID = Convert.ToInt32(umfragenReader["Autor"]);
 
-                }
-                umfragenReader.Close();
-                MySqlCommand BenutzernameZiehen = connection.CreateCommand();
-                BenutzernameZiehen.CommandText = "Select Benutzername from benutzer where Benutzer_ID = " + AutorID;
+                    using (MySqlConnection connection2 = DatenbankVerbindung.DatenbankVerbinden())
+                    {
+                        MySqlCommand BenutzernameZiehen = connection2.CreateCommand();
+                        BenutzernameZiehen.CommandText = "SELECT Benutzername FROM benutzer WHERE Benutzer_ID = " + AutorID;
 
-                MySqlDataReader NamenReader = BenutzernameZiehen.ExecuteReader();
-                while(NamenReader.Read())
-                // Holt sich den Autor Namen
-                {
-                    AutorName = NamenReader["Benutzername"].ToString();
+                        using (MySqlDataReader NamenReader = BenutzernameZiehen.ExecuteReader())
+                        {
+                            while (NamenReader.Read())
+                            {
+                                AutorName = NamenReader["Benutzername"].ToString();
+                            }
+                        }
+
+                    }
                     Umfrage umfrageItem = new Umfrage(umfrageID, umfrageName.Substring(4), umfrageBeschreibung, AutorName, anzahlAntworten, umfrageTyp);
                     umfrages.Add(umfrageItem);
-
                 }
-
-
-
-
+                umfragenReader.Close();
             }
             return umfrages;
         }

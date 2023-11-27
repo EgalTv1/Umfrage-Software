@@ -35,6 +35,7 @@
             this.UmfragenName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UmfragenBeschreibung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UmfragenAutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UmfragenTyp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUmfragenListe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,7 +74,8 @@
             this.dataGridViewUmfragenListe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.UmfragenName,
             this.UmfragenBeschreibung,
-            this.UmfragenAutor});
+            this.UmfragenAutor,
+            this.UmfragenTyp});
             this.dataGridViewUmfragenListe.Location = new System.Drawing.Point(0, 68);
             this.dataGridViewUmfragenListe.Name = "dataGridViewUmfragenListe";
             this.dataGridViewUmfragenListe.ReadOnly = true;
@@ -86,28 +88,32 @@
             // 
             this.UmfragenName.Frozen = true;
             this.UmfragenName.HeaderText = "Umfragen Name";
-            this.UmfragenName.MinimumWidth = 392;
             this.UmfragenName.Name = "UmfragenName";
             this.UmfragenName.ReadOnly = true;
-            this.UmfragenName.Width = 392;
+            this.UmfragenName.Width = 294;
             // 
             // UmfragenBeschreibung
             // 
             this.UmfragenBeschreibung.Frozen = true;
             this.UmfragenBeschreibung.HeaderText = "Umfragen Beschreibung";
-            this.UmfragenBeschreibung.MinimumWidth = 392;
             this.UmfragenBeschreibung.Name = "UmfragenBeschreibung";
             this.UmfragenBeschreibung.ReadOnly = true;
-            this.UmfragenBeschreibung.Width = 392;
+            this.UmfragenBeschreibung.Width = 294;
             // 
             // UmfragenAutor
             // 
             this.UmfragenAutor.Frozen = true;
             this.UmfragenAutor.HeaderText = "Umfragen Autor";
-            this.UmfragenAutor.MinimumWidth = 392;
             this.UmfragenAutor.Name = "UmfragenAutor";
             this.UmfragenAutor.ReadOnly = true;
-            this.UmfragenAutor.Width = 392;
+            this.UmfragenAutor.Width = 294;
+            // 
+            // UmfragenTyp
+            // 
+            this.UmfragenTyp.HeaderText = "Umfragen Typ";
+            this.UmfragenTyp.Name = "UmfragenTyp";
+            this.UmfragenTyp.ReadOnly = true;
+            this.UmfragenTyp.Width = 294;
             // 
             // UserControlUmfragenListe
             // 
@@ -135,5 +141,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn UmfragenName;
         private System.Windows.Forms.DataGridViewTextBoxColumn UmfragenBeschreibung;
         private System.Windows.Forms.DataGridViewTextBoxColumn UmfragenAutor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UmfragenTyp;
     }
 }
