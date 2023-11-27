@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonViewUmfragenUebersicht = new System.Windows.Forms.Button();
             this.buttonViewUmfrageErstellen = new System.Windows.Forms.Button();
             this.buttonBenutzerVerwalten = new System.Windows.Forms.Button();
             this.buttonViewUmfragenArchiv = new System.Windows.Forms.Button();
@@ -38,23 +37,11 @@
             this.buttonUmfragenListe = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // buttonViewUmfragenUebersicht
-            // 
-            this.buttonViewUmfragenUebersicht.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.buttonViewUmfragenUebersicht.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonViewUmfragenUebersicht.Location = new System.Drawing.Point(5, 49);
-            this.buttonViewUmfragenUebersicht.Name = "buttonViewUmfragenUebersicht";
-            this.buttonViewUmfragenUebersicht.Size = new System.Drawing.Size(162, 28);
-            this.buttonViewUmfragenUebersicht.TabIndex = 1;
-            this.buttonViewUmfragenUebersicht.Text = "Umfragen Übersicht";
-            this.buttonViewUmfragenUebersicht.UseVisualStyleBackColor = true;
-            this.buttonViewUmfragenUebersicht.Click += new System.EventHandler(this.buttonViewUmfragenUebersicht_Click);
-            // 
             // buttonViewUmfrageErstellen
             // 
             this.buttonViewUmfrageErstellen.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.buttonViewUmfrageErstellen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonViewUmfrageErstellen.Location = new System.Drawing.Point(5, 83);
+            this.buttonViewUmfrageErstellen.Location = new System.Drawing.Point(5, 49);
             this.buttonViewUmfrageErstellen.Name = "buttonViewUmfrageErstellen";
             this.buttonViewUmfrageErstellen.Size = new System.Drawing.Size(162, 28);
             this.buttonViewUmfrageErstellen.TabIndex = 2;
@@ -67,7 +54,7 @@
             this.buttonBenutzerVerwalten.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.buttonBenutzerVerwalten.Enabled = false;
             this.buttonBenutzerVerwalten.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBenutzerVerwalten.Location = new System.Drawing.Point(5, 185);
+            this.buttonBenutzerVerwalten.Location = new System.Drawing.Point(5, 151);
             this.buttonBenutzerVerwalten.Name = "buttonBenutzerVerwalten";
             this.buttonBenutzerVerwalten.Size = new System.Drawing.Size(162, 28);
             this.buttonBenutzerVerwalten.TabIndex = 4;
@@ -79,7 +66,7 @@
             // 
             this.buttonViewUmfragenArchiv.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.buttonViewUmfragenArchiv.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonViewUmfragenArchiv.Location = new System.Drawing.Point(5, 151);
+            this.buttonViewUmfragenArchiv.Location = new System.Drawing.Point(5, 117);
             this.buttonViewUmfragenArchiv.Name = "buttonViewUmfragenArchiv";
             this.buttonViewUmfragenArchiv.Size = new System.Drawing.Size(162, 28);
             this.buttonViewUmfragenArchiv.TabIndex = 3;
@@ -122,7 +109,7 @@
             // 
             this.buttonUmfragenListe.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.buttonUmfragenListe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUmfragenListe.Location = new System.Drawing.Point(5, 117);
+            this.buttonUmfragenListe.Location = new System.Drawing.Point(5, 83);
             this.buttonUmfragenListe.Name = "buttonUmfragenListe";
             this.buttonUmfragenListe.Size = new System.Drawing.Size(162, 28);
             this.buttonUmfragenListe.TabIndex = 9;
@@ -142,7 +129,6 @@
             this.Controls.Add(this.buttonBenutzerVerwalten);
             this.Controls.Add(this.buttonViewUmfragenArchiv);
             this.Controls.Add(this.buttonViewUmfrageErstellen);
-            this.Controls.Add(this.buttonViewUmfragenUebersicht);
             this.Name = "StartSeite";
             this.Text = "StartSeite";
             this.Load += new System.EventHandler(this.StartSeite_Load);
@@ -152,8 +138,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button buttonViewUmfragenUebersicht;
         private System.Windows.Forms.Button buttonViewUmfrageErstellen;
         private System.Windows.Forms.Button buttonBenutzerVerwalten;
         private System.Windows.Forms.Button buttonViewUmfragenArchiv;

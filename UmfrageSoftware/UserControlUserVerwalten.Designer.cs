@@ -36,7 +36,6 @@
             this.labelPasswort = new System.Windows.Forms.Label();
             this.buttonAbbrechen = new System.Windows.Forms.Button();
             this.labelBenutzerRolle = new System.Windows.Forms.Label();
-            this.buttonUserSuchen = new System.Windows.Forms.Button();
             this.buttonLoeschen = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -122,21 +121,10 @@
             this.labelBenutzerRolle.TabIndex = 10;
             this.labelBenutzerRolle.Text = "Benutzer Rolle:";
             // 
-            // buttonUserSuchen
-            // 
-            this.buttonUserSuchen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUserSuchen.Location = new System.Drawing.Point(23, 195);
-            this.buttonUserSuchen.Name = "buttonUserSuchen";
-            this.buttonUserSuchen.Size = new System.Drawing.Size(94, 23);
-            this.buttonUserSuchen.TabIndex = 11;
-            this.buttonUserSuchen.Text = "Suchen";
-            this.buttonUserSuchen.UseVisualStyleBackColor = true;
-            this.buttonUserSuchen.Click += new System.EventHandler(this.buttonUserSuchen_Click);
-            // 
             // buttonLoeschen
             // 
             this.buttonLoeschen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLoeschen.Location = new System.Drawing.Point(23, 151);
+            this.buttonLoeschen.Location = new System.Drawing.Point(329, 109);
             this.buttonLoeschen.Name = "buttonLoeschen";
             this.buttonLoeschen.Size = new System.Drawing.Size(94, 24);
             this.buttonLoeschen.TabIndex = 12;
@@ -149,7 +137,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.buttonLoeschen);
-            this.Controls.Add(this.buttonUserSuchen);
             this.Controls.Add(this.labelBenutzerRolle);
             this.Controls.Add(this.buttonAbbrechen);
             this.Controls.Add(this.labelPasswort);
@@ -175,7 +162,6 @@
         private System.Windows.Forms.Label labelPasswort;
         private System.Windows.Forms.Button buttonAbbrechen;
         private System.Windows.Forms.Label labelBenutzerRolle;
-        private System.Windows.Forms.Button buttonUserSuchen;
         private System.Windows.Forms.Button buttonLoeschen;
     }
 }
