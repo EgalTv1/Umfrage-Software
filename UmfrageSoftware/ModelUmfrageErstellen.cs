@@ -51,8 +51,8 @@ namespace UmfrageSoftware
 
                 //füge Umfrage in Umfragen Tabelle hinzu
                 commandHinzufuegen.CommandText = "INSERT INTO Umfragen Values ('Null','" + umfragenName + "','"
-                    + umfragenBeschreibung + " 'Ja/Nein' "
-                    + "','" + DateTime.Now.Year + "-" + DateTime.Now.Month + "-" + DateTime.Now.Date.Day
+                    + umfragenBeschreibung + ", 'Ja/Nein' , '"
+                    + DateTime.Now.Year + "-" + DateTime.Now.Month + "-" + DateTime.Now.Date.Day
                     + " " + DateTime.Now.TimeOfDay + "','"
                     + frist.Year + "-" + frist.Month + "-" + frist.Day + " " + frist.TimeOfDay + "','"
                     + StartSeite.Benutzer.BenutzerID + "','" + loeschDatum.Year + "-" + loeschDatum.Month + "-" + loeschDatum.Day + " "
@@ -227,8 +227,8 @@ namespace UmfrageSoftware
                 }
 
                 commandHinzufuegen.CommandText = "INSERT INTO Umfragen Values ('Null','" + umfragenName + "','"
-                    + umfragenBeschreibung + " 'Custom(" + anzahlAntworten + "') "
-                    + "','" + DateTime.Now.Year + "-" + DateTime.Now.Month + "-" + DateTime.Now.Date.Day
+                    + umfragenBeschreibung + " ,'Custom(" + anzahlAntworten + ")',' "
+                    + DateTime.Now.Year + "-" + DateTime.Now.Month + "-" + DateTime.Now.Date.Day
                     + " " + DateTime.Now.TimeOfDay + "','"
                     + frist.Year + "-" + frist.Month + "-" + frist.Day + " " + frist.TimeOfDay + "','"
                     + StartSeite.Benutzer.BenutzerID + "','" + loeschDatum.Year + "-" + loeschDatum.Month + "-" + loeschDatum.Day + " "
@@ -285,8 +285,8 @@ namespace UmfrageSoftware
 
                 //füge Umfrage in Umfragen Tabelle hinzu
                 commandHinzufuegen.CommandText = "INSERT INTO Umfragen Values ('Null','" + umfragenName + "','" 
-                    + umfragenBeschreibung + " 'Text' "
-                    + "','" + DateTime.Now.Year + "-" + DateTime.Now.Month + "-" + DateTime.Now.Date.Day 
+                    + umfragenBeschreibung + " ', 'Text' ,'"
+                    + DateTime.Now.Year + "-" + DateTime.Now.Month + "-" + DateTime.Now.Date.Day 
                     + " " + DateTime.Now.TimeOfDay + "','" 
                     + frist.Year + "-" + frist.Month + "-" + frist.Day + " " + frist.TimeOfDay + "','" 
                     + StartSeite.Benutzer.BenutzerID + "','" + loeschDatum.Year + "-" + loeschDatum.Month + "-" + loeschDatum.Day + " " 

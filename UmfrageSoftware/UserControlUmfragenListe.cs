@@ -12,7 +12,7 @@ namespace UmfrageSoftware
         }
         private void UserControlUmfragenListe_Load(object sender, EventArgs e)
         {
-            List<Umfrage> UmfrageDaten = ModelUmfragenListe.UmfragenSammeln();
+            List<Umfrage> UmfrageDaten = ModelUmfragenListe.UmfragenAnzeigen();
             //  MessageBox.Show(UmfrageDaten)
             foreach (Umfrage umfrage in UmfrageDaten)
             {
