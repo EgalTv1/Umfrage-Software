@@ -70,7 +70,7 @@
             this.buttonViewUmfragenArchiv.Name = "buttonViewUmfragenArchiv";
             this.buttonViewUmfragenArchiv.Size = new System.Drawing.Size(162, 28);
             this.buttonViewUmfragenArchiv.TabIndex = 3;
-            this.buttonViewUmfragenArchiv.Text = "Umfrage Archiv";
+            this.buttonViewUmfragenArchiv.Text = "Eigene Umfragen";
             this.buttonViewUmfragenArchiv.UseVisualStyleBackColor = true;
             this.buttonViewUmfragenArchiv.Click += new System.EventHandler(this.buttonViewUmfragenArchiv_Click);
             // 

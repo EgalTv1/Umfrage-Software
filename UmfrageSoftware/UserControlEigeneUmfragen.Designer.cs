@@ -29,19 +29,20 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBoxUmfrageSuchen = new System.Windows.Forms.TextBox();
-            this.buttonSuchen = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.Umfragen_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBoxUmfrageSuchen = new System.Windows.Forms.TextBox();
+            this.buttonSuchen = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -55,35 +56,6 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(1177, 537);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // textBoxUmfrageSuchen
-            // 
-            this.textBoxUmfrageSuchen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxUmfrageSuchen.Location = new System.Drawing.Point(9, 46);
-            this.textBoxUmfrageSuchen.Name = "textBoxUmfrageSuchen";
-            this.textBoxUmfrageSuchen.Size = new System.Drawing.Size(1075, 22);
-            this.textBoxUmfrageSuchen.TabIndex = 1;
-            // 
-            // buttonSuchen
-            // 
-            this.buttonSuchen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSuchen.Location = new System.Drawing.Point(1090, 46);
-            this.buttonSuchen.Name = "buttonSuchen";
-            this.buttonSuchen.Size = new System.Drawing.Size(84, 23);
-            this.buttonSuchen.TabIndex = 2;
-            this.buttonSuchen.Text = "Suchen";
-            this.buttonSuchen.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(215, 31);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Umfrage Archiv";
             // 
             // Umfragen_ID
             // 
@@ -115,6 +87,34 @@
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
+            // textBoxUmfrageSuchen
+            // 
+            this.textBoxUmfrageSuchen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxUmfrageSuchen.Location = new System.Drawing.Point(9, 46);
+            this.textBoxUmfrageSuchen.Name = "textBoxUmfrageSuchen";
+            this.textBoxUmfrageSuchen.Size = new System.Drawing.Size(1075, 22);
+            this.textBoxUmfrageSuchen.TabIndex = 1;
+            // 
+            // buttonSuchen
+            // 
+            this.buttonSuchen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSuchen.Location = new System.Drawing.Point(1090, 46);
+            this.buttonSuchen.Name = "buttonSuchen";
+            this.buttonSuchen.Size = new System.Drawing.Size(84, 23);
+            this.buttonSuchen.TabIndex = 2;
+            this.buttonSuchen.Text = "Suchen";
+            this.buttonSuchen.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(215, 31);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Umfrage Archiv";
+            // 
             // UserControlEigeneUmfragen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -125,6 +125,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "UserControlEigeneUmfragen";
             this.Size = new System.Drawing.Size(1177, 611);
+            this.Load += new System.EventHandler(this.UserControlEigeneUmfragen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

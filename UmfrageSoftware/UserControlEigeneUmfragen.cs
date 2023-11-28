@@ -19,7 +19,7 @@ namespace UmfrageSoftware
 
         private void UserControlEigeneUmfragen_Load(object sender, EventArgs e)
         {
-            List<Umfrage> UmfrageDaten = ModelUmfragenListe.UmfragenAnzeigen();
+            List<Umfrage> UmfrageDaten = ModelEigeneUmfragen.EigeneUmfragen();
             //  MessageBox.Show(UmfrageDaten)
             foreach (Umfrage umfrage in UmfrageDaten)
             {
@@ -36,13 +36,8 @@ namespace UmfrageSoftware
                     dataGridView1.Rows.Add(umfrage.UmfragenID, umfrage.UmfragenName, umfrage.UmfragenBeschreibung,
                         umfrage.Autor, umfrage.UmfrageTyp);
                 }
-
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

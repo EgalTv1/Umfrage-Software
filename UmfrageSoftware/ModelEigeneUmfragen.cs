@@ -24,11 +24,11 @@ namespace UmfrageSoftware
                 string AutorName = null;
                 int anzahlAntworten = 0;
                 MySqlCommand umfragenAnzeigen = connection.CreateCommand();
-                umfragenAnzeigen.CommandText = "SELECT * FROM Umfragen WHERE Benutzer_ID = " + StartSeite.Benutzer.BenutzerID;
+                umfragenAnzeigen.CommandText = "SELECT * FROM Umfragen WHERE Autor = " + StartSeite.Benutzer.BenutzerID;
 
 
                 MySqlDataReader umfragenReader = umfragenAnzeigen.ExecuteReader();
-                while (umfragenReader.Read()) ;
+                while (umfragenReader.Read())
                 //Baue die einzelnen Umfragen 
 
                 {
