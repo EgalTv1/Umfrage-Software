@@ -12,7 +12,7 @@ namespace UmfrageSoftware
 {
     static internal class ModelUmfrageErstellen
     {
-        internal static bool JaNeinUmfrageErstellen(string umfragenName, string umfragenBeschreibung, DateTime frist)
+        internal static bool JaNeinUmfrageErstellen(string umfragenName, string umfragenBeschreibung, DateTime frist, bool anonym)
         {
             MySqlConnection connection = DatenbankVerbindung.DatenbankVerbinden();
             if (connection != null)
@@ -49,14 +49,30 @@ namespace UmfrageSoftware
                     "(umfragenID INT NOT NULL, Umfragenbeschreibung TEXT, Stimmen_Ja INT, Stimmen_Nein INT," +
                     " PRIMARY KEY (umfragenID));";
 
-                //füge Umfrage in Umfragen Tabelle hinzu
-                commandHinzufuegen.CommandText = "INSERT INTO Umfragen Values ('Null','" + umfragenName + "','"
-                    + umfragenBeschreibung + "', 'Ja/Nein' , '"
-                    + DateTime.Now.Year + "-" + DateTime.Now.Month + "-" + DateTime.Now.Date.Day
-                    + " " + DateTime.Now.TimeOfDay + "','"
-                    + frist.Year + "-" + frist.Month + "-" + frist.Day + " " + frist.TimeOfDay + "','"
-                    + StartSeite.Benutzer.BenutzerID + "','" + loeschDatum.Year + "-" + loeschDatum.Month + "-" + loeschDatum.Day + " "
-                    + loeschDatum.TimeOfDay + "', 'Aktiv', 'Nein');";
+                if (anonym == true)
+                {
+                    //füge Umfrage in Umfragen Tabelle hinzu
+                    commandHinzufuegen.CommandText = "INSERT INTO Umfragen Values ('Null','" + umfragenName + "','"
+                        + umfragenBeschreibung + "', 'Ja/Nein' , '"
+                        + DateTime.Now.Year + "-" + DateTime.Now.Month + "-" + DateTime.Now.Date.Day
+                        + " " + DateTime.Now.TimeOfDay + "','"
+                        + frist.Year + "-" + frist.Month + "-" + frist.Day + " " + frist.TimeOfDay + "','"
+                        + 0 + "','" + loeschDatum.Year + "-" + loeschDatum.Month + "-" + loeschDatum.Day + " "
+                        + loeschDatum.TimeOfDay + "', 'Aktiv', 'Nein');";
+                }
+                else
+                {
+                    //füge Umfrage in Umfragen Tabelle hinzu
+                    commandHinzufuegen.CommandText = "INSERT INTO Umfragen Values ('Null','" + umfragenName + "','"
+                        + umfragenBeschreibung + "', 'Ja/Nein' , '"
+                        + DateTime.Now.Year + "-" + DateTime.Now.Month + "-" + DateTime.Now.Date.Day
+                        + " " + DateTime.Now.TimeOfDay + "','"
+                        + frist.Year + "-" + frist.Month + "-" + frist.Day + " " + frist.TimeOfDay + "','"
+                        + StartSeite.Benutzer.BenutzerID + "','" + loeschDatum.Year + "-" + loeschDatum.Month + "-" + loeschDatum.Day + " "
+                        + loeschDatum.TimeOfDay + "', 'Aktiv', 'Nein');";
+                }
+
+                
 
                 //fülle die Neue Umfrage mit den Antworten
                 commandFuellen.CommandText = "INSERT INTO " + umfragenName + " VALUES" +
@@ -83,7 +99,7 @@ namespace UmfrageSoftware
         internal static bool CustomAntwortenUmfrageErstellen(string umfragenName, string umfragenBeschreibung,
             int anzahlAntworten, DateTime frist, string antwort1, string antwort2, string antwort3,
             string antwort4, string antwort5, string antwort6, string antwort7, string antwort8,
-            string antwort9)
+            string antwort9, bool anonym)
         {
             MySqlConnection connection = DatenbankVerbindung.DatenbankVerbinden();
             if (connection != null)
@@ -236,13 +252,31 @@ namespace UmfrageSoftware
                         break;
                 }
 
-                commandHinzufuegen.CommandText = "INSERT INTO Umfragen Values ('Null','" + umfragenName + "','"
-                    + umfragenBeschreibung + "' ,'Custom(" + anzahlAntworten + ")',' "
-                    + DateTime.Now.Year + "-" + DateTime.Now.Month + "-" + DateTime.Now.Date.Day
-                    + " " + DateTime.Now.TimeOfDay + "','"
-                    + frist.Year + "-" + frist.Month + "-" + frist.Day + " " + frist.TimeOfDay + "','"
-                    + StartSeite.Benutzer.BenutzerID + "','" + loeschDatum.Year + "-" + loeschDatum.Month + "-" + loeschDatum.Day + " "
-                    + loeschDatum.TimeOfDay + "', 'Aktiv', 'Nein');";
+                if (anonym == true)
+                {
+
+                    commandHinzufuegen.CommandText = "INSERT INTO Umfragen Values ('Null','" + umfragenName + "','"
+                        + umfragenBeschreibung + "' ,'Custom(" + anzahlAntworten + ")',' "
+                        + DateTime.Now.Year + "-" + DateTime.Now.Month + "-" + DateTime.Now.Date.Day
+                        + " " + DateTime.Now.TimeOfDay + "','"
+                        + frist.Year + "-" + frist.Month + "-" + frist.Day + " " + frist.TimeOfDay + "','"
+                        + 0 + "','" + loeschDatum.Year + "-" + loeschDatum.Month + "-" + loeschDatum.Day + " "
+                        + loeschDatum.TimeOfDay + "', 'Aktiv', 'Nein');";
+                }
+                else
+                {
+                   commandHinzufuegen.CommandText = "INSERT INTO Umfragen Values ('Null','" + umfragenName + "','"
+                        + umfragenBeschreibung + "' ,'Custom(" + anzahlAntworten + ")',' "
+                        + DateTime.Now.Year + "-" + DateTime.Now.Month + "-" + DateTime.Now.Date.Day
+                        + " " + DateTime.Now.TimeOfDay + "','"
+                        + frist.Year + "-" + frist.Month + "-" + frist.Day + " " + frist.TimeOfDay + "','"
+                        + StartSeite.Benutzer.BenutzerID + "','" + loeschDatum.Year + "-" + loeschDatum.Month + "-" + loeschDatum.Day + " "
+                        + loeschDatum.TimeOfDay + "', 'Aktiv', 'Nein');";
+
+                }
+
+
+
 
                 commandErstellen.ExecuteNonQuery();
                 commandHinzufuegen.ExecuteNonQuery();
@@ -257,7 +291,7 @@ namespace UmfrageSoftware
             }
         }
 
-        internal static bool TextAntwortUmfrageErstellen(string umfragenName, string umfragenBeschreibung, DateTime frist)
+        internal static bool TextAntwortUmfrageErstellen(string umfragenName, string umfragenBeschreibung, DateTime frist, bool anonym)
         {
             MySqlConnection connection = DatenbankVerbindung.DatenbankVerbinden();
             if (connection != null)
@@ -293,14 +327,32 @@ namespace UmfrageSoftware
                 commandErstellen.CommandText = "CREATE TABLE " + umfragenName +
                     "(umfragenID INT, Umfragenbeschreibung TEXT, Antwort VARCHAR(255))";
 
+
+                if (anonym == true)
+                {
+                    commandHinzufuegen.CommandText = "INSERT INTO Umfragen Values ('Null','" + umfragenName + "','"
+                        + umfragenBeschreibung + " ', 'Text' ,'"
+                        + DateTime.Now.Year + "-" + DateTime.Now.Month + "-" + DateTime.Now.Date.Day
+                        + " " + DateTime.Now.TimeOfDay + "','"
+                        + frist.Year + "-" + frist.Month + "-" + frist.Day + " " + frist.TimeOfDay + "','"
+                        + 0 + "','" + loeschDatum.Year + "-" + loeschDatum.Month + "-" + loeschDatum.Day + " "
+                        + loeschDatum.TimeOfDay + "', 'Aktiv', 'Nein');";
+                }
+
+                else
+                {
+                    commandHinzufuegen.CommandText = "INSERT INTO Umfragen Values ('Null','" + umfragenName + "','"
+                        + umfragenBeschreibung + " ', 'Text' ,'"
+                        + DateTime.Now.Year + "-" + DateTime.Now.Month + "-" + DateTime.Now.Date.Day
+                        + " " + DateTime.Now.TimeOfDay + "','"
+                        + frist.Year + "-" + frist.Month + "-" + frist.Day + " " + frist.TimeOfDay + "','"
+                        + StartSeite.Benutzer.BenutzerID + "','" + loeschDatum.Year + "-" + loeschDatum.Month + "-" + loeschDatum.Day + " "
+                        + loeschDatum.TimeOfDay + "', 'Aktiv', 'Nein');";
+                }
+
+
                 //füge Umfrage in Umfragen Tabelle hinzu
-                commandHinzufuegen.CommandText = "INSERT INTO Umfragen Values ('Null','" + umfragenName + "','" 
-                    + umfragenBeschreibung + " ', 'Text' ,'"
-                    + DateTime.Now.Year + "-" + DateTime.Now.Month + "-" + DateTime.Now.Date.Day 
-                    + " " + DateTime.Now.TimeOfDay + "','" 
-                    + frist.Year + "-" + frist.Month + "-" + frist.Day + " " + frist.TimeOfDay + "','" 
-                    + StartSeite.Benutzer.BenutzerID + "','" + loeschDatum.Year + "-" + loeschDatum.Month + "-" + loeschDatum.Day + " " 
-                    + loeschDatum.TimeOfDay + "', 'Aktiv', 'Nein');";
+
 
                 //fülle die Neue Umfrage mit den Antworten
                 commandFuellen.CommandText = "INSERT INTO " + umfragenName + " VALUES" +

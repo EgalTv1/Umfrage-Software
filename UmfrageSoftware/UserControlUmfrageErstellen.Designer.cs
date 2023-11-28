@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.buttonSpeichern = new System.Windows.Forms.Button();
             this.buttonAbbrechen = new System.Windows.Forms.Button();
             this.radioButtonCustomAntworten = new System.Windows.Forms.RadioButton();
@@ -59,8 +58,8 @@
             this.labelCustomAntwort1 = new System.Windows.Forms.Label();
             this.comboBoxAnzahlAntworten = new System.Windows.Forms.ComboBox();
             this.monthCalendarFrist = new System.Windows.Forms.MonthCalendar();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label5 = new System.Windows.Forms.Label();
+            this.checkBoxAnonym = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // buttonSpeichern
@@ -389,11 +388,6 @@
             this.monthCalendarFrist.Name = "monthCalendarFrist";
             this.monthCalendarFrist.TabIndex = 38;
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -404,10 +398,21 @@
             this.label5.TabIndex = 42;
             this.label5.Text = "Umfrage-Frist";
             // 
+            // checkBoxAnonym
+            // 
+            this.checkBoxAnonym.AutoSize = true;
+            this.checkBoxAnonym.Location = new System.Drawing.Point(407, 395);
+            this.checkBoxAnonym.Name = "checkBoxAnonym";
+            this.checkBoxAnonym.Size = new System.Drawing.Size(107, 17);
+            this.checkBoxAnonym.TabIndex = 43;
+            this.checkBoxAnonym.Text = "Anonym Erstellen";
+            this.checkBoxAnonym.UseVisualStyleBackColor = true;
+            // 
             // UserControlUmfrageErstellen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.checkBoxAnonym);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.monthCalendarFrist);
             this.Controls.Add(this.comboBoxAnzahlAntworten);
@@ -478,7 +483,7 @@
         private System.Windows.Forms.Label labelCustomAntwort1;
         private System.Windows.Forms.ComboBox comboBoxAnzahlAntworten;
         private System.Windows.Forms.MonthCalendar monthCalendarFrist;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.CheckBox checkBoxAnonym;
     }
 }
