@@ -61,7 +61,7 @@ namespace UmfrageSoftware
         private void buttonViewUmfragenArchiv_Click(object sender, EventArgs e)
         {
             panelViews.Controls.Clear();
-            UserControlUmfrageArchiv userControlUmfrageArchiv = new UserControlUmfrageArchiv();
+            UserControlEigeneUmfragen userControlUmfrageArchiv = new UserControlEigeneUmfragen();
             panelViews.Controls.Add(userControlUmfrageArchiv);
         }
 

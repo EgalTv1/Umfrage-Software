@@ -1,6 +1,6 @@
 ﻿namespace UmfrageSoftware
 {
-    partial class UserControlUmfrageArchiv
+    partial class UserControlEigeneUmfragen
     {
         /// <summary> 
         /// Erforderliche Designervariable.
@@ -32,16 +32,30 @@
             this.textBoxUmfrageSuchen = new System.Windows.Forms.TextBox();
             this.buttonSuchen = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.Umfragen_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Umfragen_ID,
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4});
             this.dataGridView1.Location = new System.Drawing.Point(0, 74);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(1177, 537);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // textBoxUmfrageSuchen
             // 
@@ -71,7 +85,37 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Umfrage Archiv";
             // 
-            // UserControlUmfrageArchiv
+            // Umfragen_ID
+            // 
+            this.Umfragen_ID.HeaderText = "Umfragen_ID";
+            this.Umfragen_ID.Name = "Umfragen_ID";
+            this.Umfragen_ID.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Umfragen Name";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Umfragen Beschreibung";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Umfragen Autor";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Umfragen Typ";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // UserControlEigeneUmfragen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -79,7 +123,7 @@
             this.Controls.Add(this.buttonSuchen);
             this.Controls.Add(this.textBoxUmfrageSuchen);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "UserControlUmfrageArchiv";
+            this.Name = "UserControlEigeneUmfragen";
             this.Size = new System.Drawing.Size(1177, 611);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -93,5 +137,10 @@
         private System.Windows.Forms.TextBox textBoxUmfrageSuchen;
         private System.Windows.Forms.Button buttonSuchen;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Umfragen_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }
