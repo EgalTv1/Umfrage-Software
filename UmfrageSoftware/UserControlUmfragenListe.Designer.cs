@@ -71,6 +71,8 @@
             // 
             // dataGridViewUmfragenListe
             // 
+            this.dataGridViewUmfragenListe.AllowUserToAddRows = false;
+            this.dataGridViewUmfragenListe.AllowUserToDeleteRows = false;
             this.dataGridViewUmfragenListe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewUmfragenListe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Umfragen_ID,

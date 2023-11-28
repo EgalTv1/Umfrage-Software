@@ -186,7 +186,7 @@ namespace UmfrageSoftware
             stimmeAbgeben.ExecuteNonQuery();
         }
         internal static List<string> StimmenHolen(string UmfragenName)
-        {            
+        {
             MySqlConnection connection = DatenbankVerbindung.DatenbankVerbinden();
             if (connection != null)
             {
@@ -195,8 +195,8 @@ namespace UmfrageSoftware
                 UmfragenName = "UMF_" + UmfragenName;
                 UmfragenName = DatenbankVerbindung.SonderzeichenErsetzen(UmfragenName);
                 //für Antwort Anzahl, hole alle Antworten raus und gebe sie am ende in einer Liste zurück
-                MySqlCommand stimmenHolen = connection.CreateCommand();         
-                
+                MySqlCommand stimmenHolen = connection.CreateCommand();
+
                 stimmenHolen.CommandText = "SELECT * FROM " + UmfragenName;
 
                 MySqlDataReader reader = stimmenHolen.ExecuteReader();
@@ -213,5 +213,35 @@ namespace UmfrageSoftware
             }
             return null;
         }
+        internal static List<int> AntwortenHolen(string UmfragenName)
+        {
+            MySqlConnection connection = DatenbankVerbindung.DatenbankVerbinden();
+            if (connection != null)
+            {
+                List<int> Antworten = new List<int>();
+
+                UmfragenName = "UMF_" + UmfragenName;
+                UmfragenName = DatenbankVerbindung.SonderzeichenErsetzen(UmfragenName);
+                //für Antwort Anzahl, hole alle Antworten raus und gebe sie am ende in einer Liste zurück
+                MySqlCommand antwortenHolen = connection.CreateCommand();
+
+                antwortenHolen.CommandText = "SELECT * FROM " + UmfragenName;
+
+                MySqlDataReader antworten = antwortenHolen.ExecuteReader();
+                while (antworten.Read())
+                {
+                    MessageBox.Show("angekommen bei Message");
+                    for (int i = 2; i < antworten.FieldCount; i++)
+                    {
+                    Antworten.Add(Convert.ToInt32(antworten.GetValue(i)));
+                    }
+                }
+                antworten.Close();
+                return Antworten;
+            }
+            return null;
+        }
+
+
     }
 }
