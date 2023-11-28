@@ -34,13 +34,7 @@ namespace UmfrageSoftware
         }
         private void buttonSuchen_Click(object sender, EventArgs e)
         {
-            //dataGridViewUmfragenListe.ClearSelection();
-            List<Umfrage> UmfrageDaten = ModelUmfragenListe.UmfragenAnzeigen();
-            foreach (Umfrage umfrage in UmfrageDaten)
-            {
-                //MessageBox.Show($"UmfragenName: {umfrage.UmfragenName}, UmfragenBeschreibung: {umfrage.UmfragenBeschreibung}");
-                dataGridViewUmfragenListe.Rows.Add(umfrage.UmfragenID, umfrage.UmfragenName, umfrage.UmfragenBeschreibung, umfrage.Autor, umfrage.UmfrageTyp);
-            }
+
         }
 
         private void dataGridViewUmfragenListe_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

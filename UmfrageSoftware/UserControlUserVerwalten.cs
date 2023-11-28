@@ -28,6 +28,8 @@ namespace UmfrageSoftware
         {
             User userdaten = new User(textBoxUsername.Text, textBoxPasswort.Text, comboBoxUserrolle.Text);
             ModelUserVerwalten.speichern(userdaten);
+            textBoxPasswort.Clear();
+            textBoxUsername.Clear();
         }
 
         private void buttonUserSuchen_Click(object sender, EventArgs e)

@@ -30,7 +30,7 @@ namespace UmfrageSoftware
                 if (radioButtonJaNein.Checked)
                 {
                     if (ModelUmfrageErstellen.JaNeinUmfrageErstellen(textBoxUmfrageName.Text,
-                        textBoxUmfrageBeschreibung.Text, monthCalendarFrist.SelectionStart))
+                        textBoxUmfrageBeschreibung.Text, monthCalendarFrist.SelectionStart, checkBoxAnonym.Checked))
                     {
                         MessageBox.Show("Die Umfrage " + textBoxUmfrageName.Text + " wurde erstellt");
                     }
@@ -45,7 +45,7 @@ namespace UmfrageSoftware
                     textBoxUmfrageBeschreibung.Text, comboBoxAnzahlAntworten.SelectedIndex, monthCalendarFrist.SelectionStart,
                     textBoxCustomAntwort1.Text, textBoxCustomAntwort2.Text, textBoxCustomAntwort3.Text, textBoxCustomAntwort4.Text,
                     textBoxCustomAntwort5.Text, textBoxCustomAntwort6.Text, textBoxCustomAntwort7.Text, textBoxCustomAntwort8.Text,
-                    textBoxCustomAntwort9.Text))
+                    textBoxCustomAntwort9.Text, checkBoxAnonym.Checked))
                     {
                         MessageBox.Show("Die Umfrage " + textBoxUmfrageName.Text + " wurde erstellt");
                     }
@@ -57,7 +57,7 @@ namespace UmfrageSoftware
                 else if (radioButtonTextAntwort.Checked)
                 {
                     if (ModelUmfrageErstellen.TextAntwortUmfrageErstellen(textBoxUmfrageName.Text,
-                    textBoxUmfrageBeschreibung.Text, monthCalendarFrist.SelectionStart))
+                    textBoxUmfrageBeschreibung.Text, monthCalendarFrist.SelectionStart, checkBoxAnonym.Checked))
                     {
                         MessageBox.Show("Die Umfrage " + textBoxUmfrageName.Text + " wurde erstellt");
                     }
