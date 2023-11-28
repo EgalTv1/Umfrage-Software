@@ -127,7 +127,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(428, 26);
+            this.label2.Location = new System.Drawing.Point(417, 20);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(141, 16);
             this.label2.TabIndex = 11;
@@ -300,10 +300,11 @@
             // dataGridErgebnisse
             // 
             this.dataGridErgebnisse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridErgebnisse.Location = new System.Drawing.Point(573, 26);
+            this.dataGridErgebnisse.Location = new System.Drawing.Point(420, 39);
             this.dataGridErgebnisse.Name = "dataGridErgebnisse";
-            this.dataGridErgebnisse.Size = new System.Drawing.Size(483, 281);
+            this.dataGridErgebnisse.Size = new System.Drawing.Size(754, 112);
             this.dataGridErgebnisse.TabIndex = 32;
+            this.dataGridErgebnisse.Visible = false;
             // 
             // buttonAbbrechen
             // 
