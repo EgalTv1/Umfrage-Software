@@ -60,6 +60,12 @@ namespace UmfrageSoftware
                         textBoxCustomTextAntwort.Location.Y + abstandButtons);
                     buttonAbstimmen.Location = new System.Drawing.Point(buttonAbstimmen.Location.X,
                         textBoxCustomTextAntwort.Location.Y + abstandButtons);
+                    dataGridErgebnisse.Columns.Add("Antworten", "Antworten");
+                    List<string> textAntworten = ModelUmfrageAbstimmen.TextAntwortenHolen(UmfrageWahl.UmfragenName);
+                    foreach (string antwort in textAntworten)
+                    {
+                        dataGridErgebnisse.Rows.Add(antwort);
+                    }
                 }
                 if (UmfrageWahl.UmfrageTyp == Umfrage.umfragenTypen.Custom)
                 {
@@ -95,7 +101,7 @@ namespace UmfrageSoftware
                             radioButtonCustomAntwort1.Text = UmfrageWahl.Antwort1.Substring(8);
                             radioButtonCustomAntwort1.Visible = true;
 
-                            dataGridErgebnisse.Columns.Add("Antwort1", UmfrageWahl.Antwort1.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort1, UmfrageWahl.Antwort1.Substring(8));
 
                             dataGridErgebnisse.Rows.Add(antworten[0].ToString());
 
@@ -111,8 +117,8 @@ namespace UmfrageSoftware
                             radioButtonCustomAntwort1.Text = UmfrageWahl.Antwort1.Substring(8);
                             radioButtonCustomAntwort2.Text = UmfrageWahl.Antwort2.Substring(8);
 
-                            dataGridErgebnisse.Columns.Add("Antwort1", UmfrageWahl.Antwort1.Substring(8));
-                            dataGridErgebnisse.Columns.Add("Antwort2", UmfrageWahl.Antwort2.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort1, UmfrageWahl.Antwort1.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort2, UmfrageWahl.Antwort2.Substring(8));
 
                             dataGridErgebnisse.Rows.Add(antworten[0].ToString(), antworten[1].ToString());
 
@@ -130,9 +136,9 @@ namespace UmfrageSoftware
                             radioButtonCustomAntwort2.Text = UmfrageWahl.Antwort2.Substring(8);
                             radioButtonCustomAntwort3.Text = UmfrageWahl.Antwort3.Substring(8);
 
-                            dataGridErgebnisse.Columns.Add("Antwort1", UmfrageWahl.Antwort1.Substring(8));
-                            dataGridErgebnisse.Columns.Add("Antwort2", UmfrageWahl.Antwort2.Substring(8));
-                            dataGridErgebnisse.Columns.Add("Antwort3", UmfrageWahl.Antwort3.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort1, UmfrageWahl.Antwort1.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort2, UmfrageWahl.Antwort2.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort3, UmfrageWahl.Antwort3.Substring(8));
 
                             dataGridErgebnisse.Rows.Add(antworten[0].ToString(), antworten[1].ToString()
                                 , antworten[2].ToString());
@@ -153,10 +159,10 @@ namespace UmfrageSoftware
                             radioButtonCustomAntwort3.Text = UmfrageWahl.Antwort3.Substring(8);
                             radioButtonCustomAntwort4.Text = UmfrageWahl.Antwort4.Substring(8);
 
-                            dataGridErgebnisse.Columns.Add("Antwort1", UmfrageWahl.Antwort1.Substring(8));
-                            dataGridErgebnisse.Columns.Add("Antwort2", UmfrageWahl.Antwort2.Substring(8));
-                            dataGridErgebnisse.Columns.Add("Antwort3", UmfrageWahl.Antwort3.Substring(8));
-                            dataGridErgebnisse.Columns.Add("Antwort4", UmfrageWahl.Antwort4.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort1, UmfrageWahl.Antwort1.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort2, UmfrageWahl.Antwort2.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort3, UmfrageWahl.Antwort3.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort4, UmfrageWahl.Antwort4.Substring(8));
 
                             dataGridErgebnisse.Rows.Add(antworten[0].ToString(), antworten[1].ToString()
                                 , antworten[2].ToString(), antworten[3].ToString());
@@ -179,11 +185,11 @@ namespace UmfrageSoftware
                             radioButtonCustomAntwort4.Text = UmfrageWahl.Antwort4.Substring(8);
                             radioButtonCustomAntwort5.Text = UmfrageWahl.Antwort5.Substring(8);
 
-                            dataGridErgebnisse.Columns.Add("Antwort1", UmfrageWahl.Antwort1.Substring(8));
-                            dataGridErgebnisse.Columns.Add("Antwort2", UmfrageWahl.Antwort2.Substring(8));
-                            dataGridErgebnisse.Columns.Add("Antwort3", UmfrageWahl.Antwort3.Substring(8));
-                            dataGridErgebnisse.Columns.Add("Antwort4", UmfrageWahl.Antwort4.Substring(8));
-                            dataGridErgebnisse.Columns.Add("Antwort5", UmfrageWahl.Antwort5.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort1, UmfrageWahl.Antwort1.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort2, UmfrageWahl.Antwort2.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort3, UmfrageWahl.Antwort3.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort4, UmfrageWahl.Antwort4.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort5, UmfrageWahl.Antwort5.Substring(8));
 
                             dataGridErgebnisse.Rows.Add(antworten[0].ToString(), antworten[1].ToString()
                                 , antworten[2].ToString(), antworten[3].ToString(), antworten[4].ToString());
@@ -208,12 +214,12 @@ namespace UmfrageSoftware
                             radioButtonCustomAntwort5.Text = UmfrageWahl.Antwort5.Substring(8);
                             radioButtonCustomAntwort6.Text = UmfrageWahl.Antwort6.Substring(8);
 
-                            dataGridErgebnisse.Columns.Add("Antwort1", UmfrageWahl.Antwort1.Substring(8));
-                            dataGridErgebnisse.Columns.Add("Antwort2", UmfrageWahl.Antwort2.Substring(8));
-                            dataGridErgebnisse.Columns.Add("Antwort3", UmfrageWahl.Antwort3.Substring(8));
-                            dataGridErgebnisse.Columns.Add("Antwort4", UmfrageWahl.Antwort4.Substring(8));
-                            dataGridErgebnisse.Columns.Add("Antwort5", UmfrageWahl.Antwort5.Substring(8));
-                            dataGridErgebnisse.Columns.Add("Antwort6", UmfrageWahl.Antwort6.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort1, UmfrageWahl.Antwort1.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort2, UmfrageWahl.Antwort2.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort3, UmfrageWahl.Antwort3.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort4, UmfrageWahl.Antwort4.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort5, UmfrageWahl.Antwort5.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort6, UmfrageWahl.Antwort6.Substring(8));
 
                             dataGridErgebnisse.Rows.Add(antworten[0].ToString(), antworten[1].ToString()
                                 , antworten[2].ToString(), antworten[3].ToString(), antworten[4].ToString()
@@ -241,13 +247,13 @@ namespace UmfrageSoftware
                             radioButtonCustomAntwort6.Text = UmfrageWahl.Antwort6.Substring(8);
                             radioButtonCustomAntwort7.Text = UmfrageWahl.Antwort7.Substring(8);
 
-                            dataGridErgebnisse.Columns.Add("Antwort1", UmfrageWahl.Antwort1.Substring(8));
-                            dataGridErgebnisse.Columns.Add("Antwort2", UmfrageWahl.Antwort2.Substring(8));
-                            dataGridErgebnisse.Columns.Add("Antwort3", UmfrageWahl.Antwort3.Substring(8));
-                            dataGridErgebnisse.Columns.Add("Antwort4", UmfrageWahl.Antwort4.Substring(8));
-                            dataGridErgebnisse.Columns.Add("Antwort5", UmfrageWahl.Antwort5.Substring(8));
-                            dataGridErgebnisse.Columns.Add("Antwort6", UmfrageWahl.Antwort6.Substring(8));
-                            dataGridErgebnisse.Columns.Add("Antwort7", UmfrageWahl.Antwort7.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort1, UmfrageWahl.Antwort1.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort2, UmfrageWahl.Antwort2.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort3, UmfrageWahl.Antwort3.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort4, UmfrageWahl.Antwort4.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort5, UmfrageWahl.Antwort5.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort6, UmfrageWahl.Antwort6.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort7, UmfrageWahl.Antwort7.Substring(8));
 
                             dataGridErgebnisse.Rows.Add(antworten[0].ToString(), antworten[1].ToString()
                                 , antworten[2].ToString(), antworten[3].ToString(), antworten[4].ToString()
@@ -277,14 +283,14 @@ namespace UmfrageSoftware
                             radioButtonCustomAntwort7.Text = UmfrageWahl.Antwort7.Substring(8);
                             radioButtonCustomAntwort8.Text = UmfrageWahl.Antwort8.Substring(8);
 
-                            dataGridErgebnisse.Columns.Add("Antwort1", UmfrageWahl.Antwort1.Substring(8));
-                            dataGridErgebnisse.Columns.Add("Antwort2", UmfrageWahl.Antwort2.Substring(8));
-                            dataGridErgebnisse.Columns.Add("Antwort3", UmfrageWahl.Antwort3.Substring(8));
-                            dataGridErgebnisse.Columns.Add("Antwort4", UmfrageWahl.Antwort4.Substring(8));
-                            dataGridErgebnisse.Columns.Add("Antwort5", UmfrageWahl.Antwort5.Substring(8));
-                            dataGridErgebnisse.Columns.Add("Antwort6", UmfrageWahl.Antwort6.Substring(8));
-                            dataGridErgebnisse.Columns.Add("Antwort7", UmfrageWahl.Antwort7.Substring(8));
-                            dataGridErgebnisse.Columns.Add("Antwort8", UmfrageWahl.Antwort8.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort1, UmfrageWahl.Antwort1.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort2, UmfrageWahl.Antwort2.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort3, UmfrageWahl.Antwort3.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort4, UmfrageWahl.Antwort4.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort5, UmfrageWahl.Antwort5.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort6, UmfrageWahl.Antwort6.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort7, UmfrageWahl.Antwort7.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort8, UmfrageWahl.Antwort8.Substring(8));
 
                             dataGridErgebnisse.Rows.Add(antworten[0].ToString(), antworten[1].ToString()
                                 , antworten[2].ToString(), antworten[3].ToString(), antworten[4].ToString()
@@ -316,15 +322,15 @@ namespace UmfrageSoftware
                             radioButtonCustomAntwort8.Text = UmfrageWahl.Antwort8.Substring(8);
                             radioButtonCustomAntwort9.Text = UmfrageWahl.Antwort9.Substring(8);
 
-                            dataGridErgebnisse.Columns.Add("Antwort1", UmfrageWahl.Antwort1.Substring(8));
-                            dataGridErgebnisse.Columns.Add("Antwort2", UmfrageWahl.Antwort2.Substring(8));
-                            dataGridErgebnisse.Columns.Add("Antwort3", UmfrageWahl.Antwort3.Substring(8));
-                            dataGridErgebnisse.Columns.Add("Antwort4", UmfrageWahl.Antwort4.Substring(8));
-                            dataGridErgebnisse.Columns.Add("Antwort5", UmfrageWahl.Antwort5.Substring(8));
-                            dataGridErgebnisse.Columns.Add("Antwort6", UmfrageWahl.Antwort6.Substring(8));
-                            dataGridErgebnisse.Columns.Add("Antwort7", UmfrageWahl.Antwort7.Substring(8));
-                            dataGridErgebnisse.Columns.Add("Antwort8", UmfrageWahl.Antwort8.Substring(8));
-                            dataGridErgebnisse.Columns.Add("Antwort9", UmfrageWahl.Antwort9.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort1, UmfrageWahl.Antwort1.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort2, UmfrageWahl.Antwort2.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort3, UmfrageWahl.Antwort3.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort4, UmfrageWahl.Antwort4.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort5, UmfrageWahl.Antwort5.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort6, UmfrageWahl.Antwort6.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort7, UmfrageWahl.Antwort7.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort8, UmfrageWahl.Antwort8.Substring(8));
+                            dataGridErgebnisse.Columns.Add(UmfrageWahl.Antwort9, UmfrageWahl.Antwort9.Substring(8));
 
                             dataGridErgebnisse.Rows.Add(antworten[0].ToString(), antworten[1].ToString()
                                 , antworten[2].ToString(), antworten[3].ToString(), antworten[4].ToString()
@@ -339,7 +345,6 @@ namespace UmfrageSoftware
                     }
                 }
             }
-            //dataGridErgebnisse.quelle = Umfrage;
         }
 
         private void buttonAbstimmen_Click(object sender, EventArgs e)
@@ -351,12 +356,14 @@ namespace UmfrageSoftware
 
             dataGridErgebnisse.Visible = true;
 
+
             if (UmfrageWahl.UmfrageTyp == Umfrage.umfragenTypen.Ja_Nein)
             {
                 if (radioButtonJa.Checked)
                 {
                     if (ModelUmfrageAbstimmen.JaNein(true))
                     {
+                        dataGridErgebnisse["Ja", 0].Value = Convert.ToInt32(dataGridErgebnisse["Ja", 0]) + 1;
                         MessageBox.Show("Sie haben bei der Umfrage " + UmfrageWahl.UmfragenName + " mit: Ja, abgestimmt");
                     }
                 }
@@ -364,6 +371,7 @@ namespace UmfrageSoftware
                 {
                     if (ModelUmfrageAbstimmen.JaNein(false))
                     {
+                        dataGridErgebnisse["Nein", 0].Value = Convert.ToInt32(dataGridErgebnisse["Nein", 0]) + 1;
                         MessageBox.Show("Sie haben bei der Umfrage " + UmfrageWahl.UmfragenName + " mit: Nein, abgestimmt");
                     }
                 }
@@ -430,6 +438,7 @@ namespace UmfrageSoftware
                 #endregion AntwortChecks
                 if (ModelUmfrageAbstimmen.Custom(antwort))
                 {
+                    dataGridErgebnisse[antwortText, 0].Value = Convert.ToInt32(dataGridErgebnisse[antwortText, 0].Value) + 1;
                     MessageBox.Show("Sie haben bei der Umfrage " + UmfrageWahl.UmfragenName + " mit " + antwortText.Substring(8) + " gestimmt");
                 }
                 else
@@ -440,9 +449,14 @@ namespace UmfrageSoftware
             else if (UmfrageWahl.UmfrageTyp == Umfrage.umfragenTypen.Text)
             {
                 if (ModelUmfrageAbstimmen.Text(textBoxCustomTextAntwort.Text))
+                {
+                    dataGridErgebnisse.Rows.Add(textBoxCustomTextAntwort.Text);
                     MessageBox.Show("Sie haben ber Umfrage " + UmfrageWahl.UmfragenName + " abgestimmt");
+                }
                 else
+                {
                     MessageBox.Show("Etwas ist schief gelaufen.");
+                }
             }
 
 
@@ -451,7 +465,6 @@ namespace UmfrageSoftware
                 MessageBox.Show("Etwas ist schief gelaufen. Wie sind Sie hier angekommen, Herr Cabaj?", "MATI!?!");
             }
         }
-
         private void buttonAbbrechen_Click(object sender, EventArgs e)
         {
             this.Hide();

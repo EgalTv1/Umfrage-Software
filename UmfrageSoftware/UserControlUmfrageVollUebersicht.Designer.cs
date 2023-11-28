@@ -266,7 +266,7 @@
             this.textBoxCustomTextAntwort.Location = new System.Drawing.Point(176, 365);
             this.textBoxCustomTextAntwort.MaxLength = 255;
             this.textBoxCustomTextAntwort.Name = "textBoxCustomTextAntwort";
-            this.textBoxCustomTextAntwort.Size = new System.Drawing.Size(100, 22);
+            this.textBoxCustomTextAntwort.Size = new System.Drawing.Size(217, 22);
             this.textBoxCustomTextAntwort.TabIndex = 28;
             this.textBoxCustomTextAntwort.Visible = false;
             // 
@@ -299,9 +299,12 @@
             // 
             // dataGridErgebnisse
             // 
+            this.dataGridErgebnisse.AllowUserToAddRows = false;
+            this.dataGridErgebnisse.AllowUserToDeleteRows = false;
             this.dataGridErgebnisse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridErgebnisse.Location = new System.Drawing.Point(420, 39);
             this.dataGridErgebnisse.Name = "dataGridErgebnisse";
+            this.dataGridErgebnisse.ReadOnly = true;
             this.dataGridErgebnisse.Size = new System.Drawing.Size(754, 112);
             this.dataGridErgebnisse.TabIndex = 32;
             this.dataGridErgebnisse.Visible = false;

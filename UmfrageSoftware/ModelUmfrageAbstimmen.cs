@@ -137,7 +137,7 @@ namespace UmfrageSoftware
                 if (StimmePruefen(connection))
                 {
                     MessageBox.Show("Sie haben für diese Umfrage schon abgestimmt");
-                    return true;
+                    return false;
                 }
                 MySqlCommand stimme = connection.CreateCommand();
                 stimme.CommandText = "INSERT INTO UMF_" + DatenbankVerbindung.SonderzeichenErsetzen(UserControlUmfrageVollUebersicht.UmfrageWahl.UmfragenName) +
@@ -230,10 +230,9 @@ namespace UmfrageSoftware
                 MySqlDataReader antworten = antwortenHolen.ExecuteReader();
                 while (antworten.Read())
                 {
-                    MessageBox.Show("angekommen bei Message");
                     for (int i = 2; i < antworten.FieldCount; i++)
                     {
-                    Antworten.Add(Convert.ToInt32(antworten.GetValue(i)));
+                        Antworten.Add(Convert.ToInt32(antworten.GetValue(i)));
                     }
                 }
                 antworten.Close();
@@ -241,7 +240,31 @@ namespace UmfrageSoftware
             }
             return null;
         }
+        internal static List<string> TextAntwortenHolen(string UmfragenName)
+        {
+            MySqlConnection connection = DatenbankVerbindung.DatenbankVerbinden();
+            if (connection != null)
+            {
+                List<string> Antworten = new List<string>();
 
+                UmfragenName = "UMF_" + UmfragenName;
+                UmfragenName = DatenbankVerbindung.SonderzeichenErsetzen(UmfragenName);
+                //für Antwort Anzahl, hole alle Antworten raus und gebe sie am ende in einer Liste zurück
+                MySqlCommand antwortenHolen = connection.CreateCommand();
 
+                antwortenHolen.CommandText = "SELECT * FROM " + UmfragenName;
+
+                MySqlDataReader antworten = antwortenHolen.ExecuteReader();
+                while (antworten.Read())
+                {
+                    Antworten.Add(antworten["Antwort"].ToString());
+                }
+                Antworten.RemoveAt(0);
+                antworten.Close();
+                return Antworten;
+            }
+            return null;
+
+        }
     }
 }

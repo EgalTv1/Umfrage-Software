@@ -29,14 +29,8 @@ namespace UmfrageSoftware
                     dataGridViewUmfragenListe.Rows.Add(umfrage.UmfragenID, umfrage.UmfragenName, umfrage.UmfragenBeschreibung,
                         umfrage.Autor, umfrage.UmfrageTyp);
                 }
-
             }
         }
-        private void buttonSuchen_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void dataGridViewUmfragenListe_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             //Hole aus dem DataGrid den Namen der Umfrage 
