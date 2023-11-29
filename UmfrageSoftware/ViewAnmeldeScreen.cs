@@ -60,5 +60,10 @@ namespace UmfrageSoftware
             this.Hide();
             hartSeite.ShowDialog();
         }
+
+        private void textBoxUsername_Enter(object sender, EventArgs e)
+        {
+            this.AcceptButton = buttonAnmelden;
+        }
     }
 }
