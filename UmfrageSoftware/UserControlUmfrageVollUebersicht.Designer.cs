@@ -53,6 +53,7 @@
             this.dataGridErgebnisse = new System.Windows.Forms.DataGridView();
             this.buttonAbbrechen = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.buttonErgebnisseAnzeigen = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridErgebnisse)).BeginInit();
             this.SuspendLayout();
             // 
@@ -325,10 +326,22 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // buttonErgebnisseAnzeigen
+            // 
+            this.buttonErgebnisseAnzeigen.Enabled = false;
+            this.buttonErgebnisseAnzeigen.Location = new System.Drawing.Point(420, 157);
+            this.buttonErgebnisseAnzeigen.Name = "buttonErgebnisseAnzeigen";
+            this.buttonErgebnisseAnzeigen.Size = new System.Drawing.Size(138, 23);
+            this.buttonErgebnisseAnzeigen.TabIndex = 34;
+            this.buttonErgebnisseAnzeigen.Text = "Ergebnisse anzeigen";
+            this.buttonErgebnisseAnzeigen.UseVisualStyleBackColor = true;
+            this.buttonErgebnisseAnzeigen.Click += new System.EventHandler(this.buttonErgebnisseAnzeigen_Click);
+            // 
             // UserControlUmfrageVollUebersicht
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.buttonErgebnisseAnzeigen);
             this.Controls.Add(this.buttonAbbrechen);
             this.Controls.Add(this.dataGridErgebnisse);
             this.Controls.Add(this.textBoxAutor);
@@ -387,5 +400,6 @@
         private System.Windows.Forms.DataGridView dataGridErgebnisse;
         private System.Windows.Forms.Button buttonAbbrechen;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Button buttonErgebnisseAnzeigen;
     }
 }

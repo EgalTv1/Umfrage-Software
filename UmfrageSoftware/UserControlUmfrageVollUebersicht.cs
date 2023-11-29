@@ -28,6 +28,10 @@ namespace UmfrageSoftware
         {
             if (UmfrageWahl != null)
             {
+                if (ModelUmfrageAbstimmen.StimmePruefen(DatenbankVerbindung.DatenbankVerbinden()))
+                {
+                    buttonErgebnisseAnzeigen.Enabled = true;
+                }
                 int abstandButtons = 30;
                 int abstandRadio = 25;
                 textBoxUmfragenName.Text = UmfrageWahl.UmfragenName;
@@ -468,6 +472,12 @@ namespace UmfrageSoftware
         private void buttonAbbrechen_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void buttonErgebnisseAnzeigen_Click(object sender, EventArgs e)
+        {
+            dataGridErgebnisse.Visible = true;
+            buttonErgebnisseAnzeigen.Enabled = false;
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 
@@ -17,9 +18,14 @@ namespace UmfrageSoftware
 
             string myConnectionString = "server=127.0.0.1;uid=root;pwd=;database=umfrage_software;";
             MySqlConnection myConnection = new MySqlConnection(myConnectionString);
-
-            myConnection.Open();
-
+            try
+            {
+                myConnection.Open();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Keine Datenbank verbindung möglich");
+            }
             return myConnection;
         }
         static public void DatenbankVerbindungSchliessen()

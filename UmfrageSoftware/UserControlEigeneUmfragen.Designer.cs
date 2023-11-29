@@ -34,8 +34,6 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBoxUmfrageSuchen = new System.Windows.Forms.TextBox();
-            this.buttonSuchen = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -51,10 +49,11 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dataGridView1.Location = new System.Drawing.Point(0, 74);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 40);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(1177, 537);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(1177, 559);
             this.dataGridView1.TabIndex = 0;
             // 
             // Umfragen_ID
@@ -87,41 +86,21 @@
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
-            // textBoxUmfrageSuchen
-            // 
-            this.textBoxUmfrageSuchen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxUmfrageSuchen.Location = new System.Drawing.Point(9, 46);
-            this.textBoxUmfrageSuchen.Name = "textBoxUmfrageSuchen";
-            this.textBoxUmfrageSuchen.Size = new System.Drawing.Size(1075, 22);
-            this.textBoxUmfrageSuchen.TabIndex = 1;
-            // 
-            // buttonSuchen
-            // 
-            this.buttonSuchen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSuchen.Location = new System.Drawing.Point(1090, 46);
-            this.buttonSuchen.Name = "buttonSuchen";
-            this.buttonSuchen.Size = new System.Drawing.Size(84, 23);
-            this.buttonSuchen.TabIndex = 2;
-            this.buttonSuchen.Text = "Suchen";
-            this.buttonSuchen.UseVisualStyleBackColor = true;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 12);
+            this.label1.Location = new System.Drawing.Point(3, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(215, 31);
+            this.label1.Size = new System.Drawing.Size(239, 31);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Umfrage Archiv";
+            this.label1.Text = "Eigene Umfragen";
             // 
             // UserControlEigeneUmfragen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.buttonSuchen);
-            this.Controls.Add(this.textBoxUmfrageSuchen);
             this.Controls.Add(this.dataGridView1);
             this.Name = "UserControlEigeneUmfragen";
             this.Size = new System.Drawing.Size(1177, 611);
@@ -135,8 +114,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBoxUmfrageSuchen;
-        private System.Windows.Forms.Button buttonSuchen;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Umfragen_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
