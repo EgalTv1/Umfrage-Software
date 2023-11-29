@@ -245,7 +245,7 @@ namespace UmfrageSoftware
                     antwort1 + " INT, Stimmen_" + antwort2 + " INT, Stimmen_" + antwort3 +
                     " INT, Stimmen_" + antwort4 + " INT, Stimmen_" + antwort5 +
                     " INT, Stimmen_" + antwort6 + " INT, Stimmen_" + antwort7 +
-                    " INT, Stimmen_" + antwort8 + " INT, Stimmen_" + antwort9 + "INT, PRIMARY KEY (umfragenID));";
+                    " INT, Stimmen_" + antwort8 + " INT, Stimmen_" + antwort9 + " INT, PRIMARY KEY (umfragenID));";
 
                         commandFuellen.CommandText = "INSERT INTO " + umfragenName + " VALUES" +
                     "(" + umfragenID + ",'" + umfragenBeschreibung + "' , 0, 0,0,0,0,0,0,0,0)";
