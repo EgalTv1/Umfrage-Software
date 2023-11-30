@@ -70,27 +70,6 @@ namespace UmfrageSoftware
                     break;
             }
         }
-
-            public User(string Benutzername, string Passwort, Benutzertypen benutzertyp)
-        {
-            benutzername = Benutzername;
-            passwort = Passwort;
-            switch (benutzertyp)
-            {
-                default:
-                    this.Benutzertyp = Benutzertypen.Gast;
-                    break;
-                case User.Benutzertypen.Gast:
-                    this.Benutzertyp = Benutzertypen.Gast;
-                    break;
-                case User.Benutzertypen.Benutzer:
-                    this.Benutzertyp = Benutzertypen.Benutzer;
-                    break;
-                case User.Benutzertypen.Admin:
-                    this.Benutzertyp = Benutzertypen.Admin;
-                    break;
-            }
-        }
         public User(string Benutzername, string Passwort, Benutzertypen benutzertyp, int Benutzerid)
         {
             benutzerID = Benutzerid;
