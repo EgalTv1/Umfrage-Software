@@ -35,6 +35,7 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonSchliessen = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,10 +97,21 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Eigene Umfragen";
             // 
+            // buttonSchliessen
+            // 
+            this.buttonSchliessen.Location = new System.Drawing.Point(561, 16);
+            this.buttonSchliessen.Name = "buttonSchliessen";
+            this.buttonSchliessen.Size = new System.Drawing.Size(192, 23);
+            this.buttonSchliessen.TabIndex = 4;
+            this.buttonSchliessen.Text = "Ausgewählte Umfrage Abschließen";
+            this.buttonSchliessen.UseVisualStyleBackColor = true;
+            this.buttonSchliessen.Click += new System.EventHandler(this.buttonSchliessen_Click);
+            // 
             // UserControlEigeneUmfragen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.buttonSchliessen);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "UserControlEigeneUmfragen";
@@ -120,5 +132,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.Button buttonSchliessen;
     }
 }

@@ -19,7 +19,7 @@ namespace UmfrageSoftware
 
         private void UserControlEigeneUmfragen_Load(object sender, EventArgs e)
         {
-            List<Umfrage> UmfrageDaten = ModelEigeneUmfragen.EigeneUmfragen();
+            List<Umfrage> UmfrageDaten = ModelEigeneUmfragen.EigeneUmfragenAnzeigen();
             //  MessageBox.Show(UmfrageDaten)
             foreach (Umfrage umfrage in UmfrageDaten)
             {
@@ -39,5 +39,19 @@ namespace UmfrageSoftware
             }
         }
 
+        private void buttonSchliessen_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(dataGridView1[0, dataGridView1.CurrentRow.Index].Value.ToString());
+            //MessageBox.Show(dataGridView1["Umfragen_ID", Convert.ToInt32(dataGridView1.CurrentRow)].Value.ToString());
+            if (ModelEigeneUmfragen.UmfrageSchliessen(Convert.ToInt32(dataGridView1["Umfragen_ID", dataGridView1.CurrentRow.Index].Value)))
+            {
+                MessageBox.Show("Die Umfrage " + dataGridView1[1,dataGridView1.CurrentRow.Index].Value.ToString() +
+                    " wurde erfolgreich abgeschlossen. Andere Benutzer können diese Umfrage nicht mehr sehen");
+            }
+            else
+            {
+                MessageBox.Show("irgendwas ist schief gelaufen");
+            }
+        }
     }
 }

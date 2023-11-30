@@ -9,7 +9,7 @@ namespace UmfrageSoftware
 {
     internal class ModelEigeneUmfragen
     {
-        public static List<Umfrage> EigeneUmfragen()
+        public static List<Umfrage> EigeneUmfragenAnzeigen()
         {
             List<Umfrage> umfragen = new List<Umfrage>();
             MySqlConnection connection = DatenbankVerbindung.DatenbankVerbinden();
@@ -61,6 +61,23 @@ namespace UmfrageSoftware
                 umfragenReader.Close();
             }
             return umfragen;
+        }
+        public static bool UmfrageSchliessen(int umfrageID)
+        {
+            MySqlConnection connection = DatenbankVerbindung.DatenbankVerbinden();
+
+            if (connection != null)
+            {
+                MySqlCommand command = connection.CreateCommand();
+                command.CommandText = "UPDATE Umfragen SET Status = 'Abgeschlossen' WHERE Umfrage_ID = "
+                    + umfrageID;
+                
+                command.ExecuteNonQuery();
+                return true;
+            }
+
+
+            return false;
         }
     }
 }
