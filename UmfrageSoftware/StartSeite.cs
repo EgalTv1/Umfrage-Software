@@ -33,6 +33,7 @@ namespace UmfrageSoftware
             {
                 //Gast du opfer
                 buttonViewUmfrageErstellen.Enabled = false;
+                buttonViewUmfragenArchiv.Enabled = false;
             }
             if (Benutzer.Benutzertyp == User.Benutzertypen.Admin)
             {

@@ -26,9 +26,15 @@ namespace UmfrageSoftware
 
         private void UserControlUmfrageVollUebersicht_Load(object sender, EventArgs e)
         {
+            if (StartSeite.Benutzer.Benutzertyp == User.Benutzertypen.Gast)
+            {
+                buttonAbstimmen.Enabled = false;
+                buttonErgebnisseAnzeigen.Enabled = true;
+            }
             if (UmfrageWahl != null)
             {
-                if (ModelUmfrageAbstimmen.StimmePruefen(DatenbankVerbindung.DatenbankVerbinden()))
+                if (ModelUmfrageAbstimmen.StimmePruefen(DatenbankVerbindung.DatenbankVerbinden()) 
+                    || StartSeite.Benutzer.Benutzername == UmfrageWahl.Autor)
                 {
                     buttonErgebnisseAnzeigen.Enabled = true;
                 }
@@ -51,6 +57,8 @@ namespace UmfrageSoftware
                     dataGridErgebnisse.Columns.Add("Nein", "Nein");
                     List<int> antworten = ModelUmfrageAbstimmen.AntwortenHolen(UmfrageWahl.UmfragenName);
                     dataGridErgebnisse.Rows.Add(antworten[0].ToString(), antworten[1].ToString());
+                    dataGridErgebnisse.Size = new System.Drawing.Size
+                        (dataGridErgebnisse.Width / dataGridErgebnisse.Columns.Count + 40, dataGridErgebnisse.Height);
                 }
                 if (UmfrageWahl.UmfrageTyp == Umfrage.umfragenTypen.Text)
                 {
@@ -347,6 +355,8 @@ namespace UmfrageSoftware
                                 radioButtonCustomAntwort9.Location.Y + abstandButtons);
                             break;
                     }
+                    //dataGridErgebnisse.Size = new System.Drawing.Size
+                    //    (dataGridErgebnisse.Width * dataGridErgebnisse.Columns.Count, dataGridErgebnisse.Height);
                 }
             }
         }
@@ -367,7 +377,7 @@ namespace UmfrageSoftware
                 {
                     if (ModelUmfrageAbstimmen.JaNein(true))
                     {
-                        dataGridErgebnisse["Ja", 0].Value = Convert.ToInt32(dataGridErgebnisse["Ja", 0]) + 1;
+                        dataGridErgebnisse["Ja", 0].Value = Convert.ToInt32(dataGridErgebnisse["Ja", 0].Value) + 1;
                         MessageBox.Show("Sie haben bei der Umfrage " + UmfrageWahl.UmfragenName + " mit: Ja, abgestimmt");
                     }
                 }
@@ -375,7 +385,7 @@ namespace UmfrageSoftware
                 {
                     if (ModelUmfrageAbstimmen.JaNein(false))
                     {
-                        dataGridErgebnisse["Nein", 0].Value = Convert.ToInt32(dataGridErgebnisse["Nein", 0]) + 1;
+                        dataGridErgebnisse["Nein", 0].Value = Convert.ToInt32(dataGridErgebnisse["Nein", 0].Value) + 1;
                         MessageBox.Show("Sie haben bei der Umfrage " + UmfrageWahl.UmfragenName + " mit: Nein, abgestimmt");
                     }
                 }

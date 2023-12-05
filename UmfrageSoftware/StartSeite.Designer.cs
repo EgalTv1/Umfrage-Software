@@ -76,7 +76,7 @@
             // 
             // panelViews
             // 
-            this.panelViews.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelViews.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.panelViews.Location = new System.Drawing.Point(173, 49);
             this.panelViews.Name = "panelViews";
             this.panelViews.Size = new System.Drawing.Size(1166, 596);

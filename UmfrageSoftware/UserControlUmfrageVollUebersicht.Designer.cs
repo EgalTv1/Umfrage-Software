@@ -302,11 +302,12 @@
             // 
             this.dataGridErgebnisse.AllowUserToAddRows = false;
             this.dataGridErgebnisse.AllowUserToDeleteRows = false;
+            this.dataGridErgebnisse.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridErgebnisse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridErgebnisse.Location = new System.Drawing.Point(420, 39);
             this.dataGridErgebnisse.Name = "dataGridErgebnisse";
             this.dataGridErgebnisse.ReadOnly = true;
-            this.dataGridErgebnisse.Size = new System.Drawing.Size(754, 112);
+            this.dataGridErgebnisse.Size = new System.Drawing.Size(750, 112);
             this.dataGridErgebnisse.TabIndex = 32;
             this.dataGridErgebnisse.Visible = false;
             // 
