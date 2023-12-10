@@ -363,7 +363,6 @@
             this.comboBoxAnzahlAntworten.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxAnzahlAntworten.FormattingEnabled = true;
             this.comboBoxAnzahlAntworten.Items.AddRange(new object[] {
-            "0",
             "1",
             "2",
             "3",
