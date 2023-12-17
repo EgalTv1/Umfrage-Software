@@ -42,7 +42,7 @@ namespace UmfrageSoftware
                 else if (radioButtonCustomAntworten.Checked)
                 {
                     if (ModelUmfrageErstellen.CustomAntwortenUmfrageErstellen(textBoxUmfrageName.Text,
-                    textBoxUmfrageBeschreibung.Text, comboBoxAnzahlAntworten.SelectedIndex, monthCalendarFrist.SelectionStart,
+                    textBoxUmfrageBeschreibung.Text, Convert.ToInt32(comboBoxAnzahlAntworten.SelectedItem), monthCalendarFrist.SelectionStart,
                     textBoxCustomAntwort1.Text, textBoxCustomAntwort2.Text, textBoxCustomAntwort3.Text, textBoxCustomAntwort4.Text,
                     textBoxCustomAntwort5.Text, textBoxCustomAntwort6.Text, textBoxCustomAntwort7.Text, textBoxCustomAntwort8.Text,
                     textBoxCustomAntwort9.Text, checkBoxAnonym.Checked))
@@ -115,7 +115,7 @@ namespace UmfrageSoftware
 
         private void comboBoxAnzahlAntworten_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch (comboBoxAnzahlAntworten.SelectedIndex)
+            switch (Convert.ToInt32(comboBoxAnzahlAntworten.SelectedItem))
             {
                 default: break;
                 case 0:

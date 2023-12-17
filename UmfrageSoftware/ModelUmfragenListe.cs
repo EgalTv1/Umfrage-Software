@@ -24,7 +24,7 @@ namespace UmfrageSoftware
                 string AutorName = null;
                 int anzahlAntworten = 0;
                 MySqlCommand umfragenAnzeigen = connection.CreateCommand();
-                umfragenAnzeigen.CommandText = "SELECT * FROM Umfragen";
+                umfragenAnzeigen.CommandText = "SELECT * FROM Umfragen WHERE Status = 'Aktiv'";
 
                 MySqlDataReader umfragenReader = umfragenAnzeigen.ExecuteReader();
                 while (umfragenReader.Read())
