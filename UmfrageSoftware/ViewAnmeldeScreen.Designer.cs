@@ -99,6 +99,7 @@
             // 
             // buttonRoot
             // 
+            this.buttonRoot.Enabled = false;
             this.buttonRoot.Location = new System.Drawing.Point(479, 112);
             this.buttonRoot.Margin = new System.Windows.Forms.Padding(4);
             this.buttonRoot.Name = "buttonRoot";
@@ -106,6 +107,7 @@
             this.buttonRoot.TabIndex = 6;
             this.buttonRoot.Text = "Als Root weiter (Debuging)";
             this.buttonRoot.UseVisualStyleBackColor = true;
+            this.buttonRoot.Visible = false;
             this.buttonRoot.Click += new System.EventHandler(this.buttonRoot_Click);
             // 
             // ViewAnmeldeScreen

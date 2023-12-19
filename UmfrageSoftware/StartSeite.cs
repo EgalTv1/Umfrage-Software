@@ -17,15 +17,21 @@ namespace UmfrageSoftware
         //User static machen?
         internal static User Benutzer;
 
-        public StartSeite()
-        {
-            InitializeComponent();
-        }
         internal StartSeite(User benutzer)
         {
             InitializeComponent();
             Benutzer = benutzer;
+            this.FormClosed += new FormClosedEventHandler(StartSeite_FormClosed);
+
         }
+
+
+        private void StartSeite_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+
         private void StartSeite_Load(object sender, EventArgs e)
         {
             labelUserName.Text = Benutzer.Benutzername;
@@ -86,5 +92,9 @@ namespace UmfrageSoftware
             UserControlUmfragenListe userControlUmfragenListe = new UserControlUmfragenListe();
             panelViews.Controls.Add(userControlUmfragenListe);
         }
+
+
+
+
     }
 }

@@ -16,6 +16,12 @@ namespace UmfrageSoftware
         public ViewAnmeldeScreen()
         {
             InitializeComponent();
+            this.FormClosed += new FormClosedEventHandler(ViewAnmeldeScreen_Closed);
+        }
+
+    public void ViewAnmeldeScreen_Closed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
 
         private void buttonGastLogin_Click(object sender, EventArgs e)
@@ -64,6 +70,16 @@ namespace UmfrageSoftware
         private void textBoxUsername_Enter(object sender, EventArgs e)
         {
             this.AcceptButton = buttonAnmelden;
+        }
+
+        public void Programmschließen()
+        {
+            this.Close();
+        }
+
+        public void viewAnmeldeScreenZeigen()
+        {
+            this.Show();
         }
     }
 }
